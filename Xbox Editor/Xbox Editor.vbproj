@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D6CAAA6-D503-4285-9E09-1B670A192C1C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Xbox_Editor.My.MyApplication</StartupObject>
+    <RootNamespace>Xbox_Editor</RootNamespace>
+    <AssemblyName>Xbox Editor</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Xbox Editor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Xbox Editor.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favacon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CLKsFATXLib">
+      <HintPath>..\..\CLKsFATXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PackageIO">
+      <HintPath>..\..\PackageIO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="XboxClasses">
+      <HintPath>..\..\XboxClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="XboxLibrary">
+      <HintPath>..\..\XboxLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class%27s\ResignFile.vb" />
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Loading.Designer.vb">
+      <DependentUpon>Loading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Loading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\LoginCode.vb" />
+    <Compile Include="Tools\Mod Tools\FarCry3.Designer.vb">
+      <DependentUpon>FarCry3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\FarCry3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\BlackOps2.Designer.vb">
+      <DependentUpon>BlackOps2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\BlackOps2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\MidnightClub.Designer.vb">
+      <DependentUpon>MidnightClub.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\MidnightClub.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\NeedForSpeed2012.Designer.vb">
+      <DependentUpon>NeedForSpeed2012.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\NeedForSpeed2012.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Wet.Designer.vb">
+      <DependentUpon>Wet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Wet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Loading1.Designer.vb">
+      <DependentUpon>Loading1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Loading1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\GameTutsLogin.vb" />
+    <Compile Include="Modules\loginModule.vb" />
+    <Compile Include="Modules\Rehash.vb" />
+    <Compile Include="Tools\Tweek Tools\MyPcInfo.Designer.vb">
+      <DependentUpon>MyPcInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\MyPcInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Assassin%27s2.Designer.vb">
+      <DependentUpon>Assassin%27s2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Assassin%27s2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\AssassinsCreed3.Designer.vb">
+      <DependentUpon>AssassinsCreed3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\AssassinsCreed3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Profile Tools\AvatarEditor.Designer.vb">
+      <DependentUpon>AvatarEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Profile Tools\AvatarEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Borderlands.Designer.vb">
+      <DependentUpon>Borderlands.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Borderlands.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Brotherhood.Designer.vb">
+      <DependentUpon>Brotherhood.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Brotherhood.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Bulletstorm.Designer.vb">
+      <DependentUpon>Bulletstorm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Bulletstorm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\DeviceExplorer.Designer.vb">
+      <DependentUpon>DeviceExplorer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\DeviceExplorer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Emailer.Designer.vb">
+      <DependentUpon>Emailer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Emailer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\GameFinder.Designer.vb">
+      <DependentUpon>GameFinder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\GameFinder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\TigerWoods12.Designer.vb">
+      <DependentUpon>TigerWoods12.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\TigerWoods12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\TigerWoods13.Designer.vb">
+      <DependentUpon>TigerWoods13.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\TigerWoods13.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\TigerWoods11.Designer.vb">
+      <DependentUpon>TigerWoods11.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\TigerWoods11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\MyInfo.Designer.vb">
+      <DependentUpon>MyInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\MyInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XboxManager.Designer.vb">
+      <DependentUpon>XboxManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="XboxManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Tweek Tools\Loading.resx">
+      <DependentUpon>Loading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\FarCry3.resx">
+      <DependentUpon>FarCry3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\BlackOps2.resx">
+      <DependentUpon>BlackOps2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\MidnightClub.resx">
+      <DependentUpon>MidnightClub.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\NeedForSpeed2012.resx">
+      <DependentUpon>NeedForSpeed2012.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\Wet.resx">
+      <DependentUpon>Wet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Tweek Tools\Loading1.resx">
+      <DependentUpon>Loading1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Tweek Tools\MyPcInfo.resx">
+      <DependentUpon>MyPcInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\Assassin%27s2.resx">
+      <DependentUpon>Assassin%27s2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\AssassinsCreed3.resx">
+      <DependentUpon>AssassinsCreed3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Profile Tools\AvatarEditor.resx">
+      <DependentUpon>AvatarEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\Borderlands.resx">
+      <DependentUpon>Borderlands.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\Brotherhood.resx">
+      <DependentUpon>Brotherhood.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\Bulletstorm.resx">
+      <DependentUpon>Bulletstorm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\DeviceExplorer.resx">
+      <DependentUpon>DeviceExplorer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Tweek Tools\Emailer.resx">
+      <DependentUpon>Emailer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\GameFinder.resx">
+      <DependentUpon>GameFinder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Tweek Tools\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\TigerWoods12.resx">
+      <DependentUpon>TigerWoods12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\TigerWoods13.resx">
+      <DependentUpon>TigerWoods13.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\TigerWoods11.resx">
+      <DependentUpon>TigerWoods11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Tweek Tools\MyInfo.resx">
+      <DependentUpon>MyInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XboxManager.resx">
+      <DependentUpon>XboxManager.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\KV.bin" />
+    <None Include="Tools\Tweek Tools\app.config" />
+    <None Include="bin\Debug\KV.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="Resources\battery_10percent1.png" />
+    <None Include="Resources\battery_20percent1.png" />
+    <None Include="Resources\battery_40percent1.png" />
+    <None Include="Resources\battery_60percent1.png" />
+    <None Include="Resources\battery_80percent1.png" />
+    <None Include="Resources\battery_full1.png" />
+    <None Include="Resources\battery_horizontal_10percent.png" />
+    <None Include="Resources\battery_horizontal_40percent.png" />
+    <None Include="Tools\UsbExplorer Folder\ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Stock Index Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\key_services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+    <None Include="Resources\backagrong.png" />
+    <None Include="Resources\About.png" />
+    <None Include="Resources\back-icon.png" />
+    <None Include="Resources\back-icon1.png" />
+    <Content Include="Resources\battery_10percent.png" />
+    <Content Include="Resources\battery_20percent.png" />
+    <Content Include="Resources\battery_40percent.png" />
+    <Content Include="Resources\battery_60percent.png" />
+    <Content Include="Resources\battery_80percent.png" />
+    <Content Include="Resources\battery_full.png" />
+    <None Include="Resources\maleIcon.png" />
+    <None Include="Resources\I Dont Know.png" />
+    <None Include="Resources\Login_out-48.png" />
+    <None Include="Resources\Question-64.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\bullet_key.png" />
+    <None Include="Resources\floppy_disk.png" />
+    <Content Include="Tools\UsbExplorer Folder\FATX\EntryTypes.cs" />
+    <Content Include="Tools\UsbExplorer Folder\FATX\FATXDrive.cs" />
+    <Content Include="Tools\UsbExplorer Folder\FATX\Info.cs" />
+    <Content Include="Tools\UsbExplorer Folder\FATX\IO.cs" />
+    <Content Include="Tools\UsbExplorer Folder\FATX\Misc.cs" />
+    <Content Include="Tools\UsbExplorer Folder\FATX\Read.cs" />
+    <Content Include="Tools\UsbExplorer Folder\FATX\Write.cs" />
+    <Content Include="favacon.ico" />
+    <Content Include="Tools\UsbExplorer Folder\Notes\gabe_k Notes.txt" />
+    <Content Include="Tools\UsbExplorer Folder\Notes\Other Notes.txt" />
+    <Content Include="Resources\Chat.png" />
+    <Content Include="Resources\fatx_camera.png" />
+    <Content Include="Resources\fatx_database.png" />
+    <Content Include="Resources\fatx_file.png" />
+    <Content Include="Resources\fatx_folder.png" />
+    <Content Include="Resources\Refresh.png" />
+    <Content Include="Tools\UsbExplorer Folder\Win32\API.cs" />
+    <None Include="Resources\PackageIO.dll" />
+    <None Include="Resources\X360.dll" />
+    <None Include="Resources\xPackage3.dll" />
+    <None Include="Resources\ForumConnect.dll" />
+    <None Include="Resources\DevComponents.DotNetBar2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Updates\" />
+    <Folder Include="Tools\Admin Tools\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

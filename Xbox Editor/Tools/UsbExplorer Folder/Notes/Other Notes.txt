@@ -1,0 +1,18 @@
+﻿The File Allocation Table is a series of addresses that is accessed as a lookup table
+to see which cluster comes next, when loading a file or traversing a directory. For
+example, if the system had just loaded cluster 23, it would look up offset 23 in the
+FAT and the address there would be that of the next cluster; typically 24. Because
+the FAT is such a vital data structure, there are typically two copies (i.e. FAT1 and
+FAT2) so that corruption of the FAT can be detected and hopefully intelligently
+repaired.
+
+The root directory is fixed in length and always located at the start of the volume
+(after the FAT) in FAT12 and FAT16 volumes, but FAT32 treats the root directory as
+just another cluster chain in the data area. However, even in FAT32 volumes, the root
+directory will typically follow imediately after the two FATs.
+
+The data area fills the rest of the volume, and is divided into clusters; it is here
+that the file data is stored. Subdirectories are files with a particular structure
+that is understood by the file system, and are marked as being directories rather
+than files by setting the "directory" attribute bit in the directory entry that
+points to it.

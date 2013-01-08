@@ -1,0 +1,38 @@
+﻿(7:29 PM) gabe_k: at 0x1000
+is the allocation table
+it's a series of ints 
+
+(7:29 PM) gabe_k: each of them represents an 0x4000 byte block
+actually, in this case they're shorts 
+
+(7:30 PM) gabe_k: the first one is flagged as 0xF8FF
+that means it's the root block 
+
+(7:30 PM)  Lander: aight, i see that
+and i se another int
+0x0005 
+
+(7:30 PM) gabe_k: blocks flagged as 0xFFFF mean that's the end of that series of blocks
+for shit like directories
+or small files
+they'll be flagged as 0xFFFF
+cuz they only use 0x4000 bytes
+or less 
+
+(7:31 PM) gabe_k: now
+the thing flagged as 0x0005
+means the block after that is the 5th block in that table and thus is located at
+whatever the root offset is + 0x4000 * 5 
+
+
+(7:32 PM) gabe_k: the block location given in a fatx file entry is not the offset
+it's the location of the block in the table 
+ 
+ /*Non-sequencial files*/
+(7:33 PM) gabe_k: let's say you have a 0xC000 block file and you wanna put it
+somewhere there are free blocks 1 7 19 then the block location in the file entry
+would be 1 and in the allocation table at location 1 would be 7 then at location 7
+in the allocation table would be 19 then at location 19 in the allocation table would
+be 0xFFFF and you'd read 0x4000 bytes from block 1 0x4000 bytes from block 7 and
+0x4000 (or however many remained) from block 19 and essentially merge those all to
+get the full file 

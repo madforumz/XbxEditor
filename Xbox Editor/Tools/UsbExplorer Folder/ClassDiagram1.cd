@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FATX_Browser.About" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAABAAAASAAAACAAA4AAAAAGAAAABAAAA=</HashCode>
+      <FileName>About.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Backup">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="FATX_Browser.Backup.call_UpdateLabel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Backup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="FATX_Browser.Backup.call_UpdateProgressBar" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Backup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="FATX_Browser.Backup.call_FormClose" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Backup.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACAAABAAAACAAAASKAAYMFBIAWQAAAAIABA=</HashCode>
+      <FileName>Backup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.DeviceSelector" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAEBAAEACAAACCAwA4AAAAAnQAAIgAAAA=</HashCode>
+      <FileName>DeviceSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Extraction" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQBAIAYACAAAJIAAICAAAACAEAIAABAAUQAiAAAAAA=</HashCode>
+      <FileName>Extraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Main" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ogAIAIAAACEAIDXwDwCQAIDSIwTKGQBAAEiIAYBgABI=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Program" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Rename" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAABAAAACAAAQCAAAYAAAIECAAAAAAAAA=</HashCode>
+      <FileName>Rename.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Partition" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FATX\EntryTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Entry" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIAEAAAAAQAAAAIAAAAAABSQBAAAgAQCAAAQEAABAAA=</HashCode>
+      <FileName>FATX\EntryTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Folder" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAAAAgAAAAAAAAAAAAAAAAAAAAigAACAIA=</HashCode>
+      <FileName>FATX\EntryTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.File" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FATX\EntryTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.FATXDrive" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAAAEEBABABAACAACAAQAAAAAQCAAAEAJBBEAWAAAA=</HashCode>
+      <FileName>FATX\FATXDrive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Info" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FATX\Info.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.IO" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FATX\IO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.IO.BinaryWriter" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAABAACAAAAAQA=</HashCode>
+      <FileName>FATX\IO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Misc" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAACBEEAAEAAAAAAAAAACAACAECEBAARAAAIgAA=</HashCode>
+      <FileName>FATX\Misc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.FATStuff" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGEAgMEBAIAAAAAAQAABAAAMAAQAAIAAAEAAAAAAA=</HashCode>
+      <FileName>FATX\Read.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Partitions" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FATX\Read.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Entries" Collapsed="true">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAAAAAQBIAIQAAAAAAEAAAAgAAAYBAAAAAACACAAMA=</HashCode>
+      <FileName>FATX\Read.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.FATX.Write" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAACQAAAAAAABAAAAAIAAAAAAEKAAAIQoAACBBSoAA=</HashCode>
+      <FileName>FATX\Write.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Properties.Resources" Collapsed="true">
+    <Position X="12.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAABAAEAAAAABEAAAAQgAAAgAAAAAACAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Properties.Settings" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FATX_Browser.Win32.API" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAIAQAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Win32\API.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="FATX_Browser.FATX.EntryData" Collapsed="true">
+    <Position X="5.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAQBBAgAAAAgAIQAAAABAAAAgAAAAAAAAAAgABAAAA=</HashCode>
+      <FileName>FATX\EntryTypes.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="FATX_Browser.FATX.PartitionInfo" Collapsed="true">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAEEAAIgAAAAAQAABQAAEAAQAAAAAAAAAAAgAA=</HashCode>
+      <FileName>FATX\Read.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

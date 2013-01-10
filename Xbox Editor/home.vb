@@ -37,6 +37,7 @@ Public Class Home
     Private Sub home_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MessageBoxEx.EnableGlass = False
         KeyPreview = True
+        MsgBox("your awesome !!!!!!!!", MsgBoxStyle.Information)
         TxtUsername.Text = My.Settings.Username
         TxtPassword.Text = My.Settings.Password
     End Sub
@@ -105,22 +106,22 @@ Public Class Home
         AutoLoginBB.Visible = True
     End Sub
 
-    Private Sub AssassinsCreed2BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AssassinsCreedIIBB1.Click
+    Private Sub AssassinsCreed2BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AssassinsCreedIIBB.Click
         Assassin_s2.MdiParent = Me
         Assassin_s2.Show()
     End Sub
 
-    Private Sub AssassinsCreedBHBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AssassinsCreedBHBB1.Click
+    Private Sub AssassinsCreedBHBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AssassinsCreedBHBB.Click
         brotherhood.MdiParent = Me
         brotherhood.Show()
     End Sub
 
-    Private Sub BorderlandsBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BorderlandsBB1.Click
+    Private Sub BorderlandsBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BorderlandsBB.Click
         Borderlands.MdiParent = Me
         Borderlands.Show()
     End Sub
 
-    Private Sub BulletstormBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BulletstormBB1.Click
+    Private Sub BulletstormBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BulletstormBB.Click
         Bulletstorm.MdiParent = Me
         Bulletstorm.Show()
     End Sub
@@ -172,12 +173,12 @@ Public Class Home
         Process.Start("http://madforumz.forumotion.com/")
     End Sub
 
-    Private Sub AssassinsCreed3BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AssassinsCreed3BB1.Click
+    Private Sub AssassinsCreed3BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AssassinsCreed3BB.Click
         AssassinsCreed3.MdiParent = Me
         AssassinsCreed3.Show()
     End Sub
 
-    Private Sub WetBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WetBB.Click
+    Private Sub WetBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WetBB1.Click
         Wet.MdiParent = Me
         Wet.Show()
     End Sub
@@ -207,7 +208,7 @@ Public Class Home
 
     Private Sub NeedForSpeed2012BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         NeedForSpeed2012.MdiParent = Me
-        NeedForSpeed2012.Show();
+        NeedForSpeed2012.Show()
     End Sub
 
     Private Sub ButtonItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles XboxManagerBB.Click

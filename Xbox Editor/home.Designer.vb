@@ -25,8 +25,8 @@ Partial Class Home
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
-        Me.AboutBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
+        Me.AboutBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.XboxManagerBB = New DevComponents.DotNetBar.ButtonItem()
         Me.MyInfoBB = New DevComponents.DotNetBar.ButtonItem()
         Me.Silver2010 = New DevComponents.Editors.ComboItem()
@@ -90,13 +90,13 @@ Partial Class Home
         Me.BorderlandsBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.BulletstormBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.MidnightClubLaBB = New DevComponents.DotNetBar.ButtonItem()
-        Me.MinecraftBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.MinecraftBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.FarCry3BB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
-        Me.TigerWoods11BB = New DevComponents.DotNetBar.ButtonItem()
-        Me.TigerWoods12BB = New DevComponents.DotNetBar.ButtonItem()
-        Me.TigerWoods13BB = New DevComponents.DotNetBar.ButtonItem()
-        Me.WetBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.TigerWoods11BB1 = New DevComponents.DotNetBar.ButtonItem()
+        Me.TigerWoods12BB1 = New DevComponents.DotNetBar.ButtonItem()
+        Me.TigerWoods13BB1 = New DevComponents.DotNetBar.ButtonItem()
+        Me.WetBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem44 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem34 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem36 = New DevComponents.DotNetBar.ButtonItem()
@@ -112,13 +112,14 @@ Partial Class Home
         Me.BulletstormBB = New DevComponents.DotNetBar.ButtonItem()
         Me.FarCry3BB = New DevComponents.DotNetBar.ButtonItem()
         Me.NeedForSpeed2012BB = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem24 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem29 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem28 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem30 = New DevComponents.DotNetBar.ButtonItem()
-        Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
+        Me.MinecraftBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.TigerWoods11BB = New DevComponents.DotNetBar.ButtonItem()
+        Me.TigerWoods12BB = New DevComponents.DotNetBar.ButtonItem()
+        Me.TigerWoods13BB = New DevComponents.DotNetBar.ButtonItem()
+        Me.WetBB = New DevComponents.DotNetBar.ButtonItem()
         Me.LabelItem3 = New DevComponents.DotNetBar.LabelItem()
         Me.ExpandablePanel1 = New DevComponents.DotNetBar.ExpandablePanel()
+        Me.AssassinsCreedRBB = New DevComponents.DotNetBar.ButtonItem()
         Me.LoginPanel.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -168,6 +169,17 @@ Partial Class Home
         Me.RibbonControl1.Text = "RibbonControl1"
         Me.RibbonControl1.UseCustomizeDialog = False
         '
+        'OpenLogin
+        '
+        Me.OpenLogin.AutoExpandOnClick = True
+        Me.OpenLogin.CanCustomize = False
+        Me.OpenLogin.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image
+        Me.OpenLogin.ImagePaddingHorizontal = 0
+        Me.OpenLogin.ImagePaddingVertical = 0
+        Me.OpenLogin.Name = "OpenLogin"
+        Me.OpenLogin.ShowSubItems = False
+        Me.OpenLogin.Text = "Login"
+        '
         'AboutBB
         '
         Me.AboutBB.AutoExpandOnClick = True
@@ -181,18 +193,6 @@ Partial Class Home
         Me.AboutBB.Name = "AboutBB"
         Me.AboutBB.ShowSubItems = False
         Me.AboutBB.Text = "About And Updates"
-        '
-        'OpenLogin
-        '
-        Me.OpenLogin.AutoExpandOnClick = True
-        Me.OpenLogin.CanCustomize = False
-        Me.OpenLogin.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image
-        Me.OpenLogin.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.OpenLogin.ImagePaddingHorizontal = 0
-        Me.OpenLogin.ImagePaddingVertical = 0
-        Me.OpenLogin.Name = "OpenLogin"
-        Me.OpenLogin.ShowSubItems = False
-        Me.OpenLogin.Text = "Login"
         '
         'XboxManagerBB
         '
@@ -779,7 +779,7 @@ Partial Class Home
         Me.GalleryContainer2.MultiLine = False
         Me.GalleryContainer2.Name = "GalleryContainer2"
         Me.GalleryContainer2.PopupUsesStandardScrollbars = False
-        Me.GalleryContainer2.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB1, Me.AssassinsCreedIIBB1, Me.AssassinsCreed3BB1, Me.AssassinsCreedBHBB1, Me.BorderlandsBB1, Me.BulletstormBB1, Me.MidnightClubLaBB, Me.MinecraftBB, Me.FarCry3BB1, Me.ButtonItem2, Me.TigerWoods11BB, Me.TigerWoods12BB, Me.TigerWoods13BB, Me.WetBB})
+        Me.GalleryContainer2.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB1, Me.AssassinsCreedIIBB1, Me.AssassinsCreed3BB1, Me.AssassinsCreedBHBB1, Me.BorderlandsBB1, Me.BulletstormBB1, Me.MidnightClubLaBB, Me.MinecraftBB1, Me.FarCry3BB1, Me.ButtonItem2, Me.TigerWoods11BB1, Me.TigerWoods12BB1, Me.TigerWoods13BB1, Me.WetBB1})
         '
         'AvatarEditorBB1
         '
@@ -858,16 +858,16 @@ Partial Class Home
         Me.MidnightClubLaBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.MidnightClubLaBB.Text = "Midnight Club LA"
         '
-        'MinecraftBB
+        'MinecraftBB1
         '
-        Me.MinecraftBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.MinecraftBB.CanCustomize = False
-        Me.MinecraftBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.MinecraftBB.Image = CType(resources.GetObject("MinecraftBB.Image"), System.Drawing.Image)
-        Me.MinecraftBB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.MinecraftBB.Name = "MinecraftBB"
-        Me.MinecraftBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.MinecraftBB.Text = "Minecraft"
+        Me.MinecraftBB1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.MinecraftBB1.CanCustomize = False
+        Me.MinecraftBB1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MinecraftBB1.Image = CType(resources.GetObject("MinecraftBB1.Image"), System.Drawing.Image)
+        Me.MinecraftBB1.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.MinecraftBB1.Name = "MinecraftBB1"
+        Me.MinecraftBB1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.MinecraftBB1.Text = "Minecraft"
         '
         'FarCry3BB1
         '
@@ -891,49 +891,49 @@ Partial Class Home
         Me.ButtonItem2.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.ButtonItem2.Text = "Need For Speed Most Wanted"
         '
-        'TigerWoods11BB
+        'TigerWoods11BB1
         '
-        Me.TigerWoods11BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.TigerWoods11BB.CanCustomize = False
-        Me.TigerWoods11BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.TigerWoods11BB.Image = CType(resources.GetObject("TigerWoods11BB.Image"), System.Drawing.Image)
-        Me.TigerWoods11BB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.TigerWoods11BB.Name = "TigerWoods11BB"
-        Me.TigerWoods11BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.TigerWoods11BB.Text = "Tiger Woods PGA Tour 11"
+        Me.TigerWoods11BB1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.TigerWoods11BB1.CanCustomize = False
+        Me.TigerWoods11BB1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.TigerWoods11BB1.Image = CType(resources.GetObject("TigerWoods11BB1.Image"), System.Drawing.Image)
+        Me.TigerWoods11BB1.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.TigerWoods11BB1.Name = "TigerWoods11BB1"
+        Me.TigerWoods11BB1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.TigerWoods11BB1.Text = "Tiger Woods PGA Tour 11"
         '
-        'TigerWoods12BB
+        'TigerWoods12BB1
         '
-        Me.TigerWoods12BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.TigerWoods12BB.CanCustomize = False
-        Me.TigerWoods12BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.TigerWoods12BB.Image = CType(resources.GetObject("TigerWoods12BB.Image"), System.Drawing.Image)
-        Me.TigerWoods12BB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.TigerWoods12BB.Name = "TigerWoods12BB"
-        Me.TigerWoods12BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.TigerWoods12BB.Text = "Tiger Woods PGA Tour 12"
+        Me.TigerWoods12BB1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.TigerWoods12BB1.CanCustomize = False
+        Me.TigerWoods12BB1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.TigerWoods12BB1.Image = CType(resources.GetObject("TigerWoods12BB1.Image"), System.Drawing.Image)
+        Me.TigerWoods12BB1.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.TigerWoods12BB1.Name = "TigerWoods12BB1"
+        Me.TigerWoods12BB1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.TigerWoods12BB1.Text = "Tiger Woods PGA Tour 12"
         '
-        'TigerWoods13BB
+        'TigerWoods13BB1
         '
-        Me.TigerWoods13BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.TigerWoods13BB.CanCustomize = False
-        Me.TigerWoods13BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.TigerWoods13BB.Image = CType(resources.GetObject("TigerWoods13BB.Image"), System.Drawing.Image)
-        Me.TigerWoods13BB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.TigerWoods13BB.Name = "TigerWoods13BB"
-        Me.TigerWoods13BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.TigerWoods13BB.Text = "Tiger Woods PGA Tour 13"
+        Me.TigerWoods13BB1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.TigerWoods13BB1.CanCustomize = False
+        Me.TigerWoods13BB1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.TigerWoods13BB1.Image = CType(resources.GetObject("TigerWoods13BB1.Image"), System.Drawing.Image)
+        Me.TigerWoods13BB1.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.TigerWoods13BB1.Name = "TigerWoods13BB1"
+        Me.TigerWoods13BB1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.TigerWoods13BB1.Text = "Tiger Woods PGA Tour 13"
         '
-        'WetBB
+        'WetBB1
         '
-        Me.WetBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.WetBB.CanCustomize = False
-        Me.WetBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.WetBB.Image = CType(resources.GetObject("WetBB.Image"), System.Drawing.Image)
-        Me.WetBB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.WetBB.Name = "WetBB"
-        Me.WetBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.WetBB.Text = "Wet The Game"
+        Me.WetBB1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.WetBB1.CanCustomize = False
+        Me.WetBB1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.WetBB1.Image = CType(resources.GetObject("WetBB1.Image"), System.Drawing.Image)
+        Me.WetBB1.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.WetBB1.Name = "WetBB1"
+        Me.WetBB1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.WetBB1.Text = "Wet The Game"
         '
         'ButtonItem44
         '
@@ -1035,7 +1035,7 @@ Partial Class Home
         Me.GalleryContainer3.MultiLine = False
         Me.GalleryContainer3.Name = "GalleryContainer3"
         Me.GalleryContainer3.ScrollAnimation = False
-        Me.GalleryContainer3.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB, Me.AssassinsCreedIIBB, Me.AssassinsCreed3BB, Me.AssassinsCreedBHBB, Me.BorderlandsBB, Me.BulletstormBB, Me.FarCry3BB, Me.NeedForSpeed2012BB, Me.ButtonItem24, Me.ButtonItem29, Me.ButtonItem28, Me.ButtonItem30, Me.ButtonItem3})
+        Me.GalleryContainer3.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB, Me.AssassinsCreedIIBB, Me.AssassinsCreedBHBB, Me.AssassinsCreedRBB, Me.AssassinsCreed3BB, Me.BorderlandsBB, Me.BulletstormBB, Me.FarCry3BB, Me.NeedForSpeed2012BB, Me.MinecraftBB, Me.TigerWoods11BB, Me.TigerWoods12BB, Me.TigerWoods13BB, Me.WetBB})
         Me.GalleryContainer3.Text = "GalleryContainer3"
         '
         'AvatarEditorBB
@@ -1126,60 +1126,60 @@ Partial Class Home
         Me.NeedForSpeed2012BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.NeedForSpeed2012BB.Text = "Need For Speed Most Wanted"
         '
-        'ButtonItem24
+        'MinecraftBB
         '
-        Me.ButtonItem24.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem24.CanCustomize = False
-        Me.ButtonItem24.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonItem24.Image = CType(resources.GetObject("ButtonItem24.Image"), System.Drawing.Image)
-        Me.ButtonItem24.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.ButtonItem24.Name = "ButtonItem24"
-        Me.ButtonItem24.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ButtonItem24.Text = "Minecraft"
+        Me.MinecraftBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.MinecraftBB.CanCustomize = False
+        Me.MinecraftBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MinecraftBB.Image = CType(resources.GetObject("MinecraftBB.Image"), System.Drawing.Image)
+        Me.MinecraftBB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.MinecraftBB.Name = "MinecraftBB"
+        Me.MinecraftBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.MinecraftBB.Text = "Minecraft"
         '
-        'ButtonItem29
+        'TigerWoods11BB
         '
-        Me.ButtonItem29.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem29.CanCustomize = False
-        Me.ButtonItem29.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonItem29.Image = CType(resources.GetObject("ButtonItem29.Image"), System.Drawing.Image)
-        Me.ButtonItem29.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.ButtonItem29.Name = "ButtonItem29"
-        Me.ButtonItem29.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ButtonItem29.Text = "Tiger Woods PGA Tour 12"
+        Me.TigerWoods11BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.TigerWoods11BB.CanCustomize = False
+        Me.TigerWoods11BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.TigerWoods11BB.Image = CType(resources.GetObject("TigerWoods11BB.Image"), System.Drawing.Image)
+        Me.TigerWoods11BB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.TigerWoods11BB.Name = "TigerWoods11BB"
+        Me.TigerWoods11BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.TigerWoods11BB.Text = "Tiger Woods PGA Tour 11"
         '
-        'ButtonItem28
+        'TigerWoods12BB
         '
-        Me.ButtonItem28.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem28.CanCustomize = False
-        Me.ButtonItem28.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonItem28.Image = CType(resources.GetObject("ButtonItem28.Image"), System.Drawing.Image)
-        Me.ButtonItem28.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.ButtonItem28.Name = "ButtonItem28"
-        Me.ButtonItem28.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ButtonItem28.Text = "Tiger Woods PGA Tour 11"
+        Me.TigerWoods12BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.TigerWoods12BB.CanCustomize = False
+        Me.TigerWoods12BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.TigerWoods12BB.Image = CType(resources.GetObject("TigerWoods12BB.Image"), System.Drawing.Image)
+        Me.TigerWoods12BB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.TigerWoods12BB.Name = "TigerWoods12BB"
+        Me.TigerWoods12BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.TigerWoods12BB.Text = "Tiger Woods PGA Tour 12"
         '
-        'ButtonItem30
+        'TigerWoods13BB
         '
-        Me.ButtonItem30.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem30.CanCustomize = False
-        Me.ButtonItem30.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonItem30.Image = CType(resources.GetObject("ButtonItem30.Image"), System.Drawing.Image)
-        Me.ButtonItem30.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.ButtonItem30.Name = "ButtonItem30"
-        Me.ButtonItem30.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ButtonItem30.Text = "Tiger Woods PGA Tour 13"
+        Me.TigerWoods13BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.TigerWoods13BB.CanCustomize = False
+        Me.TigerWoods13BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.TigerWoods13BB.Image = CType(resources.GetObject("TigerWoods13BB.Image"), System.Drawing.Image)
+        Me.TigerWoods13BB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.TigerWoods13BB.Name = "TigerWoods13BB"
+        Me.TigerWoods13BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.TigerWoods13BB.Text = "Tiger Woods PGA Tour 13"
         '
-        'ButtonItem3
+        'WetBB
         '
-        Me.ButtonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem3.CanCustomize = False
-        Me.ButtonItem3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonItem3.Image = CType(resources.GetObject("ButtonItem3.Image"), System.Drawing.Image)
-        Me.ButtonItem3.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.ButtonItem3.Name = "ButtonItem3"
-        Me.ButtonItem3.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ButtonItem3.Text = "Wet The Game"
+        Me.WetBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.WetBB.CanCustomize = False
+        Me.WetBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.WetBB.Image = CType(resources.GetObject("WetBB.Image"), System.Drawing.Image)
+        Me.WetBB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.WetBB.Name = "WetBB"
+        Me.WetBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.WetBB.Text = "Wet The Game"
         '
         'LabelItem3
         '
@@ -1217,6 +1217,17 @@ Partial Class Home
         Me.ExpandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.ExpandablePanel1.TitleStyle.GradientAngle = 90
         Me.ExpandablePanel1.TitleText = "Editors And More"
+        '
+        'AssassinsCreedRBB
+        '
+        Me.AssassinsCreedRBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.AssassinsCreedRBB.CanCustomize = False
+        Me.AssassinsCreedRBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.AssassinsCreedRBB.Image = CType(resources.GetObject("AssassinsCreedRBB.Image"), System.Drawing.Image)
+        Me.AssassinsCreedRBB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.AssassinsCreedRBB.Name = "AssassinsCreedRBB"
+        Me.AssassinsCreedRBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.AssassinsCreedRBB.Text = "Assassin's Creed Revelations"
         '
         'Home
         '
@@ -1313,13 +1324,13 @@ Partial Class Home
     Friend WithEvents BorderlandsBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents BulletstormBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents MidnightClubLaBB As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents MinecraftBB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents MinecraftBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents FarCry3BB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem2 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents TigerWoods11BB As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents TigerWoods12BB As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents TigerWoods13BB As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents WetBB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents TigerWoods11BB1 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents TigerWoods12BB1 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents TigerWoods13BB1 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents WetBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem44 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem34 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem36 As DevComponents.DotNetBar.ButtonItem
@@ -1335,14 +1346,15 @@ Partial Class Home
     Friend WithEvents BulletstormBB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents FarCry3BB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents NeedForSpeed2012BB As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents ButtonItem24 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents ButtonItem29 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents ButtonItem28 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents ButtonItem30 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents ButtonItem3 As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents MinecraftBB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents TigerWoods12BB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents TigerWoods11BB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents TigerWoods13BB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents WetBB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents LabelItem3 As DevComponents.DotNetBar.LabelItem
     Friend WithEvents ExpandablePanel1 As DevComponents.DotNetBar.ExpandablePanel
     Friend WithEvents AssassinsCr As DevComponents.DotNetBar.PanelEx
     Private WithEvents UpdatesEP As DevComponents.DotNetBar.ExpandablePanel
+    Friend WithEvents AssassinsCreedRBB As DevComponents.DotNetBar.ButtonItem
 
 End Class

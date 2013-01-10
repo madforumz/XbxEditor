@@ -94,7 +94,7 @@ Partial Class XboxManager
         Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Right
         Me.PanelEx1.Location = New System.Drawing.Point(151, 0)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(308, 144)
+        Me.PanelEx1.Size = New System.Drawing.Size(308, 150)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -377,7 +377,7 @@ Partial Class XboxManager
         Me.PanelEx3.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelEx3.Location = New System.Drawing.Point(3, 0)
         Me.PanelEx3.Name = "PanelEx3"
-        Me.PanelEx3.Size = New System.Drawing.Size(145, 144)
+        Me.PanelEx3.Size = New System.Drawing.Size(145, 150)
         Me.PanelEx3.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -403,14 +403,14 @@ Partial Class XboxManager
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
-        Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.RehashBB, Me.InfoRT, Me.FileContentsRT})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.RibbonControl1.Size = New System.Drawing.Size(462, 202)
+        Me.RibbonControl1.Size = New System.Drawing.Size(462, 208)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
         Me.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon"
@@ -440,7 +440,7 @@ Partial Class XboxManager
         Me.RibbonPanel1.Location = New System.Drawing.Point(0, 53)
         Me.RibbonPanel1.Name = "RibbonPanel1"
         Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(462, 147)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(462, 153)
         '
         '
         '
@@ -589,7 +589,7 @@ Partial Class XboxManager
         Me.RibbonPanel3.Location = New System.Drawing.Point(0, 0)
         Me.RibbonPanel3.Name = "RibbonPanel3"
         Me.RibbonPanel3.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel3.Size = New System.Drawing.Size(462, 200)
+        Me.RibbonPanel3.Size = New System.Drawing.Size(462, 206)
         '
         '
         '

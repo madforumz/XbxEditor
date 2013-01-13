@@ -25,8 +25,8 @@ Partial Class Home
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
-        Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
         Me.AboutBB = New DevComponents.DotNetBar.Office2007StartButton()
+        Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
         Me.XboxManagerBB = New DevComponents.DotNetBar.ButtonItem()
         Me.MyInfoBB = New DevComponents.DotNetBar.ButtonItem()
         Me.Silver2010 = New DevComponents.Editors.ComboItem()
@@ -115,6 +115,7 @@ Partial Class Home
         Me.NeedForSpeed2012BB = New DevComponents.DotNetBar.ButtonItem()
         Me.MidnightClubLABB = New DevComponents.DotNetBar.ButtonItem()
         Me.MinecraftBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.SoulCalBB = New DevComponents.DotNetBar.ButtonItem()
         Me.TigerWoods11BB = New DevComponents.DotNetBar.ButtonItem()
         Me.TigerWoods12BB = New DevComponents.DotNetBar.ButtonItem()
         Me.TigerWoods13BB = New DevComponents.DotNetBar.ButtonItem()
@@ -170,17 +171,6 @@ Partial Class Home
         Me.RibbonControl1.Text = "RibbonControl1"
         Me.RibbonControl1.UseCustomizeDialog = False
         '
-        'OpenLogin
-        '
-        Me.OpenLogin.AutoExpandOnClick = True
-        Me.OpenLogin.CanCustomize = False
-        Me.OpenLogin.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image
-        Me.OpenLogin.ImagePaddingHorizontal = 0
-        Me.OpenLogin.ImagePaddingVertical = 0
-        Me.OpenLogin.Name = "OpenLogin"
-        Me.OpenLogin.ShowSubItems = False
-        Me.OpenLogin.Text = "Login"
-        '
         'AboutBB
         '
         Me.AboutBB.AutoExpandOnClick = True
@@ -194,6 +184,18 @@ Partial Class Home
         Me.AboutBB.Name = "AboutBB"
         Me.AboutBB.ShowSubItems = False
         Me.AboutBB.Text = "About And Updates"
+        '
+        'OpenLogin
+        '
+        Me.OpenLogin.AutoExpandOnClick = True
+        Me.OpenLogin.CanCustomize = False
+        Me.OpenLogin.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image
+        Me.OpenLogin.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.OpenLogin.ImagePaddingHorizontal = 0
+        Me.OpenLogin.ImagePaddingVertical = 0
+        Me.OpenLogin.Name = "OpenLogin"
+        Me.OpenLogin.ShowSubItems = False
+        Me.OpenLogin.Text = "Login"
         '
         'XboxManagerBB
         '
@@ -1036,7 +1038,7 @@ Partial Class Home
         Me.GalleryContainer3.MultiLine = False
         Me.GalleryContainer3.Name = "GalleryContainer3"
         Me.GalleryContainer3.ScrollAnimation = False
-        Me.GalleryContainer3.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB, Me.AssassinsCreedIIBB, Me.AssassinsCreedBHBB, Me.AssassinsCreedRBB, Me.AssassinsCreed3BB, Me.BorderlandsBB, Me.BulletstormBB, Me.FarCry3BB, Me.NeedForSpeed2012BB, Me.MidnightClubLABB, Me.MinecraftBB, Me.TigerWoods11BB, Me.TigerWoods12BB, Me.TigerWoods13BB, Me.WetBB})
+        Me.GalleryContainer3.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB, Me.AssassinsCreedIIBB, Me.AssassinsCreedBHBB, Me.AssassinsCreedRBB, Me.AssassinsCreed3BB, Me.BorderlandsBB, Me.BulletstormBB, Me.FarCry3BB, Me.NeedForSpeed2012BB, Me.MidnightClubLABB, Me.MinecraftBB, Me.SoulCalBB, Me.TigerWoods11BB, Me.TigerWoods12BB, Me.TigerWoods13BB, Me.WetBB})
         Me.GalleryContainer3.Text = "GalleryContainer3"
         '
         'AvatarEditorBB
@@ -1159,6 +1161,17 @@ Partial Class Home
         Me.MinecraftBB.Name = "MinecraftBB"
         Me.MinecraftBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.MinecraftBB.Text = "Minecraft"
+        '
+        'SoulCalBB
+        '
+        Me.SoulCalBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.SoulCalBB.CanCustomize = False
+        Me.SoulCalBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.SoulCalBB.Image = CType(resources.GetObject("SoulCalBB.Image"), System.Drawing.Image)
+        Me.SoulCalBB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.SoulCalBB.Name = "SoulCalBB"
+        Me.SoulCalBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.SoulCalBB.Text = "Soul Calibur V"
         '
         'TigerWoods11BB
         '
@@ -1369,5 +1382,6 @@ Partial Class Home
     Private WithEvents UpdatesEP As DevComponents.DotNetBar.ExpandablePanel
     Friend WithEvents AssassinsCreedRBB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents MidnightClubLABB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents SoulCalBB As DevComponents.DotNetBar.ButtonItem
 
 End Class

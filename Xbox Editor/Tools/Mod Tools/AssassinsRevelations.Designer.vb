@@ -24,14 +24,14 @@ Partial Class AssassinsRevelations
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AssassinsRevelations))
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
-        Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
-        Me.Save = New DevComponents.DotNetBar.ButtonX()
-        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
-        Me.MaxBB = New DevComponents.DotNetBar.ButtonX()
         Me.MoneyII = New DevComponents.Editors.IntegerInput()
+        Me.MaxBB = New DevComponents.DotNetBar.ButtonX()
+        Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
+        Me.Save = New DevComponents.DotNetBar.ButtonX()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
         CType(Me.MoneyII, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +53,60 @@ Partial Class AssassinsRevelations
         Me.Bar1.TabIndex = 14
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
+        '
+        'ControlContainerItem1
+        '
+        Me.ControlContainerItem1.AllowItemResize = False
+        Me.ControlContainerItem1.Control = Me.OpenAss
+        Me.ControlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem1.Name = "ControlContainerItem1"
+        '
+        'ControlContainerItem2
+        '
+        Me.ControlContainerItem2.AllowItemResize = False
+        Me.ControlContainerItem2.Control = Me.Save
+        Me.ControlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem2.Name = "ControlContainerItem2"
+        '
+        'ControlContainerItem3
+        '
+        Me.ControlContainerItem3.AllowItemResize = False
+        Me.ControlContainerItem3.Control = Me.ResignBB
+        Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem3.Name = "ControlContainerItem3"
+        '
+        'MoneyII
+        '
+        '
+        '
+        '
+        Me.MoneyII.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.MoneyII.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.MoneyII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.MoneyII.Enabled = False
+        Me.MoneyII.Location = New System.Drawing.Point(3, 34)
+        Me.MoneyII.MinValue = 0
+        Me.MoneyII.Name = "MoneyII"
+        Me.MoneyII.ShowUpDown = True
+        Me.MoneyII.Size = New System.Drawing.Size(112, 20)
+        Me.MoneyII.TabIndex = 16
+        Me.MoneyII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
+        Me.MoneyII.WatermarkText = "Money"
+        '
+        'MaxBB
+        '
+        Me.MaxBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.MaxBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MaxBB.Enabled = False
+        Me.MaxBB.Image = Global.Xbox_Editor.My.Resources.Resources.StockIndexUp
+        Me.MaxBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.MaxBB.Location = New System.Drawing.Point(121, 34)
+        Me.MaxBB.Name = "MaxBB"
+        Me.MaxBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.MaxBB.Size = New System.Drawing.Size(150, 20)
+        Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.MaxBB.TabIndex = 15
+        Me.MaxBB.Text = "Max"
         '
         'OpenAss
         '
@@ -96,59 +150,6 @@ Partial Class AssassinsRevelations
         Me.ResignBB.Size = New System.Drawing.Size(26, 26)
         Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ResignBB.TabIndex = 15
-        '
-        'ControlContainerItem1
-        '
-        Me.ControlContainerItem1.AllowItemResize = False
-        Me.ControlContainerItem1.Control = Me.OpenAss
-        Me.ControlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
-        Me.ControlContainerItem1.Name = "ControlContainerItem1"
-        '
-        'ControlContainerItem2
-        '
-        Me.ControlContainerItem2.AllowItemResize = False
-        Me.ControlContainerItem2.Control = Me.Save
-        Me.ControlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
-        Me.ControlContainerItem2.Name = "ControlContainerItem2"
-        '
-        'ControlContainerItem3
-        '
-        Me.ControlContainerItem3.AllowItemResize = False
-        Me.ControlContainerItem3.Control = Me.ResignBB
-        Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
-        Me.ControlContainerItem3.Name = "ControlContainerItem3"
-        '
-        'MaxBB
-        '
-        Me.MaxBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.MaxBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.MaxBB.Enabled = False
-        Me.MaxBB.Image = Global.Xbox_Editor.My.Resources.Resources.StockIndexUp
-        Me.MaxBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.MaxBB.Location = New System.Drawing.Point(121, 34)
-        Me.MaxBB.Name = "MaxBB"
-        Me.MaxBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.MaxBB.Size = New System.Drawing.Size(150, 20)
-        Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.MaxBB.TabIndex = 15
-        Me.MaxBB.Text = "Max"
-        '
-        'MoneyII
-        '
-        '
-        '
-        '
-        Me.MoneyII.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.MoneyII.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MoneyII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.MoneyII.Location = New System.Drawing.Point(3, 34)
-        Me.MoneyII.MinValue = 0
-        Me.MoneyII.Name = "MoneyII"
-        Me.MoneyII.ShowUpDown = True
-        Me.MoneyII.Size = New System.Drawing.Size(112, 20)
-        Me.MoneyII.TabIndex = 16
-        Me.MoneyII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
-        Me.MoneyII.WatermarkText = "Money"
         '
         'AssassinsRevelations
         '

@@ -276,4 +276,8 @@ Public Class Home
         AssassinsRevelations.Show()
     End Sub
 
+    Private Sub SoulCalBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SoulCalBB.Click
+        SoulCaliburV.MdiParent = Me
+        SoulCaliburV.Show()
+    End Sub
 End Class

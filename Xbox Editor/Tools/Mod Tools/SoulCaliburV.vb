@@ -1,112 +1,161 @@
 Imports DevComponents.DotNetBar
+Imports PackageIO
 Imports System.IO
+Imports System.Globalization
 Imports System.Security.Cryptography
 Imports System.Text
-Imports XboxClasses
-Imports XboxLibrary.IO
-Imports PackageIO
-Imports System.Globalization
-
-Public Class XboxManager
-    Public FilePath As String
-    Public TableLocation As Long
-    Public FileLocation As Long
-    Private Sub OpenBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenBB.Click
-        Try
-            If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-                FilePath = OpenFileDialog1.FileName
-                ReadFile(FilePath)
-                PanelEx2.Enabled = True
-                ProfileID.Enabled = True
-                ReadFile(FilePath)
-                Me.Text = ProfileID.Text
-            End If
-        Catch ex As Exception
-            MessageBoxEx.Show(ex.Message)
-            Me.Close()
-        End Try
-    End Sub
-    Public Function GetTableLocation(ByVal i As Integer) As Integer
-        Return (i * &H1000) + &HC000
-    End Function
-    Public Sub ReadFile(ByVal FilePath As String)
-            Dim reader As New PackageIO.Reader(FilePath, PackageIO.Endian.Big)
-            'Read Console ID
-            reader.SwapEndian() 'little endian
-            reader.Position = &H36C
-            ConsoleID.Text = reader.ReadHexString(5)
-
-            'Read Profile ID
-            ProfileID.Text = reader.ReadHexString(8)
-
-        'read title id
-        reader.Position = &H360
-        TitleID.Text = reader.ReadHexString(4)
-
-            'Get directory location from header
-            reader.SwapEndian() 'big endian
-            reader.Position += 5
-            TableLocation = GetTableLocation(reader.ReadInt24())
-
-            'Read Device ID
-            reader.SwapEndian() 'little endian
-            reader.Position = &H3FD
-            DeviceID.Text = reader.ReadHexString(20)
-            reader.SwapEndian() 'big endian
-
-
-            'Read Content Name
-            reader.Position = &H1691
-            TitleName.Text = reader.ReadUnicodeString(&H80)
-            'Read File Name from directory
-            reader.Position = TableLocation
-            DisplayName.Text = reader.ReadString(&H28)
-
-            'Read File Location from directory
-            reader.Position += 7
-            reader.SwapEndian() 'little endian
-            FileLocation = (reader.ReadInt24() * &H1000) + TableLocation
-            reader.SwapEndian() 'big endian
-
-            'Read Size of Images
-            reader.Position = &H1712
-            Dim pIconSize As Integer = reader.ReadInt32
-            Dim cIconSize As Integer = reader.ReadInt32
-
-            'Read Images
-        reader.SwapEndian() 'little endian
-            PackageImage.Image = System.Drawing.Image.FromStream(New MemoryStream(reader.ReadBytes(pIconSize))) 'Package icon
-            reader.Position = &H571A
-        ContentImage.Image = System.Drawing.Image.FromStream(New MemoryStream(reader.ReadBytes(cIconSize))) 'Content icon
-        If ContentImage.Size.Height = 32 And ContentImage.Size.Width = 32 Then
-            ContentImage.BackgroundImage = My.Resources.IDontKnow
+Public Class SoulCaliburV
+    Dim open As New OpenFileDialog
+    Dim filepath As String
+    Private Sub OpenAss_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenAss.Click
+        open.Title = "Open An Xbox 360 Assassin's Revelations Gamesave"
+        If open.ShowDialog = Windows.Forms.DialogResult.OK Then
+            Try
+                filepath = open.FileName
+                TitleIDVerify(filepath)
+            Catch ex As Exception
+                MessageBoxEx.Show("Invalid Package... This Is Not A Soul Calibur V Gamesave", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                resetform()
+            End Try
         End If
+    End Sub
+    Public Sub resetform()
+        OfflineXP.Enabled = False
+        CRITALEDGEHITS.Enabled = False
+        PLAYERDISTANCE.Enabled = False
+        PLAYERLOSSES.Enabled = False
+        PLAYERWINS.Enabled = False
+        RINGOUTS.Enabled = False
+        SUCCESSFULIMPACT.Enabled = False
+        MAXCOMBO.Enabled = False
+        MaxBB.Enabled = False
+        Save.Enabled = False
+    End Sub
+    Private Sub readfile()
+        Dim reader As New PackageIO.Reader(filepath, Endian.Big)
+
+        reader.Position = (1594212)
+
+        OFFLINEXP.Value = (reader.ReadInt32())
+
+        reader.Position = (53636)
+
+        CRITALEDGEHITS.Value = (reader.ReadInt32())
+
+        PLAYERDISTANCE.Value = (reader.ReadInt32())
+
+        reader.Position = (53644)
+
+        SUCCESSFULIMPACT.Value = (reader.ReadInt32())
+
+        reader.Position = (53652)
+
+        MAXCOMBO.Value = (reader.ReadInt32())
+
+        reader.Position = (53672)
+
+        PLAYERDISTANCE.Value = (reader.ReadInt32())
+
+        reader.Position = (53680)
+
+        RINGOUTS.Value = (reader.ReadInt32())
+
+        reader.Position = (54844)
+
+        PLAYERWINS.Value = (reader.ReadInt32())
+
+        reader.Position = (55024)
+
+        PLAYERLOSSES.Value = reader.ReadInt32()
+
+        reader.Position = (53684)
 
         reader.Close()
     End Sub
+    Public Sub writefile()
+        Dim writer As New PackageIO.Writer(filepath, Endian.Big)
+        writer.Position = (1594212)
+        writer.WriteInt32(OfflineXP.Value)
+        writer.Position = (53636)
+        writer.WriteInt32(CRITALEDGEHITS.Value)
+        writer.Position = (53644)
+        writer.WriteInt32(SUCCESSFULIMPACT.Value)
+        writer.Position = (53652)
+        writer.WriteInt32(MAXCOMBO.Value)
+        writer.Position = (53672)
+        writer.WriteInt32(PLAYERDISTANCE.Value)
+        writer.Position = (53680)
+        writer.WriteInt32(RINGOUTS.Value)
+        writer.Position = (54844)
+        writer.WriteInt32(PLAYERWINS.Value)
+        writer.Position = (55024)
+        writer.WriteInt32(PLAYERLOSSES.Value)
+        writer.Position = (1594268)
+        writer.Close()
+    End Sub
+    Public Sub enabledbbs()
+        OfflineXP.Enabled = True
+        CRITALEDGEHITS.Enabled = True
+        PLAYERDISTANCE.Enabled = True
+        PLAYERLOSSES.Enabled = True
+        PLAYERWINS.Enabled = True
+        RINGOUTS.Enabled = True
+        SUCCESSFULIMPACT.Enabled = True
+        MAXCOMBO.Enabled = True
+        ResignBB.Enabled = True
+        MaxBB.Enabled = True
+        Save.Enabled = True
+    End Sub
+    Public Function TitleIDVerify(ByVal filepath As String)
+        Dim FS As New FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite)
+        Dim BR As New System.IO.BinaryReader(FS)
+        BR.BaseStream.Position = &H360 ' The TitleID Offsets
+        Dim TitleID As String = BitConverter.ToString(BR.ReadBytes(4)).Replace("-", "")
+        BR.Close()
+        If TitleID = "4E4D083D" Then ' Enter Ur TitleID Here ?
+            readfile()
+            enabledbbs()
+            Return True ' Return True If TitleID Matches ?
+        Else
+            resetform()
+            MessageBoxEx.Show("Invalid Package... This Is Not A Soul Calibur V Gamesave", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False ' Return False If TitleID Does Not Match ?
+        End If
+    End Function
 
-    Public Sub WriteFile(ByVal File As String)
-        Dim Writer As New PackageIO.Writer(File, Endian.Little)
-
-        'Write Profile ID
-        Writer.Position = &H371
-        Writer.WriteHexString(ProfileID.Text)
-
-        'Write Console ID
-        Writer.Position = &H36C
-        Writer.WriteHexString(ConsoleID.Text)
-
-        'Write Device ID
-        Writer.Position = &H3FD
-        Writer.WriteHexString(DeviceID.Text)
-
-
-        Writer.Close()
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(filepath)
+        xbox.FilePath = filepath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
     End Sub
 
-    Private Sub Extract_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        SaveFileDialog1.ShowDialog()
-        ContentImage.Image.Save(SaveFileDialog1.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png)
+    Private Sub MaxBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MaxBB.Click
+        OfflineXP.Value = OfflineXP.MaxValue
+        CRITALEDGEHITS.Value = CRITALEDGEHITS.MaxValue
+        PLAYERDISTANCE.Value = PLAYERDISTANCE.MaxValue
+        PLAYERLOSSES.Value = PLAYERLOSSES.MaxValue
+        PLAYERWINS.Value = PLAYERWINS.MaxValue
+        RINGOUTS.Value = RINGOUTS.MaxValue
+        SUCCESSFULIMPACT.Value = SUCCESSFULIMPACT.MaxValue
+        MAXCOMBO.Value = MAXCOMBO.MaxValue
+    End Sub
+
+    Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
+        Try
+            Resign()
+            writefile()
+            readfile()
+            MessageBoxEx.EnableGlass = False
+            MessageBoxEx.Show("Saved And Rehash And Resigned", "Soul Calibur V", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBoxEx.EnableGlass = False
+            MessageBoxEx.Show(ex.Message)
+        End Try
     End Sub
     Public Sub Resign()
         Dim rsaEncryptor As New RSACryptoServiceProvider()
@@ -139,8 +188,8 @@ Public Class XboxManager
         Dim xReader As Reader
         Dim xWriter As Writer
 
-        xReader = New Reader(FilePath, Endian.Big)
-        xWriter = New Writer(FilePath, Endian.Big)
+        xReader = New Reader(filepath, Endian.Big)
+        xWriter = New Writer(filepath, Endian.Big)
 
         Dim sha1Algorythm2 As New SHA1CryptoServiceProvider()
         Try
@@ -261,30 +310,4 @@ Public Class XboxManager
         Next
         Return bytes
     End Function
-
-    Private Sub RehashBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RehashBB.Click
-        Try
-            'Stfs1.FlushPackage(New RSAParams(Application.StartupPath + "\KV.bin"))
-            'thats incase
-            Resign()
-            WriteFile(FilePath)
-            ReadFile(FilePath)
-            MessageBoxEx.EnableGlass = False
-            MessageBoxEx.Show("Rehashed And Resigned", "Rehashed And Resigned", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBoxEx.EnableGlass = False
-            MessageBoxEx.Show(ex.Message)
-        End Try
-    End Sub
-
-    Private Sub EToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EToolStripMenuItem.Click
-        SaveFileDialog1.ShowDialog()
-        PackageImage.Image.Save(SaveFileDialog1.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png)
-    End Sub
-
-    Private Sub ToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem1.Click
-        SaveFileDialog1.ShowDialog()
-        ContentImage.Image.Save(SaveFileDialog1.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png)
-    End Sub
-
 End Class

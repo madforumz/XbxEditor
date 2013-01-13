@@ -117,6 +117,12 @@
     <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tools\Mod Tools\SoulCaliburV.Designer.vb">
+      <DependentUpon>SoulCaliburV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\SoulCaliburV.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tools\Mod Tools\AssassinsRevelations.Designer.vb">
       <DependentUpon>AssassinsRevelations.vb</DependentUpon>
     </Compile>
@@ -300,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Mod Tools\AssassinsRevelations.resx">
       <DependentUpon>AssassinsRevelations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\SoulCaliburV.resx">
+      <DependentUpon>SoulCaliburV.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Tweek Tools\Loading.resx">
       <DependentUpon>Loading.vb</DependentUpon>

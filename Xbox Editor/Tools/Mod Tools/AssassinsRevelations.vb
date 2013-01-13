@@ -42,4 +42,12 @@ Public Class AssassinsRevelations
             Return False ' Return False If TitleID Does Not Match ?
         End If
     End Function
+
+    Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
+
+    End Sub
+
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+
+    End Sub
 End Class

@@ -63,6 +63,7 @@ Partial Class XboxManager
         Me.RehashBB = New DevComponents.DotNetBar.ButtonItem()
         Me.InfoRT = New DevComponents.DotNetBar.RibbonTabItem()
         Me.FileContentsRT = New DevComponents.DotNetBar.RibbonTabItem()
+        Me.PanelEx6 = New DevComponents.DotNetBar.PanelEx()
         Me.PanelEx1.SuspendLayout()
         Me.PanelEx5.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
@@ -75,6 +76,7 @@ Partial Class XboxManager
         Me.RibbonPanel1.SuspendLayout()
         Me.RibbonPanel2.SuspendLayout()
         Me.PanelEx4.SuspendLayout()
+        Me.PanelEx6.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelEx1
@@ -92,9 +94,9 @@ Partial Class XboxManager
         Me.PanelEx1.Controls.Add(Me.ConsoleID)
         Me.PanelEx1.Controls.Add(Me.Label1)
         Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PanelEx1.Location = New System.Drawing.Point(151, 0)
+        Me.PanelEx1.Location = New System.Drawing.Point(150, 0)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(308, 150)
+        Me.PanelEx1.Size = New System.Drawing.Size(301, 142)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -125,6 +127,7 @@ Partial Class XboxManager
         Me.ProfileID.Enabled = False
         Me.ProfileID.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ProfileID.Location = New System.Drawing.Point(90, 114)
+        Me.ProfileID.MaxLength = 15
         Me.ProfileID.Name = "ProfileID"
         Me.ProfileID.Size = New System.Drawing.Size(206, 20)
         Me.ProfileID.TabIndex = 14
@@ -160,7 +163,7 @@ Partial Class XboxManager
         Me.DeviceID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.DeviceID.ForeColor = System.Drawing.SystemColors.ControlText
         Me.DeviceID.Location = New System.Drawing.Point(90, 11)
-        Me.DeviceID.MaxLength = 25
+        Me.DeviceID.MaxLength = 40
         Me.DeviceID.Name = "DeviceID"
         Me.DeviceID.Size = New System.Drawing.Size(206, 20)
         Me.DeviceID.TabIndex = 21
@@ -176,8 +179,8 @@ Partial Class XboxManager
         Me.TitleName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.TitleName.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TitleName.Location = New System.Drawing.Point(90, 63)
-        Me.TitleName.MaxLength = 99
         Me.TitleName.Name = "TitleName"
+        Me.TitleName.ReadOnly = True
         Me.TitleName.Size = New System.Drawing.Size(206, 20)
         Me.TitleName.TabIndex = 27
         Me.TitleName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -204,6 +207,7 @@ Partial Class XboxManager
         Me.DisplayName.Location = New System.Drawing.Point(90, 37)
         Me.DisplayName.MaxLength = 99
         Me.DisplayName.Name = "DisplayName"
+        Me.DisplayName.ReadOnly = True
         Me.DisplayName.Size = New System.Drawing.Size(206, 20)
         Me.DisplayName.TabIndex = 22
         Me.DisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -277,9 +281,12 @@ Partial Class XboxManager
         Me.TitleID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.TitleID.ForeColor = System.Drawing.SystemColors.ControlText
         Me.TitleID.Location = New System.Drawing.Point(53, 5)
+        Me.TitleID.MaxLength = 8
         Me.TitleID.Name = "TitleID"
+        Me.TitleID.ReadOnly = True
         Me.TitleID.Size = New System.Drawing.Size(83, 20)
         Me.TitleID.TabIndex = 20
+        Me.TitleID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
@@ -313,6 +320,7 @@ Partial Class XboxManager
         '
         Me.PackageImage.BackgroundImage = CType(resources.GetObject("PackageImage.BackgroundImage"), System.Drawing.Image)
         Me.PackageImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PackageImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PackageImage.ContextMenuStrip = Me.ExtractImages1CM
         Me.PackageImage.ErrorImage = CType(resources.GetObject("PackageImage.ErrorImage"), System.Drawing.Image)
         Me.PackageImage.Location = New System.Drawing.Point(3, 3)
@@ -377,7 +385,7 @@ Partial Class XboxManager
         Me.PanelEx3.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelEx3.Location = New System.Drawing.Point(3, 0)
         Me.PanelEx3.Name = "PanelEx3"
-        Me.PanelEx3.Size = New System.Drawing.Size(145, 150)
+        Me.PanelEx3.Size = New System.Drawing.Size(148, 142)
         Me.PanelEx3.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx3.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx3.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -403,14 +411,14 @@ Partial Class XboxManager
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
-        Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.RehashBB, Me.InfoRT, Me.FileContentsRT})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.RibbonControl1.Size = New System.Drawing.Size(462, 208)
+        Me.RibbonControl1.Size = New System.Drawing.Size(454, 200)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
         Me.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon"
@@ -440,7 +448,7 @@ Partial Class XboxManager
         Me.RibbonPanel1.Location = New System.Drawing.Point(0, 53)
         Me.RibbonPanel1.Name = "RibbonPanel1"
         Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(462, 153)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(454, 145)
         '
         '
         '
@@ -461,14 +469,13 @@ Partial Class XboxManager
         'RibbonPanel2
         '
         Me.RibbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonPanel2.Controls.Add(Me.PanelEx4)
-        Me.RibbonPanel2.Controls.Add(Me.TextBoxX2)
+        Me.RibbonPanel2.Controls.Add(Me.PanelEx6)
         Me.RibbonPanel2.Controls.Add(Me.ListViewEx1)
         Me.RibbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RibbonPanel2.Location = New System.Drawing.Point(0, 53)
         Me.RibbonPanel2.Name = "RibbonPanel2"
         Me.RibbonPanel2.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel2.Size = New System.Drawing.Size(462, 147)
+        Me.RibbonPanel2.Size = New System.Drawing.Size(454, 145)
         '
         '
         '
@@ -494,7 +501,7 @@ Partial Class XboxManager
         Me.PanelEx4.Controls.Add(Me.ProgressBarX1)
         Me.PanelEx4.Controls.Add(Me.BackBB)
         Me.PanelEx4.Controls.Add(Me.Forward)
-        Me.PanelEx4.Location = New System.Drawing.Point(3, 27)
+        Me.PanelEx4.Location = New System.Drawing.Point(3, 37)
         Me.PanelEx4.Name = "PanelEx4"
         Me.PanelEx4.Size = New System.Drawing.Size(113, 30)
         Me.PanelEx4.Style.Alignment = System.Drawing.StringAlignment.Center
@@ -555,7 +562,7 @@ Partial Class XboxManager
         Me.TextBoxX2.Border.Class = "TextBoxBorder"
         Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.TextBoxX2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TextBoxX2.Location = New System.Drawing.Point(3, 3)
+        Me.TextBoxX2.Location = New System.Drawing.Point(5, 13)
         Me.TextBoxX2.Name = "TextBoxX2"
         Me.TextBoxX2.Size = New System.Drawing.Size(113, 20)
         Me.TextBoxX2.TabIndex = 3
@@ -574,9 +581,9 @@ Partial Class XboxManager
         Me.ListViewEx1.ForeColor = System.Drawing.Color.Black
         Me.ListViewEx1.FullRowSelect = True
         Me.ListViewEx1.GridLines = True
-        Me.ListViewEx1.Location = New System.Drawing.Point(117, 0)
+        Me.ListViewEx1.Location = New System.Drawing.Point(122, 0)
         Me.ListViewEx1.Name = "ListViewEx1"
-        Me.ListViewEx1.Size = New System.Drawing.Size(342, 144)
+        Me.ListViewEx1.Size = New System.Drawing.Size(329, 142)
         Me.ListViewEx1.TabIndex = 0
         Me.ListViewEx1.UseCompatibleStateImageBehavior = False
         Me.ListViewEx1.View = System.Windows.Forms.View.Details
@@ -589,7 +596,7 @@ Partial Class XboxManager
         Me.RibbonPanel3.Location = New System.Drawing.Point(0, 0)
         Me.RibbonPanel3.Name = "RibbonPanel3"
         Me.RibbonPanel3.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel3.Size = New System.Drawing.Size(462, 206)
+        Me.RibbonPanel3.Size = New System.Drawing.Size(454, 198)
         '
         '
         '
@@ -635,16 +642,35 @@ Partial Class XboxManager
         Me.FileContentsRT.Panel = Me.RibbonPanel2
         Me.FileContentsRT.Text = "Profile / Gamesave Contents"
         '
+        'PanelEx6
+        '
+        Me.PanelEx6.CanvasColor = System.Drawing.SystemColors.Control
+        Me.PanelEx6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx6.Controls.Add(Me.TextBoxX2)
+        Me.PanelEx6.Controls.Add(Me.PanelEx4)
+        Me.PanelEx6.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelEx6.Location = New System.Drawing.Point(3, 0)
+        Me.PanelEx6.Name = "PanelEx6"
+        Me.PanelEx6.Size = New System.Drawing.Size(121, 142)
+        Me.PanelEx6.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx6.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.PanelEx6.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.PanelEx6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.PanelEx6.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.PanelEx6.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.PanelEx6.Style.GradientAngle = 90
+        Me.PanelEx6.TabIndex = 7
+        '
         'XboxManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(472, 211)
+        Me.ClientSize = New System.Drawing.Size(464, 204)
         Me.Controls.Add(Me.RibbonControl1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(472, 211)
+        Me.MinimumSize = New System.Drawing.Size(464, 204)
         Me.Name = "XboxManager"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Xbox Manager"
@@ -663,6 +689,7 @@ Partial Class XboxManager
         Me.RibbonPanel1.ResumeLayout(False)
         Me.RibbonPanel2.ResumeLayout(False)
         Me.PanelEx4.ResumeLayout(False)
+        Me.PanelEx6.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -705,4 +732,5 @@ Partial Class XboxManager
     Friend WithEvents PanelEx4 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents ProgressBarX1 As DevComponents.DotNetBar.Controls.ProgressBarX
     Friend WithEvents RibbonPanel3 As DevComponents.DotNetBar.RibbonPanel
+    Friend WithEvents PanelEx6 As DevComponents.DotNetBar.PanelEx
 End Class

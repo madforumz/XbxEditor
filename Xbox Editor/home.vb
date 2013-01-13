@@ -178,12 +178,12 @@ Public Class Home
         AssassinsCreed3.Show()
     End Sub
 
-    Private Sub WetBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WetBB1.Click
+    Private Sub WetBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles WetBB.Click
         Wet.MdiParent = Me
         Wet.Show()
     End Sub
 
-    Private Sub FarCry3BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FarCry3BB1.Click
+    Private Sub FarCry3BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles FarCry3BB.Click
         FarCry3.MdiParent = Me
         FarCry3.Show()
     End Sub
@@ -206,7 +206,7 @@ Public Class Home
         XboxManager.ContentImage.BackgroundImage.Save(XboxManager.SaveFileDialog1.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png)
     End Sub
 
-    Private Sub NeedForSpeed2012BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub NeedForSpeed2012BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NeedForSpeed2012BB.Click
         NeedForSpeed2012.MdiParent = Me
         NeedForSpeed2012.Show()
     End Sub
@@ -249,10 +249,6 @@ Public Class Home
         About.Show()
     End Sub
 
-    Private Sub labelItem8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Private Sub EditorToolsBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditorToolsBB.Click
 
     End Sub
@@ -262,7 +258,7 @@ Public Class Home
         About.Show()
     End Sub
 
-    Private Sub MidnightClubLaBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MidnightClubLaBB.Click
+    Private Sub MidnightClubLABB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MidnightClubLABB.Click
         MidnightClub.MdiParent = Me
         MidnightClub.Show()
     End Sub
@@ -274,4 +270,10 @@ Public Class Home
     Private Sub AavtarEditorBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AvatarEditorBB.Click
 
     End Sub
+
+    Private Sub AssassinsCreedRBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AssassinsCreedRBB.Click
+        AssassinsRevelations.MdiParent = Me
+        AssassinsRevelations.Show()
+    End Sub
+
 End Class

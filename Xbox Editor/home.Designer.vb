@@ -89,7 +89,7 @@ Partial Class Home
         Me.AssassinsCreedBHBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.BorderlandsBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.BulletstormBB1 = New DevComponents.DotNetBar.ButtonItem()
-        Me.MidnightClubLaBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.MidnightClubLaBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.MinecraftBB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.FarCry3BB1 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
@@ -106,12 +106,14 @@ Partial Class Home
         Me.GalleryContainer3 = New DevComponents.DotNetBar.GalleryContainer()
         Me.AvatarEditorBB = New DevComponents.DotNetBar.ButtonItem()
         Me.AssassinsCreedIIBB = New DevComponents.DotNetBar.ButtonItem()
-        Me.AssassinsCreed3BB = New DevComponents.DotNetBar.ButtonItem()
         Me.AssassinsCreedBHBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.AssassinsCreedRBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.AssassinsCreed3BB = New DevComponents.DotNetBar.ButtonItem()
         Me.BorderlandsBB = New DevComponents.DotNetBar.ButtonItem()
         Me.BulletstormBB = New DevComponents.DotNetBar.ButtonItem()
         Me.FarCry3BB = New DevComponents.DotNetBar.ButtonItem()
         Me.NeedForSpeed2012BB = New DevComponents.DotNetBar.ButtonItem()
+        Me.MidnightClubLABB = New DevComponents.DotNetBar.ButtonItem()
         Me.MinecraftBB = New DevComponents.DotNetBar.ButtonItem()
         Me.TigerWoods11BB = New DevComponents.DotNetBar.ButtonItem()
         Me.TigerWoods12BB = New DevComponents.DotNetBar.ButtonItem()
@@ -119,7 +121,6 @@ Partial Class Home
         Me.WetBB = New DevComponents.DotNetBar.ButtonItem()
         Me.LabelItem3 = New DevComponents.DotNetBar.LabelItem()
         Me.ExpandablePanel1 = New DevComponents.DotNetBar.ExpandablePanel()
-        Me.AssassinsCreedRBB = New DevComponents.DotNetBar.ButtonItem()
         Me.LoginPanel.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -779,7 +780,7 @@ Partial Class Home
         Me.GalleryContainer2.MultiLine = False
         Me.GalleryContainer2.Name = "GalleryContainer2"
         Me.GalleryContainer2.PopupUsesStandardScrollbars = False
-        Me.GalleryContainer2.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB1, Me.AssassinsCreedIIBB1, Me.AssassinsCreed3BB1, Me.AssassinsCreedBHBB1, Me.BorderlandsBB1, Me.BulletstormBB1, Me.MidnightClubLaBB, Me.MinecraftBB1, Me.FarCry3BB1, Me.ButtonItem2, Me.TigerWoods11BB1, Me.TigerWoods12BB1, Me.TigerWoods13BB1, Me.WetBB1})
+        Me.GalleryContainer2.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB1, Me.AssassinsCreedIIBB1, Me.AssassinsCreed3BB1, Me.AssassinsCreedBHBB1, Me.BorderlandsBB1, Me.BulletstormBB1, Me.MidnightClubLaBB1, Me.MinecraftBB1, Me.FarCry3BB1, Me.ButtonItem2, Me.TigerWoods11BB1, Me.TigerWoods12BB1, Me.TigerWoods13BB1, Me.WetBB1})
         '
         'AvatarEditorBB1
         '
@@ -847,16 +848,16 @@ Partial Class Home
         Me.BulletstormBB1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.BulletstormBB1.Text = "Bulletstorm"
         '
-        'MidnightClubLaBB
+        'MidnightClubLaBB1
         '
-        Me.MidnightClubLaBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.MidnightClubLaBB.CanCustomize = False
-        Me.MidnightClubLaBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.MidnightClubLaBB.Image = CType(resources.GetObject("MidnightClubLaBB.Image"), System.Drawing.Image)
-        Me.MidnightClubLaBB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.MidnightClubLaBB.Name = "MidnightClubLaBB"
-        Me.MidnightClubLaBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.MidnightClubLaBB.Text = "Midnight Club LA"
+        Me.MidnightClubLaBB1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.MidnightClubLaBB1.CanCustomize = False
+        Me.MidnightClubLaBB1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MidnightClubLaBB1.Image = CType(resources.GetObject("MidnightClubLaBB1.Image"), System.Drawing.Image)
+        Me.MidnightClubLaBB1.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.MidnightClubLaBB1.Name = "MidnightClubLaBB1"
+        Me.MidnightClubLaBB1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.MidnightClubLaBB1.Text = "Midnight Club LA"
         '
         'MinecraftBB1
         '
@@ -1035,7 +1036,7 @@ Partial Class Home
         Me.GalleryContainer3.MultiLine = False
         Me.GalleryContainer3.Name = "GalleryContainer3"
         Me.GalleryContainer3.ScrollAnimation = False
-        Me.GalleryContainer3.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB, Me.AssassinsCreedIIBB, Me.AssassinsCreedBHBB, Me.AssassinsCreedRBB, Me.AssassinsCreed3BB, Me.BorderlandsBB, Me.BulletstormBB, Me.FarCry3BB, Me.NeedForSpeed2012BB, Me.MinecraftBB, Me.TigerWoods11BB, Me.TigerWoods12BB, Me.TigerWoods13BB, Me.WetBB})
+        Me.GalleryContainer3.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB, Me.AssassinsCreedIIBB, Me.AssassinsCreedBHBB, Me.AssassinsCreedRBB, Me.AssassinsCreed3BB, Me.BorderlandsBB, Me.BulletstormBB, Me.FarCry3BB, Me.NeedForSpeed2012BB, Me.MidnightClubLABB, Me.MinecraftBB, Me.TigerWoods11BB, Me.TigerWoods12BB, Me.TigerWoods13BB, Me.WetBB})
         Me.GalleryContainer3.Text = "GalleryContainer3"
         '
         'AvatarEditorBB
@@ -1060,17 +1061,6 @@ Partial Class Home
         Me.AssassinsCreedIIBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.AssassinsCreedIIBB.Text = "Assassin's Creed II"
         '
-        'AssassinsCreed3BB
-        '
-        Me.AssassinsCreed3BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.AssassinsCreed3BB.CanCustomize = False
-        Me.AssassinsCreed3BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.AssassinsCreed3BB.Image = CType(resources.GetObject("AssassinsCreed3BB.Image"), System.Drawing.Image)
-        Me.AssassinsCreed3BB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.AssassinsCreed3BB.Name = "AssassinsCreed3BB"
-        Me.AssassinsCreed3BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.AssassinsCreed3BB.Text = "Assassins Creed 3"
-        '
         'AssassinsCreedBHBB
         '
         Me.AssassinsCreedBHBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
@@ -1081,6 +1071,28 @@ Partial Class Home
         Me.AssassinsCreedBHBB.Name = "AssassinsCreedBHBB"
         Me.AssassinsCreedBHBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.AssassinsCreedBHBB.Text = "Assassin's Creed Brotherhood"
+        '
+        'AssassinsCreedRBB
+        '
+        Me.AssassinsCreedRBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.AssassinsCreedRBB.CanCustomize = False
+        Me.AssassinsCreedRBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.AssassinsCreedRBB.Image = CType(resources.GetObject("AssassinsCreedRBB.Image"), System.Drawing.Image)
+        Me.AssassinsCreedRBB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.AssassinsCreedRBB.Name = "AssassinsCreedRBB"
+        Me.AssassinsCreedRBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.AssassinsCreedRBB.Text = "Assassin's Creed Revelations"
+        '
+        'AssassinsCreed3BB
+        '
+        Me.AssassinsCreed3BB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.AssassinsCreed3BB.CanCustomize = False
+        Me.AssassinsCreed3BB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.AssassinsCreed3BB.Image = CType(resources.GetObject("AssassinsCreed3BB.Image"), System.Drawing.Image)
+        Me.AssassinsCreed3BB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.AssassinsCreed3BB.Name = "AssassinsCreed3BB"
+        Me.AssassinsCreed3BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.AssassinsCreed3BB.Text = "Assassins Creed 3"
         '
         'BorderlandsBB
         '
@@ -1125,6 +1137,17 @@ Partial Class Home
         Me.NeedForSpeed2012BB.Name = "NeedForSpeed2012BB"
         Me.NeedForSpeed2012BB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.NeedForSpeed2012BB.Text = "Need For Speed Most Wanted"
+        '
+        'MidnightClubLABB
+        '
+        Me.MidnightClubLABB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.MidnightClubLABB.CanCustomize = False
+        Me.MidnightClubLABB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MidnightClubLABB.Image = CType(resources.GetObject("MidnightClubLABB.Image"), System.Drawing.Image)
+        Me.MidnightClubLABB.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.MidnightClubLABB.Name = "MidnightClubLABB"
+        Me.MidnightClubLABB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.MidnightClubLABB.Text = "Midnight Club LA"
         '
         'MinecraftBB
         '
@@ -1217,17 +1240,6 @@ Partial Class Home
         Me.ExpandablePanel1.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.ExpandablePanel1.TitleStyle.GradientAngle = 90
         Me.ExpandablePanel1.TitleText = "Editors And More"
-        '
-        'AssassinsCreedRBB
-        '
-        Me.AssassinsCreedRBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.AssassinsCreedRBB.CanCustomize = False
-        Me.AssassinsCreedRBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.AssassinsCreedRBB.Image = CType(resources.GetObject("AssassinsCreedRBB.Image"), System.Drawing.Image)
-        Me.AssassinsCreedRBB.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.AssassinsCreedRBB.Name = "AssassinsCreedRBB"
-        Me.AssassinsCreedRBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.AssassinsCreedRBB.Text = "Assassin's Creed Revelations"
         '
         'Home
         '
@@ -1323,7 +1335,7 @@ Partial Class Home
     Friend WithEvents AssassinsCreedBHBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents BorderlandsBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents BulletstormBB1 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents MidnightClubLaBB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents MidnightClubLaBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents MinecraftBB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents FarCry3BB1 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem2 As DevComponents.DotNetBar.ButtonItem
@@ -1356,5 +1368,6 @@ Partial Class Home
     Friend WithEvents AssassinsCr As DevComponents.DotNetBar.PanelEx
     Private WithEvents UpdatesEP As DevComponents.DotNetBar.ExpandablePanel
     Friend WithEvents AssassinsCreedRBB As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents MidnightClubLABB As DevComponents.DotNetBar.ButtonItem
 
 End Class

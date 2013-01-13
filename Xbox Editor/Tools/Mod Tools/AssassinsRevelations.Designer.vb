@@ -1,5 +1,5 @@
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AsssassinsRevelations
+Partial Class AssassinsRevelations
     Inherits DevComponents.DotNetBar.Office2007Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,11 +22,11 @@ Partial Class AsssassinsRevelations
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AsssassinsRevelations))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AssassinsRevelations))
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
-        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
         Me.Save = New DevComponents.DotNetBar.ButtonX()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
@@ -53,21 +53,6 @@ Partial Class AsssassinsRevelations
         Me.Bar1.TabIndex = 14
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
-        '
-        'ResignBB
-        '
-        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
-        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ResignBB.Enabled = False
-        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
-        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.ResignBB.Location = New System.Drawing.Point(245, 2)
-        Me.ResignBB.Name = "ResignBB"
-        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
-        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ResignBB.TabIndex = 15
         '
         'OpenAss
         '
@@ -97,6 +82,21 @@ Partial Class AsssassinsRevelations
         Me.Save.TabIndex = 11
         Me.Save.Text = "Save"
         '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(245, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 15
+        '
         'ControlContainerItem1
         '
         Me.ControlContainerItem1.AllowItemResize = False
@@ -122,6 +122,7 @@ Partial Class AsssassinsRevelations
         '
         Me.MaxBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.MaxBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MaxBB.Enabled = False
         Me.MaxBB.Image = Global.Xbox_Editor.My.Resources.Resources.StockIndexUp
         Me.MaxBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.MaxBB.Location = New System.Drawing.Point(121, 34)
@@ -149,7 +150,7 @@ Partial Class AsssassinsRevelations
         Me.MoneyII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
         Me.MoneyII.WatermarkText = "Money"
         '
-        'AsssassinsRevelations
+        'AssassinsRevelations
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -161,7 +162,7 @@ Partial Class AsssassinsRevelations
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "AsssassinsRevelations"
+        Me.Name = "AssassinsRevelations"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Asssassins Creed Revelations"
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).EndInit()

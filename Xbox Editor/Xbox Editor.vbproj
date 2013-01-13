@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Xbox editor Icon.ico</ApplicationIcon>
+    <ApplicationIcon>XEIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -117,10 +117,10 @@
     <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\Mod Tools\AsssassinsRevelations.Designer.vb">
-      <DependentUpon>AsssassinsRevelations.vb</DependentUpon>
+    <Compile Include="Tools\Mod Tools\AssassinsRevelations.Designer.vb">
+      <DependentUpon>AssassinsRevelations.vb</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Mod Tools\AsssassinsRevelations.vb">
+    <Compile Include="Tools\Mod Tools\AssassinsRevelations.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tools\Tweek Tools\Loading.Designer.vb">
@@ -298,8 +298,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Mod Tools\AsssassinsRevelations.resx">
-      <DependentUpon>AsssassinsRevelations.vb</DependentUpon>
+    <EmbeddedResource Include="Tools\Mod Tools\AssassinsRevelations.resx">
+      <DependentUpon>AssassinsRevelations.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Tweek Tools\Loading.resx">
       <DependentUpon>Loading.vb</DependentUpon>
@@ -418,6 +418,7 @@
     <None Include="images\key_services.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="XEIcon.ico" />
     <None Include="Resources\Tools Icon.png" />
     <Content Include="Xbox editor Icon.ico" />
     <None Include="Resources\login.png" />

@@ -50,6 +50,8 @@ Partial Class AvatarEditor
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
+        Me.ControlContainerItem4 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.PanelEx1.SuspendLayout()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
@@ -63,7 +65,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX9.BackgroundStyle.Class = ""
         Me.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX9.Location = New System.Drawing.Point(98, 74)
+        Me.LabelX9.Location = New System.Drawing.Point(113, 75)
         Me.LabelX9.Name = "LabelX9"
         Me.LabelX9.Size = New System.Drawing.Size(73, 26)
         Me.LabelX9.TabIndex = 12
@@ -77,7 +79,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX8.BackgroundStyle.Class = ""
         Me.LabelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX8.Location = New System.Drawing.Point(234, 69)
+        Me.LabelX8.Location = New System.Drawing.Point(249, 70)
         Me.LabelX8.Name = "LabelX8"
         Me.LabelX8.Size = New System.Drawing.Size(73, 26)
         Me.LabelX8.TabIndex = 11
@@ -91,7 +93,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX7.BackgroundStyle.Class = ""
         Me.LabelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX7.Location = New System.Drawing.Point(225, 43)
+        Me.LabelX7.Location = New System.Drawing.Point(240, 44)
         Me.LabelX7.Name = "LabelX7"
         Me.LabelX7.Size = New System.Drawing.Size(82, 26)
         Me.LabelX7.TabIndex = 10
@@ -105,7 +107,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX6.BackgroundStyle.Class = ""
         Me.LabelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX6.Location = New System.Drawing.Point(234, 13)
+        Me.LabelX6.Location = New System.Drawing.Point(249, 14)
         Me.LabelX6.Name = "LabelX6"
         Me.LabelX6.Size = New System.Drawing.Size(73, 24)
         Me.LabelX6.TabIndex = 9
@@ -119,7 +121,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX1.BackgroundStyle.Class = ""
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX1.Location = New System.Drawing.Point(12, 12)
+        Me.LabelX1.Location = New System.Drawing.Point(27, 13)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.Size = New System.Drawing.Size(32, 25)
         Me.LabelX1.TabIndex = 4
@@ -133,7 +135,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX2.BackgroundStyle.Class = ""
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Location = New System.Drawing.Point(13, 45)
+        Me.LabelX2.Location = New System.Drawing.Point(28, 46)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.Size = New System.Drawing.Size(31, 25)
         Me.LabelX2.TabIndex = 5
@@ -147,7 +149,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX3.BackgroundStyle.Class = ""
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX3.Location = New System.Drawing.Point(13, 76)
+        Me.LabelX3.Location = New System.Drawing.Point(28, 77)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.Size = New System.Drawing.Size(31, 24)
         Me.LabelX3.TabIndex = 6
@@ -161,7 +163,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX4.BackgroundStyle.Class = ""
         Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX4.Location = New System.Drawing.Point(142, 12)
+        Me.LabelX4.Location = New System.Drawing.Point(157, 13)
         Me.LabelX4.Name = "LabelX4"
         Me.LabelX4.Size = New System.Drawing.Size(29, 25)
         Me.LabelX4.TabIndex = 7
@@ -175,7 +177,7 @@ Partial Class AvatarEditor
         '
         Me.LabelX5.BackgroundStyle.Class = ""
         Me.LabelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX5.Location = New System.Drawing.Point(129, 41)
+        Me.LabelX5.Location = New System.Drawing.Point(144, 42)
         Me.LabelX5.Name = "LabelX5"
         Me.LabelX5.Size = New System.Drawing.Size(42, 26)
         Me.LabelX5.TabIndex = 8
@@ -188,7 +190,7 @@ Partial Class AvatarEditor
         Me.Skin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Skin.Enabled = False
         Me.Skin.Image = CType(resources.GetObject("Skin.Image"), System.Drawing.Image)
-        Me.Skin.Location = New System.Drawing.Point(50, 16)
+        Me.Skin.Location = New System.Drawing.Point(65, 17)
         Me.Skin.Name = "Skin"
         Me.Skin.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Skin.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -202,7 +204,7 @@ Partial Class AvatarEditor
         Me.Paint2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Paint2.Enabled = False
         Me.Paint2.Image = CType(resources.GetObject("Paint2.Image"), System.Drawing.Image)
-        Me.Paint2.Location = New System.Drawing.Point(182, 78)
+        Me.Paint2.Location = New System.Drawing.Point(197, 79)
         Me.Paint2.Name = "Paint2"
         Me.Paint2.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Paint2.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -216,7 +218,7 @@ Partial Class AvatarEditor
         Me.Hair.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Hair.Enabled = False
         Me.Hair.Image = CType(resources.GetObject("Hair.Image"), System.Drawing.Image)
-        Me.Hair.Location = New System.Drawing.Point(50, 47)
+        Me.Hair.Location = New System.Drawing.Point(65, 48)
         Me.Hair.Name = "Hair"
         Me.Hair.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Hair.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -230,7 +232,7 @@ Partial Class AvatarEditor
         Me.Paint1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Paint1.Enabled = False
         Me.Paint1.Image = CType(resources.GetObject("Paint1.Image"), System.Drawing.Image)
-        Me.Paint1.Location = New System.Drawing.Point(318, 75)
+        Me.Paint1.Location = New System.Drawing.Point(333, 76)
         Me.Paint1.Name = "Paint1"
         Me.Paint1.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Paint1.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -244,7 +246,7 @@ Partial Class AvatarEditor
         Me.Lip.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Lip.Enabled = False
         Me.Lip.Image = CType(resources.GetObject("Lip.Image"), System.Drawing.Image)
-        Me.Lip.Location = New System.Drawing.Point(50, 79)
+        Me.Lip.Location = New System.Drawing.Point(65, 80)
         Me.Lip.Name = "Lip"
         Me.Lip.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Lip.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -258,7 +260,7 @@ Partial Class AvatarEditor
         Me.Face.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Face.Enabled = False
         Me.Face.Image = CType(resources.GetObject("Face.Image"), System.Drawing.Image)
-        Me.Face.Location = New System.Drawing.Point(318, 47)
+        Me.Face.Location = New System.Drawing.Point(333, 48)
         Me.Face.Name = "Face"
         Me.Face.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Face.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -272,7 +274,7 @@ Partial Class AvatarEditor
         Me.Eye.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Eye.Enabled = False
         Me.Eye.Image = CType(resources.GetObject("Eye.Image"), System.Drawing.Image)
-        Me.Eye.Location = New System.Drawing.Point(182, 16)
+        Me.Eye.Location = New System.Drawing.Point(197, 17)
         Me.Eye.Name = "Eye"
         Me.Eye.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Eye.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -286,7 +288,7 @@ Partial Class AvatarEditor
         Me.Shadow.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Shadow.Enabled = False
         Me.Shadow.Image = CType(resources.GetObject("Shadow.Image"), System.Drawing.Image)
-        Me.Shadow.Location = New System.Drawing.Point(318, 15)
+        Me.Shadow.Location = New System.Drawing.Point(333, 16)
         Me.Shadow.Name = "Shadow"
         Me.Shadow.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Shadow.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -300,7 +302,7 @@ Partial Class AvatarEditor
         Me.Brow.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.Brow.Enabled = False
         Me.Brow.Image = CType(resources.GetObject("Brow.Image"), System.Drawing.Image)
-        Me.Brow.Location = New System.Drawing.Point(182, 47)
+        Me.Brow.Location = New System.Drawing.Point(197, 48)
         Me.Brow.Name = "Brow"
         Me.Brow.SelectedColorImageRectangle = New System.Drawing.Rectangle(2, 2, 12, 12)
         Me.Brow.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
@@ -338,7 +340,7 @@ Partial Class AvatarEditor
         Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelEx1.Location = New System.Drawing.Point(0, 19)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(366, 106)
+        Me.PanelEx1.Size = New System.Drawing.Size(396, 106)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -353,7 +355,7 @@ Partial Class AvatarEditor
         Me.RandomBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.RandomBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.RandomBB.Enabled = False
-        Me.RandomBB.Location = New System.Drawing.Point(258, 2)
+        Me.RandomBB.Location = New System.Drawing.Point(258, 3)
         Me.RandomBB.Name = "RandomBB"
         Me.RandomBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.RandomBB.Size = New System.Drawing.Size(102, 25)
@@ -392,14 +394,15 @@ Partial Class AvatarEditor
         'Bar1
         '
         Me.Bar1.AntiAlias = True
-        Me.Bar1.Controls.Add(Me.RandomBB)
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
+        Me.Bar1.Controls.Add(Me.RandomBB)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3})
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3, Me.ControlContainerItem4})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(366, 30)
+        Me.Bar1.Size = New System.Drawing.Size(396, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 18
@@ -427,11 +430,33 @@ Partial Class AvatarEditor
         Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
         Me.ControlContainerItem3.Name = "ControlContainerItem3"
         '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(364, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 29
+        '
+        'ControlContainerItem4
+        '
+        Me.ControlContainerItem4.AllowItemResize = False
+        Me.ControlContainerItem4.Control = Me.ResignBB
+        Me.ControlContainerItem4.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem4.Name = "ControlContainerItem4"
+        '
         'AvatarEditor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(366, 125)
+        Me.ClientSize = New System.Drawing.Size(396, 125)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.PanelEx1)
         Me.DoubleBuffered = True
@@ -476,4 +501,6 @@ Partial Class AvatarEditor
     Friend WithEvents ControlContainerItem2 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents RandomBB As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ControlContainerItem3 As DevComponents.DotNetBar.ControlContainerItem
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ControlContainerItem4 As DevComponents.DotNetBar.ControlContainerItem
 End Class

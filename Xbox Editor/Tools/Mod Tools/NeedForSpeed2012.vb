@@ -29,6 +29,7 @@ Public Class NeedForSpeed2012
             Save.Enabled = True
             DrivingII.Enabled = True
             MaxBB.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
             MessageBoxEx.Show("Invalid Package... This Is Not A Need For Speed Most Wanted Gamesave", "Need For Speed Most Wanted", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -42,6 +43,7 @@ Public Class NeedForSpeed2012
         Save.Enabled = False
         DrivingII.Enabled = False
         MaxBB.Enabled = False
+        ResignBB.Enabled = False
     End Sub
     Public Sub readfile()
         Dim reader As New PackageIO.Reader(filepath, Endian.Big)
@@ -65,8 +67,6 @@ Public Class NeedForSpeed2012
     Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
         Dim writer As New PackageIO.Writer(filepath, Endian.Big)
         Try
-
-
             Resign()
             writer.Position = 100376
             writer.WriteInt32(SpII.Value)
@@ -231,4 +231,15 @@ Public Class NeedForSpeed2012
         Next
         Return bytes
     End Function
+
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(filepath)
+        xbox.FilePath = filepath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

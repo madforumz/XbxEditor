@@ -24,23 +24,25 @@ Partial Class NeedForSpeed2012
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NeedForSpeed2012))
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
         Me.Save = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
-        Me.SpII = New DevComponents.Editors.IntegerInput()
-        Me.DrivingII = New DevComponents.Editors.IntegerInput()
-        Me.ResultsII = New DevComponents.Editors.IntegerInput()
         Me.MaxBB = New DevComponents.DotNetBar.ButtonX()
+        Me.ResultsII = New DevComponents.Editors.IntegerInput()
+        Me.DrivingII = New DevComponents.Editors.IntegerInput()
+        Me.SpII = New DevComponents.Editors.IntegerInput()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
         Me.PanelEx1.SuspendLayout()
-        CType(Me.SpII, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DrivingII, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResultsII, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DrivingII, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpII, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Bar1
@@ -48,16 +50,32 @@ Partial Class NeedForSpeed2012
         Me.Bar1.AntiAlias = True
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(232, 31)
+        Me.Bar1.Size = New System.Drawing.Size(264, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 14
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
+        '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(233, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 17
         '
         'OpenAss
         '
@@ -101,6 +119,13 @@ Partial Class NeedForSpeed2012
         Me.ControlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
         Me.ControlContainerItem2.Name = "ControlContainerItem2"
         '
+        'ControlContainerItem3
+        '
+        Me.ControlContainerItem3.AllowItemResize = False
+        Me.ControlContainerItem3.Control = Me.ResignBB
+        Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem3.Name = "ControlContainerItem3"
+        '
         'GroupPanel1
         '
         Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
@@ -109,7 +134,7 @@ Partial Class NeedForSpeed2012
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 31)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(232, 62)
+        Me.GroupPanel1.Size = New System.Drawing.Size(264, 62)
         '
         '
         '
@@ -154,7 +179,7 @@ Partial Class NeedForSpeed2012
         Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelEx1.Location = New System.Drawing.Point(0, 0)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(226, 56)
+        Me.PanelEx1.Size = New System.Drawing.Size(258, 56)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -164,39 +189,20 @@ Partial Class NeedForSpeed2012
         Me.PanelEx1.Style.GradientAngle = 90
         Me.PanelEx1.TabIndex = 0
         '
-        'SpII
+        'MaxBB
         '
-        '
-        '
-        '
-        Me.SpII.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.SpII.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.SpII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.SpII.Enabled = False
-        Me.SpII.Location = New System.Drawing.Point(2, 3)
-        Me.SpII.Name = "SpII"
-        Me.SpII.ShowUpDown = True
-        Me.SpII.Size = New System.Drawing.Size(105, 20)
-        Me.SpII.TabIndex = 0
-        Me.SpII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
-        Me.SpII.WatermarkText = "SP Points"
-        '
-        'DrivingII
-        '
-        '
-        '
-        '
-        Me.DrivingII.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.DrivingII.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.DrivingII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.DrivingII.Enabled = False
-        Me.DrivingII.Location = New System.Drawing.Point(113, 3)
-        Me.DrivingII.Name = "DrivingII"
-        Me.DrivingII.ShowUpDown = True
-        Me.DrivingII.Size = New System.Drawing.Size(110, 20)
-        Me.DrivingII.TabIndex = 1
-        Me.DrivingII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
-        Me.DrivingII.WatermarkText = "Driving Milestone"
+        Me.MaxBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.MaxBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MaxBB.Enabled = False
+        Me.MaxBB.Image = Global.Xbox_Editor.My.Resources.Resources.StockIndexUp
+        Me.MaxBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.MaxBB.Location = New System.Drawing.Point(113, 29)
+        Me.MaxBB.Name = "MaxBB"
+        Me.MaxBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.MaxBB.Size = New System.Drawing.Size(143, 20)
+        Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.MaxBB.TabIndex = 3
+        Me.MaxBB.Text = "Max"
         '
         'ResultsII
         '
@@ -215,26 +221,45 @@ Partial Class NeedForSpeed2012
         Me.ResultsII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
         Me.ResultsII.WatermarkText = "SP Race Results"
         '
-        'MaxBB
+        'DrivingII
         '
-        Me.MaxBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.MaxBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.MaxBB.Enabled = False
-        Me.MaxBB.Image = Global.Xbox_Editor.My.Resources.Resources.StockIndexUp
-        Me.MaxBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.MaxBB.Location = New System.Drawing.Point(113, 29)
-        Me.MaxBB.Name = "MaxBB"
-        Me.MaxBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.MaxBB.Size = New System.Drawing.Size(110, 20)
-        Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.MaxBB.TabIndex = 3
-        Me.MaxBB.Text = "Max"
+        '
+        '
+        '
+        Me.DrivingII.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.DrivingII.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DrivingII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.DrivingII.Enabled = False
+        Me.DrivingII.Location = New System.Drawing.Point(113, 3)
+        Me.DrivingII.Name = "DrivingII"
+        Me.DrivingII.ShowUpDown = True
+        Me.DrivingII.Size = New System.Drawing.Size(142, 20)
+        Me.DrivingII.TabIndex = 1
+        Me.DrivingII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
+        Me.DrivingII.WatermarkText = "Driving Milestone"
+        '
+        'SpII
+        '
+        '
+        '
+        '
+        Me.SpII.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.SpII.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SpII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.SpII.Enabled = False
+        Me.SpII.Location = New System.Drawing.Point(2, 3)
+        Me.SpII.Name = "SpII"
+        Me.SpII.ShowUpDown = True
+        Me.SpII.Size = New System.Drawing.Size(105, 20)
+        Me.SpII.TabIndex = 0
+        Me.SpII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
+        Me.SpII.WatermarkText = "SP Points"
         '
         'NeedForSpeed2012
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(232, 93)
+        Me.ClientSize = New System.Drawing.Size(264, 93)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Controls.Add(Me.Bar1)
         Me.DoubleBuffered = True
@@ -248,9 +273,9 @@ Partial Class NeedForSpeed2012
         Me.Bar1.ResumeLayout(False)
         Me.GroupPanel1.ResumeLayout(False)
         Me.PanelEx1.ResumeLayout(False)
-        CType(Me.SpII, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DrivingII, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ResultsII, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DrivingII, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpII, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -265,4 +290,6 @@ Partial Class NeedForSpeed2012
     Friend WithEvents ResultsII As DevComponents.Editors.IntegerInput
     Friend WithEvents DrivingII As DevComponents.Editors.IntegerInput
     Friend WithEvents SpII As DevComponents.Editors.IntegerInput
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ControlContainerItem3 As DevComponents.DotNetBar.ControlContainerItem
 End Class

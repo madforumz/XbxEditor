@@ -24,15 +24,12 @@ Public Class Borderlands
         End If
     End Sub
     Public Sub resetform()
-        Level.Value = ""
-        Xpoints.Text = ""
-        Skillpoints.Text = ""
-        Money.Text = ""
         Level.Enabled = False
         Xpoints.Enabled = False
         Skillpoints.Enabled = False
         Max.Enabled = False
         Save.Enabled = False
+        ResignBB.Enabled = False
     End Sub
     Private Sub ButtonItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem1.Click
         Level.Value = Level.MaxValue
@@ -78,6 +75,7 @@ Public Class Borderlands
             Money.Enabled = True
             Save.Enabled = True
             Max.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
             MessageBoxEx.Show("Invalid Package... This Is Not A Borderlands Gamesave", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -267,4 +265,15 @@ Public Class Borderlands
         Next
         Return bytes
     End Function
+
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(FilePath)
+        xbox.FilePath = FilePath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

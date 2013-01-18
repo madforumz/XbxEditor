@@ -28,6 +28,7 @@ Public Class Bulletstorm
         Points.Enabled = False
         Save.Enabled = False
         Max.Enabled = False
+        ResignBB.Enabled = False
     End Sub
     Public Function TitleIDVerify(ByVal filepath As String)
         Dim FS As New FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite)
@@ -40,6 +41,7 @@ Public Class Bulletstorm
             Points.Enabled = True
             Save.Enabled = True
             Max.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
             resetform()
@@ -223,4 +225,15 @@ Public Class Bulletstorm
         Next
         Return bytes
     End Function
+
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(filepath)
+        xbox.FilePath = filepath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

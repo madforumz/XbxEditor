@@ -27,8 +27,10 @@ Partial Class MidnightClub
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
         Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
         Me.Save = New DevComponents.DotNetBar.ButtonX()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.Money = New DevComponents.Editors.IntegerInput()
         Me.Rep = New DevComponents.Editors.IntegerInput()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
@@ -57,11 +59,12 @@ Partial Class MidnightClub
         Me.Bar1.AntiAlias = True
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(269, 31)
+        Me.Bar1.Size = New System.Drawing.Size(299, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 14
@@ -96,6 +99,21 @@ Partial Class MidnightClub
         Me.Save.TabIndex = 11
         Me.Save.Text = "Save"
         '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(269, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 17
+        '
         'ControlContainerItem1
         '
         Me.ControlContainerItem1.AllowItemResize = False
@@ -109,6 +127,13 @@ Partial Class MidnightClub
         Me.ControlContainerItem2.Control = Me.Save
         Me.ControlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
         Me.ControlContainerItem2.Name = "ControlContainerItem2"
+        '
+        'ControlContainerItem3
+        '
+        Me.ControlContainerItem3.AllowItemResize = False
+        Me.ControlContainerItem3.Control = Me.ResignBB
+        Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem3.Name = "ControlContainerItem3"
         '
         'Money
         '
@@ -154,7 +179,7 @@ Partial Class MidnightClub
         Me.PanelEx1.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelEx1.Location = New System.Drawing.Point(0, 31)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(275, 54)
+        Me.PanelEx1.Size = New System.Drawing.Size(299, 54)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -174,7 +199,7 @@ Partial Class MidnightClub
         Me.MaxBB.Location = New System.Drawing.Point(135, 3)
         Me.MaxBB.Name = "MaxBB"
         Me.MaxBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.MaxBB.Size = New System.Drawing.Size(130, 46)
+        Me.MaxBB.Size = New System.Drawing.Size(160, 46)
         Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.MaxBB.TabIndex = 17
         Me.MaxBB.Text = "Max"
@@ -183,7 +208,7 @@ Partial Class MidnightClub
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(269, 85)
+        Me.ClientSize = New System.Drawing.Size(299, 85)
         Me.Controls.Add(Me.PanelEx1)
         Me.Controls.Add(Me.Bar1)
         Me.DoubleBuffered = True
@@ -211,4 +236,6 @@ Partial Class MidnightClub
     Friend WithEvents Rep As DevComponents.Editors.IntegerInput
     Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents MaxBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ControlContainerItem3 As DevComponents.DotNetBar.ControlContainerItem
 End Class

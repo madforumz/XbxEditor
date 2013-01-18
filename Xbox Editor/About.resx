@@ -165,7 +165,7 @@
         XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
         fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
         tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
-        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDwAACw8BkvkDpQAAaHNJREFUeF7tvXdfVNm2
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAALDAAACwwBP0AiyAAAaHNJREFUeF7tvXdfVNm2
         NTyJoogIYsBsmQBFUAwogqCFqIhiQEWCkkpAMWAoBCMmEHMu29RqJzuH0ydwzr3npue5f/RX8CvwFeY7
         xoLtqa7eINq03c/r/mP8qty1a665ZhhzrF30OaKqDhw4cODAgQMHP4PtRQcOHDhw4MDB+w3biw4cOHDg
         wIGD9xu2Fx04cODAgQMH7zdsLzpw4MCBAwcO3m/YXnTgwIEDBw4cvN+wvWiHJx/c188+eq4vPv5IP/7w
@@ -615,14 +615,15 @@
 </value>
   </data>
   <data name="UpdateTextL.Text" xml:space="preserve">
-    <value>Update Version 4 0.0.4 boot Beta.....
+    <value>Update Version 0.0.0.5 boot Beta.....
 And As You Guy's Can See There's A New Design..
-You Can See The Orange Button On The Top Tab...
-Its The New Editor's Tools For Xbox Editor...
+You Can See The Editors And More On The Side Bar.
+Its The New Editor's Tool Bar For Xbox Editor...
 And Its The Same Thing As Game Tools And
 Profile Tools.... We Added Some New 
-(Editor Tools) Like 
-(Need For Speed Most Wanted)
+(Editor Tools)  Like 
+(Soul Calibur V , Assassin's Creed Revelations ,
+ Midnight Club LA)
 More Tools And Info In Next Update.</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

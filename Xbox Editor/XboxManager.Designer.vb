@@ -53,17 +53,17 @@ Partial Class XboxManager
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
         Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonPanel2 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.PanelEx6 = New DevComponents.DotNetBar.PanelEx()
+        Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.PanelEx4 = New DevComponents.DotNetBar.PanelEx()
         Me.ProgressBarX1 = New DevComponents.DotNetBar.Controls.ProgressBarX()
         Me.BackBB = New DevComponents.DotNetBar.ButtonX()
         Me.Forward = New DevComponents.DotNetBar.ButtonX()
-        Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.ListViewEx1 = New DevComponents.DotNetBar.Controls.ListViewEx()
         Me.RibbonPanel3 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RehashBB = New DevComponents.DotNetBar.ButtonItem()
         Me.InfoRT = New DevComponents.DotNetBar.RibbonTabItem()
         Me.FileContentsRT = New DevComponents.DotNetBar.RibbonTabItem()
-        Me.PanelEx6 = New DevComponents.DotNetBar.PanelEx()
         Me.PanelEx1.SuspendLayout()
         Me.PanelEx5.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
@@ -75,8 +75,8 @@ Partial Class XboxManager
         Me.RibbonControl1.SuspendLayout()
         Me.RibbonPanel1.SuspendLayout()
         Me.RibbonPanel2.SuspendLayout()
-        Me.PanelEx4.SuspendLayout()
         Me.PanelEx6.SuspendLayout()
+        Me.PanelEx4.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelEx1
@@ -349,6 +349,7 @@ Partial Class XboxManager
         Me.InjectImageToolStripMenuItem.Name = "InjectImageToolStripMenuItem"
         Me.InjectImageToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.InjectImageToolStripMenuItem.Text = "Inject Image"
+        Me.InjectImageToolStripMenuItem.Visible = False
         '
         'ContentImage
         '
@@ -494,6 +495,41 @@ Partial Class XboxManager
         Me.RibbonPanel2.TabIndex = 2
         Me.RibbonPanel2.Visible = False
         '
+        'PanelEx6
+        '
+        Me.PanelEx6.CanvasColor = System.Drawing.SystemColors.Control
+        Me.PanelEx6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.PanelEx6.Controls.Add(Me.TextBoxX2)
+        Me.PanelEx6.Controls.Add(Me.PanelEx4)
+        Me.PanelEx6.Dock = System.Windows.Forms.DockStyle.Left
+        Me.PanelEx6.Location = New System.Drawing.Point(3, 0)
+        Me.PanelEx6.Name = "PanelEx6"
+        Me.PanelEx6.Size = New System.Drawing.Size(121, 142)
+        Me.PanelEx6.Style.Alignment = System.Drawing.StringAlignment.Center
+        Me.PanelEx6.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.PanelEx6.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.PanelEx6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.PanelEx6.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.PanelEx6.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.PanelEx6.Style.GradientAngle = 90
+        Me.PanelEx6.TabIndex = 7
+        '
+        'TextBoxX2
+        '
+        Me.TextBoxX2.BackColor = System.Drawing.SystemColors.Control
+        '
+        '
+        '
+        Me.TextBoxX2.Border.Class = "TextBoxBorder"
+        Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.TextBoxX2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.TextBoxX2.Location = New System.Drawing.Point(5, 13)
+        Me.TextBoxX2.Name = "TextBoxX2"
+        Me.TextBoxX2.Size = New System.Drawing.Size(113, 20)
+        Me.TextBoxX2.TabIndex = 3
+        Me.TextBoxX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.TextBoxX2.WatermarkText = "Search"
+        '
         'PanelEx4
         '
         Me.PanelEx4.CanvasColor = System.Drawing.SystemColors.Control
@@ -552,22 +588,6 @@ Partial Class XboxManager
         Me.Forward.Size = New System.Drawing.Size(25, 23)
         Me.Forward.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Forward.TabIndex = 5
-        '
-        'TextBoxX2
-        '
-        Me.TextBoxX2.BackColor = System.Drawing.SystemColors.Control
-        '
-        '
-        '
-        Me.TextBoxX2.Border.Class = "TextBoxBorder"
-        Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.TextBoxX2.Location = New System.Drawing.Point(5, 13)
-        Me.TextBoxX2.Name = "TextBoxX2"
-        Me.TextBoxX2.Size = New System.Drawing.Size(113, 20)
-        Me.TextBoxX2.TabIndex = 3
-        Me.TextBoxX2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.TextBoxX2.WatermarkText = "Search"
         '
         'ListViewEx1
         '
@@ -641,25 +661,7 @@ Partial Class XboxManager
         Me.FileContentsRT.Name = "FileContentsRT"
         Me.FileContentsRT.Panel = Me.RibbonPanel2
         Me.FileContentsRT.Text = "Profile / Gamesave Contents"
-        '
-        'PanelEx6
-        '
-        Me.PanelEx6.CanvasColor = System.Drawing.SystemColors.Control
-        Me.PanelEx6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.PanelEx6.Controls.Add(Me.TextBoxX2)
-        Me.PanelEx6.Controls.Add(Me.PanelEx4)
-        Me.PanelEx6.Dock = System.Windows.Forms.DockStyle.Left
-        Me.PanelEx6.Location = New System.Drawing.Point(3, 0)
-        Me.PanelEx6.Name = "PanelEx6"
-        Me.PanelEx6.Size = New System.Drawing.Size(121, 142)
-        Me.PanelEx6.Style.Alignment = System.Drawing.StringAlignment.Center
-        Me.PanelEx6.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.PanelEx6.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        Me.PanelEx6.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx6.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.PanelEx6.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        Me.PanelEx6.Style.GradientAngle = 90
-        Me.PanelEx6.TabIndex = 7
+        Me.FileContentsRT.Visible = False
         '
         'XboxManager
         '
@@ -688,8 +690,8 @@ Partial Class XboxManager
         Me.RibbonControl1.PerformLayout()
         Me.RibbonPanel1.ResumeLayout(False)
         Me.RibbonPanel2.ResumeLayout(False)
-        Me.PanelEx4.ResumeLayout(False)
         Me.PanelEx6.ResumeLayout(False)
+        Me.PanelEx4.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

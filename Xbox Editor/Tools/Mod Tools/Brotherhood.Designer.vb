@@ -25,12 +25,14 @@ Partial Class brotherhood
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(brotherhood))
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
         Me.Max = New DevComponents.DotNetBar.ButtonX()
+        Me.ModChanger = New DevComponents.Editors.IntegerInput()
         Me.Save = New DevComponents.DotNetBar.ButtonX()
         Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
-        Me.ModChanger = New DevComponents.Editors.IntegerInput()
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.PanelEx1.SuspendLayout()
         CType(Me.ModChanger, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,7 +47,7 @@ Partial Class brotherhood
         Me.PanelEx1.Controls.Add(Me.ModChanger)
         Me.PanelEx1.Location = New System.Drawing.Point(3, 34)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(219, 27)
+        Me.PanelEx1.Size = New System.Drawing.Size(248, 27)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -65,10 +67,29 @@ Partial Class brotherhood
         Me.Max.Location = New System.Drawing.Point(111, 3)
         Me.Max.Name = "Max"
         Me.Max.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Max.Size = New System.Drawing.Size(105, 20)
+        Me.Max.Size = New System.Drawing.Size(132, 20)
         Me.Max.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Max.TabIndex = 12
         Me.Max.Text = "Max Florins"
+        '
+        'ModChanger
+        '
+        '
+        '
+        '
+        Me.ModChanger.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.ModChanger.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.ModChanger.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.ModChanger.Enabled = False
+        Me.ModChanger.Location = New System.Drawing.Point(3, 4)
+        Me.ModChanger.MaxValue = 65535
+        Me.ModChanger.MinValue = 0
+        Me.ModChanger.Name = "ModChanger"
+        Me.ModChanger.ShowUpDown = True
+        Me.ModChanger.Size = New System.Drawing.Size(102, 20)
+        Me.ModChanger.TabIndex = 10
+        Me.ModChanger.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
+        Me.ModChanger.WatermarkText = "Your Florins"
         '
         'Save
         '
@@ -98,40 +119,37 @@ Partial Class brotherhood
         Me.OpenAss.TabIndex = 10
         Me.OpenAss.Text = "Open"
         '
-        'ModChanger
-        '
-        '
-        '
-        '
-        Me.ModChanger.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.ModChanger.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.ModChanger.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.ModChanger.Enabled = False
-        Me.ModChanger.Location = New System.Drawing.Point(3, 4)
-        Me.ModChanger.MaxValue = 65535
-        Me.ModChanger.MinValue = 0
-        Me.ModChanger.Name = "ModChanger"
-        Me.ModChanger.ShowUpDown = True
-        Me.ModChanger.Size = New System.Drawing.Size(102, 20)
-        Me.ModChanger.TabIndex = 10
-        Me.ModChanger.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
-        Me.ModChanger.WatermarkText = "Your Florins"
-        '
         'Bar1
         '
         Me.Bar1.AntiAlias = True
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(222, 31)
+        Me.Bar1.Size = New System.Drawing.Size(252, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 11
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
+        '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(220, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 17
         '
         'ControlContainerItem1
         '
@@ -147,11 +165,18 @@ Partial Class brotherhood
         Me.ControlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
         Me.ControlContainerItem2.Name = "ControlContainerItem2"
         '
+        'ControlContainerItem3
+        '
+        Me.ControlContainerItem3.AllowItemResize = False
+        Me.ControlContainerItem3.Control = Me.ResignBB
+        Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem3.Name = "ControlContainerItem3"
+        '
         'brotherhood
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(222, 63)
+        Me.ClientSize = New System.Drawing.Size(252, 63)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.PanelEx1)
         Me.DoubleBuffered = True
@@ -178,4 +203,6 @@ Partial Class brotherhood
     Friend WithEvents Bar1 As DevComponents.DotNetBar.Bar
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents ControlContainerItem2 As DevComponents.DotNetBar.ControlContainerItem
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ControlContainerItem3 As DevComponents.DotNetBar.ControlContainerItem
 End Class

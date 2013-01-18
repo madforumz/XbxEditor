@@ -27,13 +27,15 @@ Partial Class About
         Me.UpdatesGP = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.UpdateTextL = New DevComponents.DotNetBar.LabelX()
         Me.ThanksGP = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.UpdatesGP.SuspendLayout()
         Me.ThanksGP.SuspendLayout()
@@ -54,9 +56,9 @@ Partial Class About
         Me.UpdatesGP.CanvasColor = System.Drawing.SystemColors.Control
         Me.UpdatesGP.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.UpdatesGP.Controls.Add(Me.UpdateTextL)
-        Me.UpdatesGP.Location = New System.Drawing.Point(12, 92)
+        Me.UpdatesGP.Location = New System.Drawing.Point(3, 92)
         Me.UpdatesGP.Name = "UpdatesGP"
-        Me.UpdatesGP.Size = New System.Drawing.Size(279, 150)
+        Me.UpdatesGP.Size = New System.Drawing.Size(273, 150)
         '
         '
         '
@@ -93,15 +95,16 @@ Partial Class About
         '
         'UpdateTextL
         '
+        Me.UpdateTextL.AutoSize = True
         Me.UpdateTextL.BackColor = System.Drawing.Color.Transparent
         '
         '
         '
         Me.UpdateTextL.BackgroundStyle.Class = ""
         Me.UpdateTextL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.UpdateTextL.Location = New System.Drawing.Point(3, 3)
+        Me.UpdateTextL.Location = New System.Drawing.Point(-1, -1)
         Me.UpdateTextL.Name = "UpdateTextL"
-        Me.UpdateTextL.Size = New System.Drawing.Size(269, 121)
+        Me.UpdateTextL.Size = New System.Drawing.Size(265, 127)
         Me.UpdateTextL.TabIndex = 7
         Me.UpdateTextL.Text = resources.GetString("UpdateTextL.Text")
         Me.UpdateTextL.TextLineAlignment = System.Drawing.StringAlignment.Near
@@ -110,6 +113,8 @@ Partial Class About
         '
         Me.ThanksGP.CanvasColor = System.Drawing.SystemColors.Control
         Me.ThanksGP.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.ThanksGP.Controls.Add(Me.Label9)
+        Me.ThanksGP.Controls.Add(Me.Label8)
         Me.ThanksGP.Controls.Add(Me.Label7)
         Me.ThanksGP.Controls.Add(Me.Label6)
         Me.ThanksGP.Controls.Add(Me.Label5)
@@ -117,9 +122,9 @@ Partial Class About
         Me.ThanksGP.Controls.Add(Me.Label3)
         Me.ThanksGP.Controls.Add(Me.Label2)
         Me.ThanksGP.Controls.Add(Me.Label1)
-        Me.ThanksGP.Location = New System.Drawing.Point(297, 92)
+        Me.ThanksGP.Location = New System.Drawing.Point(282, 92)
         Me.ThanksGP.Name = "ThanksGP"
-        Me.ThanksGP.Size = New System.Drawing.Size(239, 150)
+        Me.ThanksGP.Size = New System.Drawing.Size(254, 150)
         '
         '
         '
@@ -152,57 +157,37 @@ Partial Class About
         Me.ThanksGP.StyleMouseOver.Class = ""
         Me.ThanksGP.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.ThanksGP.TabIndex = 2
-        Me.ThanksGP.Text = "Thanks To People From Xbox MB"
+        Me.ThanksGP.Text = "Thanks To People From Xbox MB & Xbox Live"
         '
-        'Label1
+        'Label9
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(24, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Joe"
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Location = New System.Drawing.Point(88, 26)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(78, 13)
+        Me.Label9.TabIndex = 8
+        Me.Label9.Text = "Nightsniper215"
         '
-        'Label2
+        'Label8
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(3, 13)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "ToXiC x SnIpEr"
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Location = New System.Drawing.Point(88, 3)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(67, 13)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "KyleXRHillier"
         '
-        'Label3
+        'Label7
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(3, 26)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Risk"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(3, 39)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Whatsamod"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Location = New System.Drawing.Point(3, 52)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(67, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "kylegas2012"
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Location = New System.Drawing.Point(3, 78)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(73, 13)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "sgt frankieboy"
         '
         'Label6
         '
@@ -214,15 +199,55 @@ Partial Class About
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Daniel Ali"
         '
-        'Label7
+        'Label5
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Location = New System.Drawing.Point(3, 78)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(73, 13)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "sgt frankieboy"
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Location = New System.Drawing.Point(3, 52)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(67, 13)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "kylegas2012"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Location = New System.Drawing.Point(3, 39)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(64, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Whatsamod"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Location = New System.Drawing.Point(3, 26)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(28, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Risk"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Location = New System.Drawing.Point(3, 13)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(79, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "ToXiC x SnIpEr"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(3, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(24, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Joe"
         '
         'About
         '
@@ -241,6 +266,7 @@ Partial Class About
         Me.Text = "About"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.UpdatesGP.ResumeLayout(False)
+        Me.UpdatesGP.PerformLayout()
         Me.ThanksGP.ResumeLayout(False)
         Me.ThanksGP.PerformLayout()
         Me.ResumeLayout(False)
@@ -257,4 +283,6 @@ Partial Class About
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

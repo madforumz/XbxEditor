@@ -32,10 +32,11 @@ Partial Class Borderlands
         Me.ButtonItem4 = New DevComponents.DotNetBar.ButtonItem()
         Me.Money = New DevComponents.Editors.IntegerInput()
         Me.Skillpoints = New DevComponents.Editors.IntegerInput()
+        Me.Xpoints = New DevComponents.Editors.IntegerInput()
         Me.Save = New DevComponents.DotNetBar.ButtonX()
         Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
-        Me.Xpoints = New DevComponents.Editors.IntegerInput()
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.PanelEx1.SuspendLayout()
@@ -56,9 +57,9 @@ Partial Class Borderlands
         Me.PanelEx1.Controls.Add(Me.Money)
         Me.PanelEx1.Controls.Add(Me.Skillpoints)
         Me.PanelEx1.Controls.Add(Me.Xpoints)
-        Me.PanelEx1.Location = New System.Drawing.Point(0, 34)
+        Me.PanelEx1.Location = New System.Drawing.Point(3, 34)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(260, 85)
+        Me.PanelEx1.Size = New System.Drawing.Size(286, 79)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -78,6 +79,7 @@ Partial Class Borderlands
         Me.Level.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.Level.Enabled = False
         Me.Level.Location = New System.Drawing.Point(7, 3)
+        Me.Level.MaxValue = 69
         Me.Level.MinValue = 0
         Me.Level.Name = "Level"
         Me.Level.ShowUpDown = True
@@ -96,7 +98,7 @@ Partial Class Borderlands
         Me.Max.Location = New System.Drawing.Point(7, 55)
         Me.Max.Name = "Max"
         Me.Max.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Max.Size = New System.Drawing.Size(246, 21)
+        Me.Max.Size = New System.Drawing.Size(276, 21)
         Me.Max.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Max.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1, Me.ButtonItem2, Me.ButtonItem3, Me.ButtonItem4})
         Me.Max.TabIndex = 16
@@ -147,7 +149,7 @@ Partial Class Borderlands
         Me.Money.MinValue = 0
         Me.Money.Name = "Money"
         Me.Money.ShowUpDown = True
-        Me.Money.Size = New System.Drawing.Size(125, 20)
+        Me.Money.Size = New System.Drawing.Size(155, 20)
         Me.Money.TabIndex = 15
         Me.Money.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
         Me.Money.WatermarkText = "Money/Cash"
@@ -169,6 +171,24 @@ Partial Class Borderlands
         Me.Skillpoints.TabIndex = 14
         Me.Skillpoints.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
         Me.Skillpoints.WatermarkText = "Skill Points"
+        '
+        'Xpoints
+        '
+        '
+        '
+        '
+        Me.Xpoints.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.Xpoints.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.Xpoints.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.Xpoints.Enabled = False
+        Me.Xpoints.Location = New System.Drawing.Point(128, 3)
+        Me.Xpoints.MinValue = 0
+        Me.Xpoints.Name = "Xpoints"
+        Me.Xpoints.ShowUpDown = True
+        Me.Xpoints.Size = New System.Drawing.Size(155, 20)
+        Me.Xpoints.TabIndex = 1
+        Me.Xpoints.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
+        Me.Xpoints.WatermarkText = "XP Points"
         '
         'Save
         '
@@ -198,39 +218,37 @@ Partial Class Borderlands
         Me.OpenAss.TabIndex = 12
         Me.OpenAss.Text = "Open"
         '
-        'Xpoints
-        '
-        '
-        '
-        '
-        Me.Xpoints.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.Xpoints.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.Xpoints.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.Xpoints.Enabled = False
-        Me.Xpoints.Location = New System.Drawing.Point(128, 3)
-        Me.Xpoints.MinValue = 0
-        Me.Xpoints.Name = "Xpoints"
-        Me.Xpoints.ShowUpDown = True
-        Me.Xpoints.Size = New System.Drawing.Size(125, 20)
-        Me.Xpoints.TabIndex = 1
-        Me.Xpoints.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
-        Me.Xpoints.WatermarkText = "XP Points"
-        '
         'Bar1
         '
         Me.Bar1.AntiAlias = True
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(260, 31)
+        Me.Bar1.Size = New System.Drawing.Size(291, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 2
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
+        '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(259, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(27, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 17
         '
         'ControlContainerItem1
         '
@@ -250,7 +268,7 @@ Partial Class Borderlands
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(260, 114)
+        Me.ClientSize = New System.Drawing.Size(291, 114)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.PanelEx1)
         Me.DoubleBuffered = True
@@ -287,4 +305,5 @@ Partial Class Borderlands
     Friend WithEvents Bar1 As DevComponents.DotNetBar.Bar
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents ControlContainerItem2 As DevComponents.DotNetBar.ControlContainerItem
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
 End Class

@@ -35,6 +35,7 @@ Public Class TigerWoods12
             Points.Enabled = True
             Save.Enabled = True
             Max.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
             MessageBoxEx.Show("Invalid Package... This Is Not A Tiger Woods PGA Tour 12 Gamesave", Home.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -46,6 +47,7 @@ Public Class TigerWoods12
         Max.Enabled = False
         Save.Enabled = False
         Points.Enabled = False
+        ResignBB.Enabled = False
     End Sub
     Private Sub Readfile()
         Dim reader As New PackageIO.Reader(filepath, Endian.Big)
@@ -223,4 +225,15 @@ Public Class TigerWoods12
         Next
         Return bytes
     End Function
+
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(filepath)
+        xbox.FilePath = filepath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

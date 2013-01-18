@@ -31,6 +31,7 @@ Partial Class AssassinsCreed3
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
         Me.Max = New DevComponents.DotNetBar.ButtonX()
         Me.ModChanger = New DevComponents.Editors.IntegerInput()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
         Me.PanelEx1.SuspendLayout()
@@ -40,13 +41,14 @@ Partial Class AssassinsCreed3
         'Bar1
         '
         Me.Bar1.AntiAlias = True
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(234, 31)
+        Me.Bar1.Size = New System.Drawing.Size(263, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 11
@@ -103,7 +105,7 @@ Partial Class AssassinsCreed3
         Me.PanelEx1.Controls.Add(Me.ModChanger)
         Me.PanelEx1.Location = New System.Drawing.Point(0, 34)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(234, 29)
+        Me.PanelEx1.Size = New System.Drawing.Size(260, 29)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -123,7 +125,7 @@ Partial Class AssassinsCreed3
         Me.Max.Location = New System.Drawing.Point(106, 3)
         Me.Max.Name = "Max"
         Me.Max.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Max.Size = New System.Drawing.Size(122, 20)
+        Me.Max.Size = New System.Drawing.Size(151, 20)
         Me.Max.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Max.TabIndex = 12
         Me.Max.Text = "Max Pouch"
@@ -146,11 +148,26 @@ Partial Class AssassinsCreed3
         Me.ModChanger.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
         Me.ModChanger.WatermarkText = "Your Pouch"
         '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(234, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 16
+        '
         'AssassinsCreed3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(234, 64)
+        Me.ClientSize = New System.Drawing.Size(263, 64)
         Me.Controls.Add(Me.PanelEx1)
         Me.Controls.Add(Me.Bar1)
         Me.DoubleBuffered = True
@@ -175,4 +192,5 @@ Partial Class AssassinsCreed3
     Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents Max As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ModChanger As DevComponents.Editors.IntegerInput
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
 End Class

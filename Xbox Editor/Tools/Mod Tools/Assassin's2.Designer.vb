@@ -29,6 +29,7 @@ Partial Class Assassin_s2
         Me.Save = New DevComponents.DotNetBar.ButtonX()
         Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.PanelEx1.SuspendLayout()
@@ -45,7 +46,7 @@ Partial Class Assassin_s2
         Me.PanelEx1.Controls.Add(Me.ModChanger)
         Me.PanelEx1.Location = New System.Drawing.Point(0, 34)
         Me.PanelEx1.Name = "PanelEx1"
-        Me.PanelEx1.Size = New System.Drawing.Size(203, 26)
+        Me.PanelEx1.Size = New System.Drawing.Size(228, 26)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -65,7 +66,7 @@ Partial Class Assassin_s2
         Me.Max.Location = New System.Drawing.Point(100, 3)
         Me.Max.Name = "Max"
         Me.Max.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Max.Size = New System.Drawing.Size(100, 20)
+        Me.Max.Size = New System.Drawing.Size(125, 20)
         Me.Max.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Max.TabIndex = 12
         Me.Max.Text = "Max Pouch"
@@ -98,7 +99,7 @@ Partial Class Assassin_s2
         Me.Save.Location = New System.Drawing.Point(100, 2)
         Me.Save.Name = "Save"
         Me.Save.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Save.Size = New System.Drawing.Size(100, 26)
+        Me.Save.Size = New System.Drawing.Size(92, 26)
         Me.Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Save.TabIndex = 11
         Me.Save.Text = "Save"
@@ -119,18 +120,34 @@ Partial Class Assassin_s2
         'Bar1
         '
         Me.Bar1.AntiAlias = True
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(203, 31)
+        Me.Bar1.Size = New System.Drawing.Size(231, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 10
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
+        '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(198, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(30, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 16
         '
         'ControlContainerItem1
         '
@@ -150,7 +167,7 @@ Partial Class Assassin_s2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(203, 61)
+        Me.ClientSize = New System.Drawing.Size(231, 61)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.PanelEx1)
         Me.DoubleBuffered = True
@@ -177,4 +194,5 @@ Partial Class Assassin_s2
     Friend WithEvents Bar1 As DevComponents.DotNetBar.Bar
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents ControlContainerItem2 As DevComponents.DotNetBar.ControlContainerItem
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
 End Class

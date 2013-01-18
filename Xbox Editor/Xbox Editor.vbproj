@@ -110,11 +110,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class%27s\ResignFile.vb" />
-    <Compile Include="Form2.Designer.vb">
+    <Compile Include="Modules\Class%27s\ResignFile.vb" />
+    <Compile Include="Modules\Class%27s\Update.vb" />
+    <Compile Include="Tools\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="Tools\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Skyrim.Designer.vb">
+      <DependentUpon>Skyrim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Mod Tools\Skyrim.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tools\Mod Tools\SoulCaliburV.Designer.vb">
@@ -241,11 +248,11 @@
     <Compile Include="Tools\Mod Tools\GameFinder.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="home.vb">
+    <Compile Include="Home.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="home.Designer.vb">
-      <DependentUpon>home.vb</DependentUpon>
+    <Compile Include="Home.Designer.vb">
+      <DependentUpon>Home.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tools\Tweek Tools\Login.Designer.vb">
@@ -293,6 +300,12 @@
     <Compile Include="Tools\Tweek Tools\MyInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Tools\Tweek Tools\Updater.Designer.vb">
+      <DependentUpon>Updater.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tweek Tools\Updater.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="XboxManager.Designer.vb">
       <DependentUpon>XboxManager.vb</DependentUpon>
     </Compile>
@@ -301,11 +314,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form2.resx">
+    <EmbeddedResource Include="Tools\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Mod Tools\AssassinsRevelations.resx">
       <DependentUpon>AssassinsRevelations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Mod Tools\Skyrim.resx">
+      <DependentUpon>Skyrim.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Mod Tools\SoulCaliburV.resx">
       <DependentUpon>SoulCaliburV.vb</DependentUpon>
@@ -364,8 +380,8 @@
     <EmbeddedResource Include="Tools\Mod Tools\GameFinder.resx">
       <DependentUpon>GameFinder.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="home.resx">
-      <DependentUpon>home.vb</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Tweek Tools\Login.resx">
@@ -389,12 +405,16 @@
     <EmbeddedResource Include="Tools\Tweek Tools\MyInfo.resx">
       <DependentUpon>MyInfo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tools\Tweek Tools\Updater.resx">
+      <DependentUpon>Updater.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="XboxManager.resx">
       <DependentUpon>XboxManager.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="bin\app.config" />
     <None Include="Resources\KV.bin" />
     <None Include="Tools\Tweek Tools\app.config" />
     <None Include="bin\Debug\KV.bin">
@@ -429,7 +449,6 @@
   <ItemGroup>
     <Content Include="XEIcon.ico" />
     <None Include="Resources\Tools Icon.png" />
-    <Content Include="Xbox editor Icon.ico" />
     <None Include="Resources\login.png" />
     <None Include="Resources\backagrong.png" />
     <None Include="Resources\About.png" />
@@ -455,7 +474,6 @@
     <Content Include="Tools\UsbExplorer Folder\FATX\Misc.cs" />
     <Content Include="Tools\UsbExplorer Folder\FATX\Read.cs" />
     <Content Include="Tools\UsbExplorer Folder\FATX\Write.cs" />
-    <Content Include="favacon.ico" />
     <Content Include="Tools\UsbExplorer Folder\Notes\gabe_k Notes.txt" />
     <Content Include="Tools\UsbExplorer Folder\Notes\Other Notes.txt" />
     <Content Include="Resources\Chat.png" />

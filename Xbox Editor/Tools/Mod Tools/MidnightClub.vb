@@ -27,6 +27,7 @@ Public Class MidnightClub
             Save.Enabled = True
             MaxBB.Enabled = True
             Rep.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
             MessageBoxEx.Show("Invalid Package... This Is Not A Midnight Club LA Gamesave", "Midnight Club LA", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -39,6 +40,7 @@ Public Class MidnightClub
         Money.Enabled = False
         Rep.Enabled = False
         MaxBB.Enabled = False
+        ResignBB.Enabled = False
     End Sub
     Public Sub readfile()
         Dim reader As New PackageIO.Reader(filepath, Endian.Big)
@@ -227,4 +229,14 @@ Public Class MidnightClub
         Return bytes
     End Function
 
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(filepath)
+        xbox.FilePath = filepath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

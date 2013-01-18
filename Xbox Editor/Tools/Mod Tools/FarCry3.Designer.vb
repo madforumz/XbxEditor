@@ -31,6 +31,8 @@ Partial Class FarCry3
         Me.MoneyII = New DevComponents.Editors.IntegerInput()
         Me.MoneyGP = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.MaxBB = New DevComponents.DotNetBar.ButtonX()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
+        Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
         CType(Me.MoneyII, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,13 +42,14 @@ Partial Class FarCry3
         'Bar1
         '
         Me.Bar1.AntiAlias = True
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(247, 31)
+        Me.Bar1.Size = New System.Drawing.Size(274, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 13
@@ -122,7 +125,7 @@ Partial Class FarCry3
         Me.MoneyGP.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MoneyGP.Location = New System.Drawing.Point(0, 31)
         Me.MoneyGP.Name = "MoneyGP"
-        Me.MoneyGP.Size = New System.Drawing.Size(247, 48)
+        Me.MoneyGP.Size = New System.Drawing.Size(274, 48)
         '
         '
         '
@@ -167,16 +170,38 @@ Partial Class FarCry3
         Me.MaxBB.Location = New System.Drawing.Point(127, 3)
         Me.MaxBB.Name = "MaxBB"
         Me.MaxBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.MaxBB.Size = New System.Drawing.Size(110, 20)
+        Me.MaxBB.Size = New System.Drawing.Size(140, 20)
         Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.MaxBB.TabIndex = 15
         Me.MaxBB.Text = "Max"
+        '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(244, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 17
+        '
+        'ControlContainerItem3
+        '
+        Me.ControlContainerItem3.AllowItemResize = False
+        Me.ControlContainerItem3.Control = Me.ResignBB
+        Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem3.Name = "ControlContainerItem3"
         '
         'FarCry3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(247, 79)
+        Me.ClientSize = New System.Drawing.Size(274, 79)
         Me.Controls.Add(Me.MoneyGP)
         Me.Controls.Add(Me.Bar1)
         Me.DoubleBuffered = True
@@ -201,4 +226,6 @@ Partial Class FarCry3
     Friend WithEvents MoneyII As DevComponents.Editors.IntegerInput
     Friend WithEvents MoneyGP As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents MaxBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ControlContainerItem3 As DevComponents.DotNetBar.ControlContainerItem
 End Class

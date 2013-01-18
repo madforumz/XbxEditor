@@ -24,14 +24,14 @@ Partial Class AssassinsRevelations
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AssassinsRevelations))
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
+        Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
+        Me.Save = New DevComponents.DotNetBar.ButtonX()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.MoneyII = New DevComponents.Editors.IntegerInput()
         Me.MaxBB = New DevComponents.DotNetBar.ButtonX()
-        Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
-        Me.Save = New DevComponents.DotNetBar.ButtonX()
-        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
         CType(Me.MoneyII, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +53,49 @@ Partial Class AssassinsRevelations
         Me.Bar1.TabIndex = 14
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
+        '
+        'OpenAss
+        '
+        Me.OpenAss.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.OpenAss.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.OpenAss.Image = CType(resources.GetObject("OpenAss.Image"), System.Drawing.Image)
+        Me.OpenAss.Location = New System.Drawing.Point(3, 2)
+        Me.OpenAss.Name = "OpenAss"
+        Me.OpenAss.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.OpenAss.Size = New System.Drawing.Size(112, 26)
+        Me.OpenAss.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.OpenAss.TabIndex = 10
+        Me.OpenAss.Text = "Open"
+        '
+        'Save
+        '
+        Me.Save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.Save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.Save.Enabled = False
+        Me.Save.Image = CType(resources.GetObject("Save.Image"), System.Drawing.Image)
+        Me.Save.ImageFixedSize = New System.Drawing.Size(18, 18)
+        Me.Save.Location = New System.Drawing.Point(119, 2)
+        Me.Save.Name = "Save"
+        Me.Save.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.Save.Size = New System.Drawing.Size(122, 26)
+        Me.Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.Save.TabIndex = 11
+        Me.Save.Text = "Save"
+        '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(245, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 15
         '
         'ControlContainerItem1
         '
@@ -107,49 +150,6 @@ Partial Class AssassinsRevelations
         Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.MaxBB.TabIndex = 15
         Me.MaxBB.Text = "Max"
-        '
-        'OpenAss
-        '
-        Me.OpenAss.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.OpenAss.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.OpenAss.Image = CType(resources.GetObject("OpenAss.Image"), System.Drawing.Image)
-        Me.OpenAss.Location = New System.Drawing.Point(3, 2)
-        Me.OpenAss.Name = "OpenAss"
-        Me.OpenAss.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.OpenAss.Size = New System.Drawing.Size(112, 26)
-        Me.OpenAss.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.OpenAss.TabIndex = 10
-        Me.OpenAss.Text = "Open"
-        '
-        'Save
-        '
-        Me.Save.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.Save.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.Save.Enabled = False
-        Me.Save.Image = CType(resources.GetObject("Save.Image"), System.Drawing.Image)
-        Me.Save.ImageFixedSize = New System.Drawing.Size(18, 18)
-        Me.Save.Location = New System.Drawing.Point(119, 2)
-        Me.Save.Name = "Save"
-        Me.Save.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Save.Size = New System.Drawing.Size(122, 26)
-        Me.Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.Save.TabIndex = 11
-        Me.Save.Text = "Save"
-        '
-        'ResignBB
-        '
-        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
-        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ResignBB.Enabled = False
-        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
-        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.ResignBB.Location = New System.Drawing.Point(245, 2)
-        Me.ResignBB.Name = "ResignBB"
-        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
-        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ResignBB.TabIndex = 15
         '
         'AssassinsRevelations
         '

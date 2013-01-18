@@ -36,6 +36,7 @@ Public Class brotherhood
             ModChanger.Enabled = True
             Save.Enabled = True
             Max.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
             resetform()
@@ -47,6 +48,7 @@ Public Class brotherhood
         Save.Enabled = False
         Max.Enabled = False
         ModChanger.Enabled = False
+        ResignBB.Enabled = False
     End Sub
 
     Private Sub Max_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Max.Click
@@ -223,4 +225,15 @@ Public Class brotherhood
         Next
         Return bytes
     End Function
+
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(FilePath)
+        xbox.FilePath = FilePath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

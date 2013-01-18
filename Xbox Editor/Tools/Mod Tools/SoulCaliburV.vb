@@ -30,6 +30,7 @@ Public Class SoulCaliburV
         MAXCOMBO.Enabled = False
         MaxBB.Enabled = False
         Save.Enabled = False
+        ResignBB.Enabled = False
     End Sub
     Private Sub readfile()
         Dim reader As New PackageIO.Reader(filepath, Endian.Big)
@@ -221,8 +222,6 @@ Public Class SoulCaliburV
             If noOfHashes > 29070 Then
                 xReader.Close()
                 Throw New Exception("It is not physically possible using the SHA1 algorithm to rehash " & noOfHashes & " the highest amound of hashes is 29070.")
-
-
             End If
             xReader.Position = 893
             Dim tableOffset As Integer = 40960

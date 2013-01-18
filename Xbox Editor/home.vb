@@ -10,6 +10,7 @@ Imports Xbox_Editor.GameTuts
 Imports System.Net
 
 Public Class Home
+    Dim webc As New WebClient
     Private Sub OpenLogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenLogin.Click
         TxtUsername.Select()
         UpdatesEP.Expanded = True
@@ -18,7 +19,24 @@ Public Class Home
         Else : UpdatesEP.Expanded = False
         End If
     End Sub
-    
+    Public Sub updating()
+
+            'It is downloading your textfile with version in and changing the update buttons text to the version number
+            Dim web As New Net.WebClient
+            Dim UpdateTXTFile As String = "https://dl.dropbox.com/u/53532004/Xbox%20Editor%20Updates/UpdateInfo.txt" '<<<<<CHANGE ME
+            'Me.CheckUpdateBB.Text = web.DownloadString(UpdateTXTFile)
+            Dim UpdateCheckTest As String = web.DownloadString(UpdateTXTFile)
+            Dim UpdateCheck As Decimal
+            If IsNumeric(UpdateCheckTest) Then
+                UpdateCheck = Val(UpdateCheckTest)
+            End If
+            'it is asking if the buttons text(version number) is greater then it will run a command for you to download if not it will just open like normal saying no update needed
+            If UpdateCheck > 0.5 Then
+            Updater.MdiParent = Me
+            Updater.Show()
+            Updater.updateHome()
+            End If
+    End Sub
     Public Sub Mdi()
         Login.MdiParent = Me
         Assassin_s2.MdiParent = Me
@@ -35,9 +53,9 @@ Public Class Home
     End Sub
 
     Private Sub home_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        updating()
         MessageBoxEx.EnableGlass = False
         KeyPreview = True
-        MsgBox("your awesome !!!!!!!!", MsgBoxStyle.Information)
         TxtUsername.Text = My.Settings.Username
         TxtPassword.Text = My.Settings.Password
     End Sub
@@ -279,5 +297,10 @@ Public Class Home
     Private Sub SoulCalBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SoulCalBB.Click
         SoulCaliburV.MdiParent = Me
         SoulCaliburV.Show()
+    End Sub
+
+    Private Sub UpdateBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateBB.Click
+        Updater.MdiParent = Me
+        Updater.Show()
     End Sub
 End Class

@@ -6,10 +6,9 @@ Imports System.Security.Cryptography
 Imports System.Text
 
 Public Class AvatarEditor
-    Dim file As String
+    Dim filepath As String
     Dim C1C8F1Location As Integer
     Dim OFD As New OpenFileDialog
-    Dim filepath As String = Nothing
 
     Private Sub AvatarEditor_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MessageBoxEx.EnableGlass = False
@@ -19,8 +18,8 @@ Public Class AvatarEditor
         OFD.Title = "Open  An XBOX 360 Profile Only!"
         If OFD.ShowDialog = Windows.Forms.DialogResult.OK Then
             Try
-                file = OFD.FileName
-                TitleIDVerify(file)
+                filepath = OFD.FileName
+                TitleIDVerify(filepath)
             Catch ex As Exception
                 MessageBoxEx.Show("Invalid Package... This Is Not A Xbox 360 Profile With a Avatar !", Home.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 resetform()
@@ -50,9 +49,10 @@ Public Class AvatarEditor
             Face.Enabled = True
             Hair.Enabled = True
             RandomBB.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
-            MessageBoxEx.Show("Invalid Package... This Is Not A Xbox 360 Profile With a Avatar !", Home.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBoxEx.Show("Invalid Package... This Is Not A Xbox 360 Profile With a Avatar !", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
             resetform()
             Return False ' Return False If TitleID Does Not Match ?
         End If
@@ -69,6 +69,7 @@ Public Class AvatarEditor
         Face.Enabled = False
         Hair.Enabled = False
         RandomBB.Enabled = False
+        ResignBB.Enabled = False
     End Sub
 
 
@@ -78,7 +79,7 @@ Public Class AvatarEditor
             Dim Found As Boolean = False
             Dim Block As String = Nothing
             Dim Length As Integer = (find.Length / 2)
-            Dim reader As New PackageIO.Reader(file, Endian.Little)
+            Dim reader As New PackageIO.Reader(filepath, Endian.Little)
             While Found = False
                 If i <> 0 Then
                     reader.Position = (32 * i) - Length
@@ -149,7 +150,7 @@ Public Class AvatarEditor
             output += Face.SelectedColor.A.ToString("X2") + Face.SelectedColor.R.ToString("X2") + Face.SelectedColor.G.ToString("X2") + Face.SelectedColor.B.ToString("X2")
             output += Paint1.SelectedColor.A.ToString("X2") + Paint1.SelectedColor.R.ToString("X2") + Paint1.SelectedColor.G.ToString("X2") + Paint1.SelectedColor.B.ToString("X2")
             output += Paint2.SelectedColor.A.ToString("X2") + Paint2.SelectedColor.R.ToString("X2") + Paint2.SelectedColor.G.ToString("X2") + Paint2.SelectedColor.B.ToString("X2")
-            Dim writer As New PackageIO.Writer(file, Endian.Little)
+            Dim writer As New PackageIO.Writer(filepath, Endian.Little)
             writer.Position = C1C8F1Location
             writer.Position += 232
             writer.Write(HexStringToArray(output))
@@ -170,7 +171,7 @@ Public Class AvatarEditor
     Private Sub ReadAvatarColors()
         Try
             Dim color1 As New Color
-            Dim reader As New PackageIO.Reader(file, Endian.Little)
+            Dim reader As New PackageIO.Reader(filepath, Endian.Little)
             reader.Position = C1C8F1Location
             reader.Position += 232
             color1 = Color.FromArgb(GetColor(reader.ReadBytes(1)), GetColor(reader.ReadBytes(1)), GetColor(reader.ReadBytes(1)), GetColor(reader.ReadBytes(1)))
@@ -359,4 +360,15 @@ Public Class AvatarEditor
         Next
         Return bytes
     End Function
+
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(filepath)
+        xbox.FilePath = filepath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

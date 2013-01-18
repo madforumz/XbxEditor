@@ -18,6 +18,7 @@ Public Class FarCry3
         Save.Enabled = False
         MaxBB.Enabled = False
         MoneyII.Enabled = False
+        ResignBB.Enabled = False
     End Sub
 
     Private Sub MaxBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MaxBB.Click
@@ -34,6 +35,7 @@ Public Class FarCry3
             MoneyII.Enabled = True
             Save.Enabled = True
             MaxBB.Enabled = True
+            ResignBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
             MessageBoxEx.Show("Invalid Package... This Is Not A Far Cry 3 Gamesave", Home.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -220,4 +222,14 @@ Public Class FarCry3
         Return bytes
     End Function
 
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Dim xbox As New XboxManager
+        XboxManager.ReadFile(filepath)
+        xbox.FilePath = filepath
+        xbox.ReadFile(xbox.FilePath)
+        xbox.MdiParent = Home
+        xbox.Show()
+        xbox.ProfileID.Enabled = True
+        Me.Close()
+    End Sub
 End Class

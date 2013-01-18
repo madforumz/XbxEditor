@@ -30,6 +30,8 @@ Partial Class Bulletstorm
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
+        Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
         CType(Me.Points, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
@@ -91,7 +93,7 @@ Partial Class Bulletstorm
         Me.Max.Location = New System.Drawing.Point(107, 34)
         Me.Max.Name = "Max"
         Me.Max.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Max.Size = New System.Drawing.Size(118, 20)
+        Me.Max.Size = New System.Drawing.Size(148, 20)
         Me.Max.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Max.TabIndex = 17
         Me.Max.Text = "Max Points"
@@ -99,13 +101,14 @@ Partial Class Bulletstorm
         'Bar1
         '
         Me.Bar1.AntiAlias = True
+        Me.Bar1.Controls.Add(Me.ResignBB)
         Me.Bar1.Controls.Add(Me.OpenAss)
         Me.Bar1.Controls.Add(Me.Save)
         Me.Bar1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2})
+        Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(228, 31)
+        Me.Bar1.Size = New System.Drawing.Size(260, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 18
@@ -126,11 +129,33 @@ Partial Class Bulletstorm
         Me.ControlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
         Me.ControlContainerItem2.Name = "ControlContainerItem2"
         '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(229, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 17
+        '
+        'ControlContainerItem3
+        '
+        Me.ControlContainerItem3.AllowItemResize = False
+        Me.ControlContainerItem3.Control = Me.ResignBB
+        Me.ControlContainerItem3.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
+        Me.ControlContainerItem3.Name = "ControlContainerItem3"
+        '
         'Bulletstorm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(228, 57)
+        Me.ClientSize = New System.Drawing.Size(260, 57)
         Me.Controls.Add(Me.Bar1)
         Me.Controls.Add(Me.Max)
         Me.Controls.Add(Me.Points)
@@ -156,4 +181,6 @@ Partial Class Bulletstorm
     Friend WithEvents Bar1 As DevComponents.DotNetBar.Bar
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents ControlContainerItem2 As DevComponents.DotNetBar.ControlContainerItem
+    Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ControlContainerItem3 As DevComponents.DotNetBar.ControlContainerItem
 End Class

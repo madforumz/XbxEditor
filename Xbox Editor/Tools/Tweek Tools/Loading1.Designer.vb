@@ -27,7 +27,7 @@ Partial Class Loading1
         Me.PersentLL = New DevComponents.DotNetBar.LabelX()
         Me.Timer1 = New System.Timers.Timer()
         Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
-        Me.ProgressBarx1 = New System.Windows.Forms.ProgressBar()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,12 +58,12 @@ Partial Class Loading1
         Me.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.VisualStudio2010Blue
         Me.StyleManager1.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(26, Byte), Integer)))
         '
-        'ProgressBarx1
+        'ProgressBar1
         '
-        Me.ProgressBarx1.Location = New System.Drawing.Point(2, 69)
-        Me.ProgressBarx1.Name = "ProgressBarx1"
-        Me.ProgressBarx1.Size = New System.Drawing.Size(509, 10)
-        Me.ProgressBarx1.TabIndex = 9
+        Me.ProgressBar1.Location = New System.Drawing.Point(2, 69)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(509, 10)
+        Me.ProgressBar1.TabIndex = 9
         '
         'PictureBox1
         '
@@ -83,7 +83,7 @@ Partial Class Loading1
         Me.ClientSize = New System.Drawing.Size(514, 81)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ProgressBarx1)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.PersentLL)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -102,6 +102,6 @@ Partial Class Loading1
     Friend WithEvents PersentLL As DevComponents.DotNetBar.LabelX
     Friend WithEvents Timer1 As System.Timers.Timer
     Friend WithEvents StyleManager1 As DevComponents.DotNetBar.StyleManager
-    Friend WithEvents ProgressBarx1 As System.Windows.Forms.ProgressBar
+    Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

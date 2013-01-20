@@ -25,10 +25,10 @@ Partial Class Home
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
-        Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
         Me.AboutBB = New DevComponents.DotNetBar.Office2007StartButton()
-        Me.UpdateBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.XboxManagerBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.UpdateBB = New DevComponents.DotNetBar.Office2007StartButton()
+        Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
         Me.MyInfoBB = New DevComponents.DotNetBar.ButtonItem()
         Me.Silver2010 = New DevComponents.Editors.ComboItem()
         Me.Black2010 = New DevComponents.Editors.ComboItem()
@@ -122,6 +122,7 @@ Partial Class Home
         Me.ButtonItem36 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem41 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
+        Me.label1 = New DevComponents.DotNetBar.LabelItem()
         Me.LoginPanel.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -142,13 +143,13 @@ Partial Class Home
         Me.RibbonControl1.CanCustomize = False
         Me.RibbonControl1.CaptionVisible = True
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.OpenLogin, Me.AboutBB, Me.UpdateBB, Me.XboxManagerBB})
+        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AboutBB, Me.UpdateBB, Me.OpenLogin})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MyInfoBB})
-        Me.RibbonControl1.Size = New System.Drawing.Size(986, 64)
+        Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.XboxManagerBB, Me.MyInfoBB, Me.label1})
+        Me.RibbonControl1.Size = New System.Drawing.Size(986, 59)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
         Me.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon"
@@ -170,18 +171,6 @@ Partial Class Home
         Me.RibbonControl1.Text = "RibbonControl1"
         Me.RibbonControl1.UseCustomizeDialog = False
         '
-        'OpenLogin
-        '
-        Me.OpenLogin.AutoExpandOnClick = True
-        Me.OpenLogin.CanCustomize = False
-        Me.OpenLogin.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image
-        Me.OpenLogin.ImagePaddingHorizontal = 0
-        Me.OpenLogin.ImagePaddingVertical = 0
-        Me.OpenLogin.Name = "OpenLogin"
-        Me.OpenLogin.ShowSubItems = False
-        Me.OpenLogin.Text = "Login"
-        Me.OpenLogin.Visible = False
-        '
         'AboutBB
         '
         Me.AboutBB.AutoExpandOnClick = True
@@ -195,19 +184,6 @@ Partial Class Home
         Me.AboutBB.ShowSubItems = False
         Me.AboutBB.Text = "About And Updates"
         '
-        'UpdateBB
-        '
-        Me.UpdateBB.AutoExpandOnClick = True
-        Me.UpdateBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways
-        Me.UpdateBB.CanCustomize = False
-        Me.UpdateBB.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground
-        Me.UpdateBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.UpdateBB.ImagePaddingHorizontal = 0
-        Me.UpdateBB.ImagePaddingVertical = 0
-        Me.UpdateBB.Name = "UpdateBB"
-        Me.UpdateBB.ShowSubItems = False
-        Me.UpdateBB.Text = "Check For Updates"
-        '
         'XboxManagerBB
         '
         Me.XboxManagerBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
@@ -219,6 +195,30 @@ Partial Class Home
         Me.XboxManagerBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(3, 3, 0, 0)
         Me.XboxManagerBB.Text = "Xbox Manager"
         Me.XboxManagerBB.Tooltip = "Open a STFS File / Xbox Gamesave /Profile"
+        '
+        'UpdateBB
+        '
+        Me.UpdateBB.AutoExpandOnClick = True
+        Me.UpdateBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways
+        Me.UpdateBB.CanCustomize = False
+        Me.UpdateBB.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground
+        Me.UpdateBB.ImagePaddingHorizontal = 0
+        Me.UpdateBB.ImagePaddingVertical = 0
+        Me.UpdateBB.Name = "UpdateBB"
+        Me.UpdateBB.ShowSubItems = False
+        Me.UpdateBB.Text = "Check For Updates"
+        '
+        'OpenLogin
+        '
+        Me.OpenLogin.AutoExpandOnClick = True
+        Me.OpenLogin.CanCustomize = False
+        Me.OpenLogin.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image
+        Me.OpenLogin.ImagePaddingHorizontal = 0
+        Me.OpenLogin.ImagePaddingVertical = 0
+        Me.OpenLogin.Name = "OpenLogin"
+        Me.OpenLogin.ShowSubItems = False
+        Me.OpenLogin.Text = "Login"
+        Me.OpenLogin.Visible = False
         '
         'MyInfoBB
         '
@@ -396,7 +396,7 @@ Partial Class Home
         '
         'XboxColorStyle
         '
-        Me.XboxColorStyle.ManagerColorTint = System.Drawing.Color.Black
+        Me.XboxColorStyle.ManagerColorTint = System.Drawing.SystemColors.Desktop
         Me.XboxColorStyle.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Silver
         Me.XboxColorStyle.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(26, Byte), Integer)))
         '
@@ -420,9 +420,9 @@ Partial Class Home
         Me.UpdatesEP.Expanded = False
         Me.UpdatesEP.ExpandedBounds = New System.Drawing.Rectangle(794, 65, 197, 435)
         Me.UpdatesEP.ExpandOnTitleClick = True
-        Me.UpdatesEP.Location = New System.Drawing.Point(961, 65)
+        Me.UpdatesEP.Location = New System.Drawing.Point(961, 60)
         Me.UpdatesEP.Name = "UpdatesEP"
-        Me.UpdatesEP.Size = New System.Drawing.Size(30, 435)
+        Me.UpdatesEP.Size = New System.Drawing.Size(30, 440)
         Me.UpdatesEP.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.UpdatesEP.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.UpdatesEP.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
@@ -969,7 +969,7 @@ Partial Class Home
         Me.ItemPanel1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
         Me.ItemPanel1.Location = New System.Drawing.Point(0, 26)
         Me.ItemPanel1.Name = "ItemPanel1"
-        Me.ItemPanel1.Size = New System.Drawing.Size(30, 409)
+        Me.ItemPanel1.Size = New System.Drawing.Size(30, 414)
         Me.ItemPanel1.TabIndex = 24
         Me.ItemPanel1.Text = "ItemPanel1"
         '
@@ -980,11 +980,13 @@ Partial Class Home
         '
         Me.GalleryContainer3.BackgroundStyle.Class = ""
         Me.GalleryContainer3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.GalleryContainer3.DefaultSize = New System.Drawing.Size(200, 405)
+        Me.GalleryContainer3.DefaultSize = New System.Drawing.Size(200, 406)
         Me.GalleryContainer3.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
-        Me.GalleryContainer3.MinimumSize = New System.Drawing.Size(150, 199)
+        Me.GalleryContainer3.MinimumSize = New System.Drawing.Size(150, 200)
         Me.GalleryContainer3.MultiLine = False
         Me.GalleryContainer3.Name = "GalleryContainer3"
+        Me.GalleryContainer3.ScrollAnimation = False
+        Me.GalleryContainer3.StretchGallery = True
         Me.GalleryContainer3.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AvatarEditorBB, Me.AssassinsCreedIIBB, Me.AssassinsCreedBHBB, Me.AssassinsCreedRBB, Me.AssassinsCreed3BB, Me.BorderlandsBB, Me.BulletstormBB, Me.FarCry3BB, Me.NeedForSpeed2012BB, Me.MidnightClubLABB, Me.SoulCalBB, Me.SkyrimBB, Me.TigerWoods11BB, Me.TigerWoods12BB, Me.TigerWoods13BB, Me.WetBB})
         Me.GalleryContainer3.Text = "GalleryContainer3"
         '
@@ -1186,10 +1188,10 @@ Partial Class Home
         Me.ExpandablePanel1.Controls.Add(Me.ItemPanel1)
         Me.ExpandablePanel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.ExpandablePanel1.Expanded = False
-        Me.ExpandablePanel1.ExpandedBounds = New System.Drawing.Rectangle(5, 65, 206, 435)
-        Me.ExpandablePanel1.Location = New System.Drawing.Point(5, 65)
+        Me.ExpandablePanel1.ExpandedBounds = New System.Drawing.Rectangle(5, 60, 208, 440)
+        Me.ExpandablePanel1.Location = New System.Drawing.Point(5, 60)
         Me.ExpandablePanel1.Name = "ExpandablePanel1"
-        Me.ExpandablePanel1.Size = New System.Drawing.Size(30, 435)
+        Me.ExpandablePanel1.Size = New System.Drawing.Size(30, 440)
         Me.ExpandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.ExpandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.ExpandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -1255,6 +1257,11 @@ Partial Class Home
         Me.ButtonItem31.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.ButtonItem31.Text = "Minecraft"
         '
+        'label1
+        '
+        Me.label1.Name = "label1"
+        Me.label1.Text = "LabelItem2"
+        '
         'Home
         '
         Me.AllowDrop = True
@@ -1265,7 +1272,6 @@ Partial Class Home
         Me.Controls.Add(Me.UpdatesEP)
         Me.Controls.Add(Me.PanelEx1)
         Me.Controls.Add(Me.RibbonControl1)
-        Me.EnableGlass = False
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.IsMdiContainer = True
@@ -1361,7 +1367,6 @@ Partial Class Home
     Friend WithEvents ButtonItem41 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem31 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ItemPanel1 As DevComponents.DotNetBar.ItemPanel
-    Friend WithEvents GalleryContainer3 As DevComponents.DotNetBar.GalleryContainer
     Friend WithEvents AvatarEditorBB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents AssassinsCreedIIBB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents AssassinsCreed3BB As DevComponents.DotNetBar.ButtonItem
@@ -1375,7 +1380,6 @@ Partial Class Home
     Friend WithEvents TigerWoods13BB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents WetBB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents LabelItem3 As DevComponents.DotNetBar.LabelItem
-    Friend WithEvents ExpandablePanel1 As DevComponents.DotNetBar.ExpandablePanel
     Friend WithEvents AssassinsCr As DevComponents.DotNetBar.PanelEx
     Private WithEvents UpdatesEP As DevComponents.DotNetBar.ExpandablePanel
     Friend WithEvents AssassinsCreedRBB As DevComponents.DotNetBar.ButtonItem
@@ -1383,5 +1387,8 @@ Partial Class Home
     Friend WithEvents SoulCalBB As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents UpdateBB As DevComponents.DotNetBar.Office2007StartButton
     Friend WithEvents SkyrimBB As DevComponents.DotNetBar.ButtonItem
+    Private WithEvents GalleryContainer3 As DevComponents.DotNetBar.GalleryContainer
+    Private WithEvents ExpandablePanel1 As DevComponents.DotNetBar.ExpandablePanel
+    Friend WithEvents label1 As DevComponents.DotNetBar.LabelItem
 
 End Class

@@ -34,6 +34,7 @@ Partial Class Wet
         Me.ShotGunII = New DevComponents.Editors.IntegerInput()
         Me.MachineGunII = New DevComponents.Editors.IntegerInput()
         Me.DartBowII = New DevComponents.Editors.IntegerInput()
+        Me.MaxBB = New DevComponents.DotNetBar.ButtonX()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Bar1.SuspendLayout()
         CType(Me.SkillPointsII, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,7 +52,7 @@ Partial Class Wet
         Me.Bar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ControlContainerItem1, Me.ControlContainerItem2, Me.ControlContainerItem3})
         Me.Bar1.Location = New System.Drawing.Point(0, 0)
         Me.Bar1.Name = "Bar1"
-        Me.Bar1.Size = New System.Drawing.Size(222, 31)
+        Me.Bar1.Size = New System.Drawing.Size(296, 31)
         Me.Bar1.Stretch = True
         Me.Bar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Bar1.TabIndex = 12
@@ -66,7 +67,7 @@ Partial Class Wet
         Me.OpenAss.Location = New System.Drawing.Point(3, 2)
         Me.OpenAss.Name = "OpenAss"
         Me.OpenAss.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.OpenAss.Size = New System.Drawing.Size(88, 26)
+        Me.OpenAss.Size = New System.Drawing.Size(141, 26)
         Me.OpenAss.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.OpenAss.TabIndex = 10
         Me.OpenAss.Text = "Open"
@@ -78,10 +79,10 @@ Partial Class Wet
         Me.Save.Enabled = False
         Me.Save.Image = CType(resources.GetObject("Save.Image"), System.Drawing.Image)
         Me.Save.ImageFixedSize = New System.Drawing.Size(18, 18)
-        Me.Save.Location = New System.Drawing.Point(95, 2)
+        Me.Save.Location = New System.Drawing.Point(148, 2)
         Me.Save.Name = "Save"
         Me.Save.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.Save.Size = New System.Drawing.Size(93, 26)
+        Me.Save.Size = New System.Drawing.Size(112, 26)
         Me.Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Save.TabIndex = 11
         Me.Save.Text = "Save"
@@ -116,7 +117,7 @@ Partial Class Wet
         Me.ResignBB.Enabled = False
         Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
         Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.ResignBB.Location = New System.Drawing.Point(192, 2)
+        Me.ResignBB.Location = New System.Drawing.Point(264, 2)
         Me.ResignBB.Name = "ResignBB"
         Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.ResignBB.Size = New System.Drawing.Size(26, 26)
@@ -133,6 +134,8 @@ Partial Class Wet
         Me.SkillPointsII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.SkillPointsII.Enabled = False
         Me.SkillPointsII.Location = New System.Drawing.Point(3, 34)
+        Me.SkillPointsII.MaxValue = 9999999
+        Me.SkillPointsII.MinValue = 0
         Me.SkillPointsII.Name = "SkillPointsII"
         Me.SkillPointsII.ShowUpDown = True
         Me.SkillPointsII.Size = New System.Drawing.Size(95, 20)
@@ -150,6 +153,8 @@ Partial Class Wet
         Me.ShotGunII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.ShotGunII.Enabled = False
         Me.ShotGunII.Location = New System.Drawing.Point(3, 60)
+        Me.ShotGunII.MaxValue = 9999999
+        Me.ShotGunII.MinValue = 0
         Me.ShotGunII.Name = "ShotGunII"
         Me.ShotGunII.ShowUpDown = True
         Me.ShotGunII.Size = New System.Drawing.Size(95, 20)
@@ -167,6 +172,8 @@ Partial Class Wet
         Me.MachineGunII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.MachineGunII.Enabled = False
         Me.MachineGunII.Location = New System.Drawing.Point(104, 60)
+        Me.MachineGunII.MaxValue = 9999999
+        Me.MachineGunII.MinValue = 0
         Me.MachineGunII.Name = "MachineGunII"
         Me.MachineGunII.ShowUpDown = True
         Me.MachineGunII.Size = New System.Drawing.Size(114, 20)
@@ -184,6 +191,8 @@ Partial Class Wet
         Me.DartBowII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.DartBowII.Enabled = False
         Me.DartBowII.Location = New System.Drawing.Point(104, 34)
+        Me.DartBowII.MaxValue = 9999999
+        Me.DartBowII.MinValue = 0
         Me.DartBowII.Name = "DartBowII"
         Me.DartBowII.ShowUpDown = True
         Me.DartBowII.Size = New System.Drawing.Size(114, 20)
@@ -191,11 +200,27 @@ Partial Class Wet
         Me.DartBowII.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Center
         Me.DartBowII.WatermarkText = "Dart Bow"
         '
+        'MaxBB
+        '
+        Me.MaxBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.MaxBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.MaxBB.Enabled = False
+        Me.MaxBB.Image = Global.Xbox_Editor.My.Resources.Resources.StockIndexUp
+        Me.MaxBB.ImageFixedSize = New System.Drawing.Size(20, 20)
+        Me.MaxBB.Location = New System.Drawing.Point(221, 34)
+        Me.MaxBB.Name = "MaxBB"
+        Me.MaxBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.MaxBB.Size = New System.Drawing.Size(75, 46)
+        Me.MaxBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.MaxBB.TabIndex = 18
+        Me.MaxBB.Text = "Max All"
+        '
         'Wet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(222, 81)
+        Me.ClientSize = New System.Drawing.Size(296, 81)
+        Me.Controls.Add(Me.MaxBB)
         Me.Controls.Add(Me.ResignBB)
         Me.Controls.Add(Me.DartBowII)
         Me.Controls.Add(Me.MachineGunII)
@@ -229,4 +254,5 @@ Partial Class Wet
     Friend WithEvents DartBowII As DevComponents.Editors.IntegerInput
     Friend WithEvents ControlContainerItem3 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents MaxBB As DevComponents.DotNetBar.ButtonX
 End Class

@@ -13,7 +13,6 @@ Public Class Wet
             filepath = open.FileName
             TitleIDVerify(filepath)
         End If
-
     End Sub
     Public Sub formreset()
         SkillPointsII.Enabled = False
@@ -22,6 +21,7 @@ Public Class Wet
         MachineGunII.Enabled = False
         DartBowII.Enabled = False
         ResignBB.Enabled = False
+        MaxBB.Enabled = False
     End Sub
     Public Function TitleIDVerify(ByVal filepath As String)
         Dim FS As New FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite)
@@ -37,9 +37,10 @@ Public Class Wet
             MachineGunII.Enabled = True
             DartBowII.Enabled = True
             ResignBB.Enabled = True
+            MaxBB.Enabled = True
             Return True ' Return True If TitleID Matches ?
         Else
-            MessageBoxEx.Show("Invalid Package... This Is Not A Wet Gamesave", Me.Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBoxEx.Show("Invalid Package... This Is Not A Wet Gamesave", Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
             formreset()
             Return False ' Return False If TitleID Does Not Match ?
         End If
@@ -111,7 +112,7 @@ Public Class Wet
             binaryReader2.Close()
             ms.Close()
         Catch ex As Exception
-            MessageBoxEx.Show(ex.Message, "Xbox Manager", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBoxEx.Show(ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End Try
 
@@ -242,10 +243,6 @@ Public Class Wet
         Return bytes
     End Function
 
-    Private Sub DartBowII_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DartBowII.ValueChanged
-
-    End Sub
-
     Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
         Dim xbox As New XboxManager
         XboxManager.ReadFile(filepath)
@@ -255,5 +252,12 @@ Public Class Wet
         xbox.Show()
         xbox.ProfileID.Enabled = True
         Me.Close()
+    End Sub
+
+    Private Sub MaxBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MaxBB.Click
+        DartBowII.Value = DartBowII.MaxValue
+        MachineGunII.Value = MachineGunII.MaxValue
+        ShotGunII.Value = ShotGunII.MaxValue
+        SkillPointsII.Value = SkillPointsII.MaxValue
     End Sub
 End Class

@@ -73,19 +73,21 @@ Public Class Updater
             'A message box is displayed and it offers you to update or cancel, if you cancel the button will say update avalible and become enabled
             Dim Response As Integer
             Label1.Text = "A Newer Version Is Avaliable !"
+            MessageBoxEx.EnableGlass = False
             Response = MessageBoxEx.Show("There is a Update Avaliable. We Will Download It To Your Desktop.", "Update Avaliable", MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Information)
             Label1.Text = "Downloading...."
             'If you press ok then It will open your EXE's Dropbox link then close its self
             If Response = vbOK Then
-                AddHandler webc.DownloadProgressChanged, New DownloadProgressChangedEventHandler(AddressOf wec_DownloadProgressChanged)
-                webc.DownloadFileAsync(New Uri("https://dl.dropbox.com/u/53532004/Xbox%20Editor.zip"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Xbox Editor.zip") '<<<<<CHANGE ME
-            Else : Label1.Text = "Your On The Latest Version !" And
-                CheckUpdateBB.Enabled = False
-            End If
-
-
+                downloadingHome()
+            Else
+                Label1.Text = "Your On The Latest Version !" And CheckUpdateBB.Enabled = False
+                End If
         Catch ex As Exception
             MessageBoxEx.Show("Can't Download File Your Not Connected To A Network Or No Internet Access", Text, MessageBoxButtons.OK)
         End Try
+    End Sub
+    Public Sub downloadingHome()
+        AddHandler webc.DownloadProgressChanged, New DownloadProgressChangedEventHandler(AddressOf wec_DownloadProgressChanged)
+        webc.DownloadFileAsync(New Uri("https://dl.dropbox.com/u/53532004/Xbox%20Editor.zip"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Xbox Editor.zip") '<<<<<CHANGE ME
     End Sub
 End Class

@@ -24,9 +24,9 @@ Partial Class NeedForSpeed2012
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NeedForSpeed2012))
         Me.Bar1 = New DevComponents.DotNetBar.Bar()
-        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.OpenAss = New DevComponents.DotNetBar.ButtonX()
         Me.Save = New DevComponents.DotNetBar.ButtonX()
+        Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem3 = New DevComponents.DotNetBar.ControlContainerItem()
@@ -62,21 +62,6 @@ Partial Class NeedForSpeed2012
         Me.Bar1.TabStop = False
         Me.Bar1.Text = "Bar1"
         '
-        'ResignBB
-        '
-        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
-        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ResignBB.Enabled = False
-        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
-        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.ResignBB.Location = New System.Drawing.Point(233, 2)
-        Me.ResignBB.Name = "ResignBB"
-        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
-        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
-        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.ResignBB.TabIndex = 17
-        '
         'OpenAss
         '
         Me.OpenAss.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
@@ -104,6 +89,21 @@ Partial Class NeedForSpeed2012
         Me.Save.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.Save.TabIndex = 11
         Me.Save.Text = "Save"
+        '
+        'ResignBB
+        '
+        Me.ResignBB.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ResignBB.BackColor = System.Drawing.Color.Transparent
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ResignBB.Enabled = False
+        Me.ResignBB.Image = Global.Xbox_Editor.My.Resources.Resources.Tools_Icon
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.ResignBB.Location = New System.Drawing.Point(233, 2)
+        Me.ResignBB.Name = "ResignBB"
+        Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.ResignBB.Size = New System.Drawing.Size(26, 26)
+        Me.ResignBB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.ResignBB.TabIndex = 17
         '
         'ControlContainerItem1
         '
@@ -214,6 +214,8 @@ Partial Class NeedForSpeed2012
         Me.ResultsII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.ResultsII.Enabled = False
         Me.ResultsII.Location = New System.Drawing.Point(2, 29)
+        Me.ResultsII.MaxValue = 9999999
+        Me.ResultsII.MinValue = 0
         Me.ResultsII.Name = "ResultsII"
         Me.ResultsII.ShowUpDown = True
         Me.ResultsII.Size = New System.Drawing.Size(105, 20)
@@ -231,6 +233,8 @@ Partial Class NeedForSpeed2012
         Me.DrivingII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.DrivingII.Enabled = False
         Me.DrivingII.Location = New System.Drawing.Point(113, 3)
+        Me.DrivingII.MaxValue = 9999999
+        Me.DrivingII.MinValue = 0
         Me.DrivingII.Name = "DrivingII"
         Me.DrivingII.ShowUpDown = True
         Me.DrivingII.Size = New System.Drawing.Size(142, 20)
@@ -248,6 +252,8 @@ Partial Class NeedForSpeed2012
         Me.SpII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.SpII.Enabled = False
         Me.SpII.Location = New System.Drawing.Point(2, 3)
+        Me.SpII.MaxValue = 9999999
+        Me.SpII.MinValue = 0
         Me.SpII.Name = "SpII"
         Me.SpII.ShowUpDown = True
         Me.SpII.Size = New System.Drawing.Size(105, 20)

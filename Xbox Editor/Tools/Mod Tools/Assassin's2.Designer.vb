@@ -81,6 +81,7 @@ Partial Class Assassin_s2
         Me.ModChanger.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.ModChanger.Enabled = False
         Me.ModChanger.Location = New System.Drawing.Point(3, 3)
+        Me.ModChanger.MaxValue = 99999999
         Me.ModChanger.MinValue = 0
         Me.ModChanger.Name = "ModChanger"
         Me.ModChanger.ShowUpDown = True

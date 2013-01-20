@@ -323,10 +323,6 @@ Public Class Home
         MidnightClub.Show()
     End Sub
 
-    Private Sub ExpandablePanel1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExpandablePanel1.Click
-        ItemPanel1.Size = GalleryContainer3.DefaultSize + ItemPanel1.Size
-    End Sub
-
     Private Sub AavtarEditorBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AvatarEditorBB.Click
 
     End Sub

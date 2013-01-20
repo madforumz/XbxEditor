@@ -26,10 +26,11 @@ Partial Class Home
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Home))
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
         Me.AboutBB = New DevComponents.DotNetBar.Office2007StartButton()
-        Me.XboxManagerBB = New DevComponents.DotNetBar.ButtonItem()
         Me.UpdateBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
+        Me.XboxManagerBB = New DevComponents.DotNetBar.ButtonItem()
         Me.MyInfoBB = New DevComponents.DotNetBar.ButtonItem()
+        Me.label1 = New DevComponents.DotNetBar.LabelItem()
         Me.Silver2010 = New DevComponents.Editors.ComboItem()
         Me.Black2010 = New DevComponents.Editors.ComboItem()
         Me.LoginPanel = New DevComponents.DotNetBar.PanelEx()
@@ -122,7 +123,6 @@ Partial Class Home
         Me.ButtonItem36 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem41 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
-        Me.label1 = New DevComponents.DotNetBar.LabelItem()
         Me.LoginPanel.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,18 +184,6 @@ Partial Class Home
         Me.AboutBB.ShowSubItems = False
         Me.AboutBB.Text = "About And Updates"
         '
-        'XboxManagerBB
-        '
-        Me.XboxManagerBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.XboxManagerBB.CanCustomize = False
-        Me.XboxManagerBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.XboxManagerBB.Image = CType(resources.GetObject("XboxManagerBB.Image"), System.Drawing.Image)
-        Me.XboxManagerBB.ImageFixedSize = New System.Drawing.Size(16, 16)
-        Me.XboxManagerBB.Name = "XboxManagerBB"
-        Me.XboxManagerBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(3, 3, 0, 0)
-        Me.XboxManagerBB.Text = "Xbox Manager"
-        Me.XboxManagerBB.Tooltip = "Open a STFS File / Xbox Gamesave /Profile"
-        '
         'UpdateBB
         '
         Me.UpdateBB.AutoExpandOnClick = True
@@ -220,6 +208,18 @@ Partial Class Home
         Me.OpenLogin.Text = "Login"
         Me.OpenLogin.Visible = False
         '
+        'XboxManagerBB
+        '
+        Me.XboxManagerBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.XboxManagerBB.CanCustomize = False
+        Me.XboxManagerBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.XboxManagerBB.Image = CType(resources.GetObject("XboxManagerBB.Image"), System.Drawing.Image)
+        Me.XboxManagerBB.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.XboxManagerBB.Name = "XboxManagerBB"
+        Me.XboxManagerBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(3, 3, 0, 0)
+        Me.XboxManagerBB.Text = "Xbox Manager"
+        Me.XboxManagerBB.Tooltip = "Open a STFS File / Xbox Gamesave /Profile"
+        '
         'MyInfoBB
         '
         Me.MyInfoBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
@@ -231,6 +231,11 @@ Partial Class Home
         Me.MyInfoBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor(3, 3, 0, 0)
         Me.MyInfoBB.Text = "My Info"
         Me.MyInfoBB.Visible = False
+        '
+        'label1
+        '
+        Me.label1.Name = "label1"
+        Me.label1.Text = "LabelItem2"
         '
         'Silver2010
         '
@@ -969,7 +974,7 @@ Partial Class Home
         Me.ItemPanel1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
         Me.ItemPanel1.Location = New System.Drawing.Point(0, 26)
         Me.ItemPanel1.Name = "ItemPanel1"
-        Me.ItemPanel1.Size = New System.Drawing.Size(30, 414)
+        Me.ItemPanel1.Size = New System.Drawing.Size(208, 414)
         Me.ItemPanel1.TabIndex = 24
         Me.ItemPanel1.Text = "ItemPanel1"
         '
@@ -1187,11 +1192,9 @@ Partial Class Home
         Me.ExpandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ExpandablePanel1.Controls.Add(Me.ItemPanel1)
         Me.ExpandablePanel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.ExpandablePanel1.Expanded = False
-        Me.ExpandablePanel1.ExpandedBounds = New System.Drawing.Rectangle(5, 60, 208, 440)
         Me.ExpandablePanel1.Location = New System.Drawing.Point(5, 60)
         Me.ExpandablePanel1.Name = "ExpandablePanel1"
-        Me.ExpandablePanel1.Size = New System.Drawing.Size(30, 440)
+        Me.ExpandablePanel1.Size = New System.Drawing.Size(208, 440)
         Me.ExpandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.ExpandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.ExpandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -1256,11 +1259,6 @@ Partial Class Home
         Me.ButtonItem31.Name = "ButtonItem31"
         Me.ButtonItem31.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.ButtonItem31.Text = "Minecraft"
-        '
-        'label1
-        '
-        Me.label1.Name = "label1"
-        Me.label1.Text = "LabelItem2"
         '
         'Home
         '

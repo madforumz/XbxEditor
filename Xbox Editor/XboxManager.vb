@@ -42,7 +42,7 @@ Public Class XboxManager
         'read title id
         reader.Position = &H360
         TitleID.Text = reader.ReadHexString(4)
-
+ 
             'Get directory location from header
             reader.SwapEndian() 'big endian
             reader.Position += 5
@@ -262,7 +262,7 @@ Public Class XboxManager
         Return bytes
     End Function
 
-    Private Sub RehashBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RehashBB.Click
+    Private Sub RehashBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             'Stfs1.FlushPackage(New RSAParams(Application.StartupPath + "\KV.bin"))
             'thats incase
@@ -287,4 +287,29 @@ Public Class XboxManager
         ContentImage.Image.Save(SaveFileDialog1.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png)
     End Sub
 
+    Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
+        Try
+            'Stfs1.FlushPackage(New RSAParams(Application.StartupPath + "\KV.bin"))
+            'thats incase
+            Resign()
+            WriteFile(FilePath)
+            ReadFile(FilePath)
+            MessageBoxEx.EnableGlass = False
+            MessageBoxEx.Show("Rehashed And Resigned", "Rehashed And Resigned", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBoxEx.EnableGlass = False
+            MessageBoxEx.Show(ex.Message)
+        End Try
+    End Sub
+    Public Sub modsfile()
+        If TitleID.Text = "5553083B" Then
+            Assassin_s2.FilePath = FilePath
+            Assassin_s2.ReadFile()
+            Assassin_s2.MdiParent = Home
+        End If
+    End Sub
+
+    Private Sub ModFileBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModFileBB.Click
+
+    End Sub
 End Class

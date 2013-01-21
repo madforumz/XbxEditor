@@ -28,9 +28,9 @@ Partial Class Home
         Me.AboutBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.UpdateBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
+        Me.label1 = New DevComponents.DotNetBar.LabelItem()
         Me.XboxManagerBB = New DevComponents.DotNetBar.ButtonItem()
         Me.MyInfoBB = New DevComponents.DotNetBar.ButtonItem()
-        Me.label1 = New DevComponents.DotNetBar.LabelItem()
         Me.Silver2010 = New DevComponents.Editors.ComboItem()
         Me.Black2010 = New DevComponents.Editors.ComboItem()
         Me.LoginPanel = New DevComponents.DotNetBar.PanelEx()
@@ -123,6 +123,7 @@ Partial Class Home
         Me.ButtonItem36 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem41 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
+        Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         Me.LoginPanel.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
         CType(Me.Timer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,6 +136,7 @@ Partial Class Home
         '
         Me.RibbonControl1.AllowMerge = False
         Me.RibbonControl1.AutoScroll = True
+        Me.RibbonControl1.BackColor = System.Drawing.Color.White
         '
         '
         '
@@ -143,13 +145,14 @@ Partial Class Home
         Me.RibbonControl1.CanCustomize = False
         Me.RibbonControl1.CaptionVisible = True
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AboutBB, Me.UpdateBB, Me.OpenLogin})
+        Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
+        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AboutBB, Me.UpdateBB, Me.OpenLogin, Me.label1})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.XboxManagerBB, Me.MyInfoBB, Me.label1})
-        Me.RibbonControl1.Size = New System.Drawing.Size(986, 59)
+        Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.XboxManagerBB, Me.MyInfoBB})
+        Me.RibbonControl1.Size = New System.Drawing.Size(986, 63)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
         Me.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon"
@@ -176,11 +179,12 @@ Partial Class Home
         Me.AboutBB.AutoExpandOnClick = True
         Me.AboutBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways
         Me.AboutBB.CanCustomize = False
-        Me.AboutBB.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground
+        Me.AboutBB.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.AboutBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.AboutBB.ImagePaddingHorizontal = 0
         Me.AboutBB.ImagePaddingVertical = 0
         Me.AboutBB.Name = "AboutBB"
+        Me.AboutBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.AboutBB.ShowSubItems = False
         Me.AboutBB.Text = "About And Updates"
         '
@@ -189,24 +193,32 @@ Partial Class Home
         Me.UpdateBB.AutoExpandOnClick = True
         Me.UpdateBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways
         Me.UpdateBB.CanCustomize = False
-        Me.UpdateBB.ColorTable = DevComponents.DotNetBar.eButtonColor.Office2007WithBackground
+        Me.UpdateBB.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground
+        Me.UpdateBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.UpdateBB.ImagePaddingHorizontal = 0
         Me.UpdateBB.ImagePaddingVertical = 0
         Me.UpdateBB.Name = "UpdateBB"
+        Me.UpdateBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.UpdateBB.ShowSubItems = False
         Me.UpdateBB.Text = "Check For Updates"
         '
         'OpenLogin
         '
         Me.OpenLogin.AutoExpandOnClick = True
+        Me.OpenLogin.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.TextOnlyAlways
         Me.OpenLogin.CanCustomize = False
-        Me.OpenLogin.HotTrackingStyle = DevComponents.DotNetBar.eHotTrackingStyle.Image
+        Me.OpenLogin.Image = Global.Xbox_Editor.My.Resources.Resources.login
+        Me.OpenLogin.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.OpenLogin.ImagePaddingHorizontal = 0
         Me.OpenLogin.ImagePaddingVertical = 0
         Me.OpenLogin.Name = "OpenLogin"
-        Me.OpenLogin.ShowSubItems = False
-        Me.OpenLogin.Text = "Login"
-        Me.OpenLogin.Visible = False
+        Me.OpenLogin.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
+        Me.OpenLogin.Text = "Sign In/Login"
+        '
+        'label1
+        '
+        Me.label1.Name = "label1"
+        Me.label1.Text = "LabelItem2"
         '
         'XboxManagerBB
         '
@@ -232,11 +244,6 @@ Partial Class Home
         Me.MyInfoBB.Text = "My Info"
         Me.MyInfoBB.Visible = False
         '
-        'label1
-        '
-        Me.label1.Name = "label1"
-        Me.label1.Text = "LabelItem2"
-        '
         'Silver2010
         '
         Me.Silver2010.Text = "Office 2010 Silver"
@@ -259,9 +266,7 @@ Partial Class Home
         Me.LoginPanel.Size = New System.Drawing.Size(184, 133)
         Me.LoginPanel.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.LoginPanel.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.LoginPanel.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
         Me.LoginPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.LoginPanel.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.LoginPanel.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.LoginPanel.Style.GradientAngle = 90
         Me.LoginPanel.TabIndex = 3
@@ -347,7 +352,7 @@ Partial Class Home
         Me.PanelEx2.Controls.Add(Me.LinkLabel3)
         Me.PanelEx2.Controls.Add(Me.LinkLabel2)
         Me.PanelEx2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelEx2.Location = New System.Drawing.Point(0, 365)
+        Me.PanelEx2.Location = New System.Drawing.Point(0, 366)
         Me.PanelEx2.Name = "PanelEx2"
         Me.PanelEx2.Size = New System.Drawing.Size(30, 44)
         Me.PanelEx2.Style.Alignment = System.Drawing.StringAlignment.Center
@@ -401,7 +406,7 @@ Partial Class Home
         '
         'XboxColorStyle
         '
-        Me.XboxColorStyle.ManagerColorTint = System.Drawing.SystemColors.Desktop
+        Me.XboxColorStyle.ManagerColorTint = System.Drawing.Color.Black
         Me.XboxColorStyle.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Silver
         Me.XboxColorStyle.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(26, Byte), Integer)))
         '
@@ -423,16 +428,14 @@ Partial Class Home
         Me.UpdatesEP.Controls.Add(Me.AssassinsCr)
         Me.UpdatesEP.Dock = System.Windows.Forms.DockStyle.Right
         Me.UpdatesEP.Expanded = False
-        Me.UpdatesEP.ExpandedBounds = New System.Drawing.Rectangle(794, 65, 197, 435)
+        Me.UpdatesEP.ExpandedBounds = New System.Drawing.Rectangle(794, 64, 197, 436)
         Me.UpdatesEP.ExpandOnTitleClick = True
-        Me.UpdatesEP.Location = New System.Drawing.Point(961, 60)
+        Me.UpdatesEP.Location = New System.Drawing.Point(961, 64)
         Me.UpdatesEP.Name = "UpdatesEP"
-        Me.UpdatesEP.Size = New System.Drawing.Size(30, 440)
+        Me.UpdatesEP.Size = New System.Drawing.Size(30, 436)
         Me.UpdatesEP.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.UpdatesEP.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.UpdatesEP.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
         Me.UpdatesEP.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.UpdatesEP.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.UpdatesEP.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.UpdatesEP.Style.GradientAngle = 90
         Me.UpdatesEP.TabIndex = 10
@@ -457,12 +460,10 @@ Partial Class Home
         Me.AssassinsCr.Enabled = False
         Me.AssassinsCr.Location = New System.Drawing.Point(0, 26)
         Me.AssassinsCr.Name = "AssassinsCr"
-        Me.AssassinsCr.Size = New System.Drawing.Size(30, 409)
+        Me.AssassinsCr.Size = New System.Drawing.Size(30, 410)
         Me.AssassinsCr.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.AssassinsCr.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.AssassinsCr.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
         Me.AssassinsCr.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.AssassinsCr.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.AssassinsCr.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.AssassinsCr.Style.GradientAngle = 90
         Me.AssassinsCr.TabIndex = 15
@@ -519,9 +520,7 @@ Partial Class Home
         Me.PanelEx1.Size = New System.Drawing.Size(986, 26)
         Me.PanelEx1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.PanelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
         Me.PanelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx1.Style.GradientAngle = 90
         Me.PanelEx1.TabIndex = 15
@@ -974,7 +973,7 @@ Partial Class Home
         Me.ItemPanel1.LayoutOrientation = DevComponents.DotNetBar.eOrientation.Vertical
         Me.ItemPanel1.Location = New System.Drawing.Point(0, 26)
         Me.ItemPanel1.Name = "ItemPanel1"
-        Me.ItemPanel1.Size = New System.Drawing.Size(208, 414)
+        Me.ItemPanel1.Size = New System.Drawing.Size(208, 410)
         Me.ItemPanel1.TabIndex = 24
         Me.ItemPanel1.Text = "ItemPanel1"
         '
@@ -1192,9 +1191,9 @@ Partial Class Home
         Me.ExpandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.ExpandablePanel1.Controls.Add(Me.ItemPanel1)
         Me.ExpandablePanel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.ExpandablePanel1.Location = New System.Drawing.Point(5, 60)
+        Me.ExpandablePanel1.Location = New System.Drawing.Point(5, 64)
         Me.ExpandablePanel1.Name = "ExpandablePanel1"
-        Me.ExpandablePanel1.Size = New System.Drawing.Size(208, 440)
+        Me.ExpandablePanel1.Size = New System.Drawing.Size(208, 436)
         Me.ExpandablePanel1.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.ExpandablePanel1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
         Me.ExpandablePanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -1259,6 +1258,12 @@ Partial Class Home
         Me.ButtonItem31.Name = "ButtonItem31"
         Me.ButtonItem31.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.ButtonItem31.Text = "Minecraft"
+        '
+        'StyleManager1
+        '
+        Me.StyleManager1.ManagerColorTint = System.Drawing.Color.Black
+        Me.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Silver
+        Me.StyleManager1.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(26, Byte), Integer)))
         '
         'Home
         '
@@ -1388,5 +1393,6 @@ Partial Class Home
     Private WithEvents GalleryContainer3 As DevComponents.DotNetBar.GalleryContainer
     Private WithEvents ExpandablePanel1 As DevComponents.DotNetBar.ExpandablePanel
     Friend WithEvents label1 As DevComponents.DotNetBar.LabelItem
+    Friend WithEvents StyleManager1 As DevComponents.DotNetBar.StyleManager
 
 End Class

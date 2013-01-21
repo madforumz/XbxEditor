@@ -6,7 +6,7 @@ Imports System.Text
 Imports System.Globalization
 
 Public Class Assassin_s2
-    Dim FilePath As String
+    Public FilePath As String
     Dim Open As New OpenFileDialog
     Private Sub ButtonX1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenAss.Click
         Open.Title = "Open An Xbox 360 Assassin's Creed II Gamesave"
@@ -20,7 +20,7 @@ Public Class Assassin_s2
             End Try
         End If
     End Sub
-    Private Sub ReadFile()
+    Public Sub ReadFile()
         Dim Reader As New PackageIO.Reader(FilePath, PackageIO.Endian.Little)
         Reader.Position = 81326
         ModChanger.Value = Reader.ReadInt32

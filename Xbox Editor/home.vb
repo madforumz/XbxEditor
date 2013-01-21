@@ -84,6 +84,9 @@ Public Class Home
                 If Response = vbOK Then
 
                     webc.DownloadFileAsync(New Uri("https://dl.dropbox.com/u/53532004/Xbox%20Editor.zip"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Xbox Editor.zip") '<<<<<CHANGE ME
+                    If Response = vbCancel Then
+
+                    End If
                 End If
             Else
                 Label1.Text = "Your On The Latest Version !"
@@ -348,12 +351,7 @@ Public Class Home
         Skyrim.Show()
     End Sub
 
-    Private Sub ItemPanel1_SizeChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ItemPanel1.SizeChanged
-        'GalleryContainer3.Size.Height = ItemPanel1.Height
-    End Sub
-
     Private Sub wec_DownloadFileCompleted()
         AddHandler webc.DownloadFileCompleted, New AsyncCompletedEventHandler(AddressOf wec_DownloadFileCompleted)
     End Sub
-
 End Class 'bitch!!!!!

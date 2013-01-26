@@ -22,7 +22,7 @@ Public Class FarCry3
     End Sub
 
     Private Sub MaxBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MaxBB.Click
-        MoneyII.Value = MoneyII.MaxValue
+        MoneyII.Value = "99999999"
     End Sub
     Public Function TitleIDVerify(ByVal filepath As String)
         Dim FS As New FileStream(filepath, FileMode.OpenOrCreate, FileAccess.ReadWrite)

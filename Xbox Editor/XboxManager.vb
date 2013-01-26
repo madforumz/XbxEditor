@@ -11,21 +11,6 @@ Public Class XboxManager
     Public FilePath As String
     Public TableLocation As Long
     Public FileLocation As Long
-    Private Sub OpenBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenBB.Click
-        Try
-            If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-                FilePath = OpenFileDialog1.FileName
-                ReadFile(FilePath)
-                PanelEx2.Enabled = True
-                ProfileID.Enabled = True
-                ReadFile(FilePath)
-                Me.Text = ProfileID.Text
-            End If
-        Catch ex As Exception
-            MessageBoxEx.Show(ex.Message)
-            Me.Close()
-        End Try
-    End Sub
     Public Function GetTableLocation(ByVal i As Integer) As Integer
         Return (i * &H1000) + &HC000
     End Function
@@ -289,13 +274,11 @@ Public Class XboxManager
 
     Private Sub ResignBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ResignBB.Click
         Try
-            'Stfs1.FlushPackage(New RSAParams(Application.StartupPath + "\KV.bin"))
-            'thats incase
             Resign()
             WriteFile(FilePath)
             ReadFile(FilePath)
             MessageBoxEx.EnableGlass = False
-            MessageBoxEx.Show("Rehashed And Resigned", "Rehashed And Resigned", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            MessageBoxEx.Show("Rehashed And Resigned (" + ProfileID.Text + ")", "Rehashed And Resigned", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Catch ex As Exception
             MessageBoxEx.EnableGlass = False
             MessageBoxEx.Show(ex.Message)
@@ -309,7 +292,19 @@ Public Class XboxManager
         End If
     End Sub
 
-    Private Sub ModFileBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ModFileBB.Click
-
+    Private Sub OpenBB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OpenBB.Click
+        Try
+            If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+                FilePath = OpenFileDialog1.FileName
+                ReadFile(FilePath)
+                PanelEx2.Enabled = True
+                ProfileID.Enabled = True
+                ReadFile(FilePath)
+                Me.Text = ProfileID.Text
+            End If
+        Catch ex As Exception
+            MessageBoxEx.Show(ex.Message)
+            Me.Close()
+        End Try
     End Sub
 End Class

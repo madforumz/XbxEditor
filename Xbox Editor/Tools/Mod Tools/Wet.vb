@@ -55,11 +55,11 @@ Public Class Wet
         SkillPointsII.Value = reader.ReadInt32()
         reader.Position = reader.Position + 4
         'Shotgun
-        ShotGunII.Value = reader.ReadInt32()
+        ShotGunII.Value = reader.ReadInt16
         'Machine Gun
-        MachineGunII.Value = reader.ReadInt32()
+        MachineGunII.Value = reader.ReadInt16
         'Dart Bow
-        DartBowII.Value = reader.ReadInt32()
+        DartBowII.Value = reader.ReadInt16
         reader.Close()
     End Sub
     Public Sub SaveFile()

@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>XEIcon.ico</ApplicationIcon>
+    <ApplicationIcon>XEIcon 1.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -110,7 +110,6 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modules\Class%27s\ResignFile.vb" />
     <Compile Include="Modules\Class%27s\Update.vb" />
     <Compile Include="Tools\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -411,6 +410,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XboxManager.resx">
       <DependentUpon>XboxManager.vb</DependentUpon>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -447,7 +448,7 @@
     <None Include="images\key_services.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="XEIcon.ico" />
+    <Content Include="XEIcon 1.ico" />
     <None Include="Resources\Tools Icon.png" />
     <None Include="Resources\login.png" />
     <None Include="Resources\backagrong.png" />

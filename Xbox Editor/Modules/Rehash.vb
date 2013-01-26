@@ -6,7 +6,7 @@ Imports System.IO
 Imports System.Text
 
 Module Rehash
-
+    Public filepath As String
     Public Sub ResignXboxmanager()
         Dim rsaEncryptor As New RSACryptoServiceProvider()
         Dim rsaParamaters1 As New RSAParameters()
@@ -38,8 +38,8 @@ Module Rehash
         Dim xReader As Reader
         Dim xWriter As Writer
 
-        xReader = New Reader(XboxManager.FilePath, Endian.Big)
-        xWriter = New Writer(XboxManager.FilePath, Endian.Big)
+        xReader = New Reader(filepath, Endian.Big)
+        xWriter = New Writer(filepath, Endian.Big)
 
         Dim sha1Algorythm2 As New SHA1CryptoServiceProvider()
         Try

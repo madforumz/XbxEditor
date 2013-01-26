@@ -28,7 +28,6 @@ Partial Class Home
         Me.AboutBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.UpdateBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.OpenLogin = New DevComponents.DotNetBar.Office2007StartButton()
-        Me.label1 = New DevComponents.DotNetBar.LabelItem()
         Me.XboxManagerBB = New DevComponents.DotNetBar.ButtonItem()
         Me.MyInfoBB = New DevComponents.DotNetBar.ButtonItem()
         Me.Silver2010 = New DevComponents.Editors.ComboItem()
@@ -146,12 +145,12 @@ Partial Class Home
         Me.RibbonControl1.CaptionVisible = True
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
-        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AboutBB, Me.UpdateBB, Me.OpenLogin, Me.label1})
+        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.AboutBB, Me.XboxManagerBB, Me.UpdateBB, Me.OpenLogin})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
         Me.RibbonControl1.Name = "RibbonControl1"
         Me.RibbonControl1.Padding = New System.Windows.Forms.Padding(0, 0, 0, 2)
-        Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.XboxManagerBB, Me.MyInfoBB})
+        Me.RibbonControl1.QuickToolbarItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MyInfoBB})
         Me.RibbonControl1.Size = New System.Drawing.Size(986, 63)
         Me.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon"
@@ -201,6 +200,7 @@ Partial Class Home
         Me.UpdateBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.UpdateBB.ShowSubItems = False
         Me.UpdateBB.Text = "Check For Updates"
+        Me.UpdateBB.Visible = False
         '
         'OpenLogin
         '
@@ -214,11 +214,7 @@ Partial Class Home
         Me.OpenLogin.Name = "OpenLogin"
         Me.OpenLogin.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.OpenLogin.Text = "Sign In/Login"
-        '
-        'label1
-        '
-        Me.label1.Name = "label1"
-        Me.label1.Text = "LabelItem2"
+        Me.OpenLogin.Visible = False
         '
         'XboxManagerBB
         '
@@ -1392,7 +1388,6 @@ Partial Class Home
     Friend WithEvents SkyrimBB As DevComponents.DotNetBar.ButtonItem
     Private WithEvents GalleryContainer3 As DevComponents.DotNetBar.GalleryContainer
     Private WithEvents ExpandablePanel1 As DevComponents.DotNetBar.ExpandablePanel
-    Friend WithEvents label1 As DevComponents.DotNetBar.LabelItem
     Friend WithEvents StyleManager1 As DevComponents.DotNetBar.StyleManager
 
 End Class

@@ -237,9 +237,7 @@ Partial Class XboxManager
         Me.PanelEx5.Size = New System.Drawing.Size(140, 37)
         Me.PanelEx5.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx5.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.PanelEx5.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
         Me.PanelEx5.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx5.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx5.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx5.Style.GradientAngle = 90
         Me.PanelEx5.TabIndex = 12
@@ -362,9 +360,7 @@ Partial Class XboxManager
         Me.PanelEx2.Size = New System.Drawing.Size(140, 75)
         Me.PanelEx2.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelEx2.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.PanelEx2.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
         Me.PanelEx2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.PanelEx2.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
         Me.PanelEx2.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.PanelEx2.Style.GradientAngle = 90
         Me.PanelEx2.TabIndex = 16
@@ -469,7 +465,7 @@ Partial Class XboxManager
         Me.ResignBB.AutoExpandOnClick = True
         Me.ResignBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
         Me.ResignBB.CanCustomize = False
-        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground
+        Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.Magenta
         Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.ResignBB.ImagePaddingHorizontal = 0
         Me.ResignBB.ImagePaddingVertical = 0
@@ -483,7 +479,7 @@ Partial Class XboxManager
         Me.OpenBB.AutoExpandOnClick = True
         Me.OpenBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
         Me.OpenBB.CanCustomize = False
-        Me.OpenBB.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueOrb
+        Me.OpenBB.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground
         Me.OpenBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.OpenBB.ImagePaddingHorizontal = 0
         Me.OpenBB.ImagePaddingVertical = 0

@@ -37,7 +37,6 @@ Public Class Home
     
     Private Sub home_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim update As New Update("https://dl.dropbox.com/u/53532004/Xbox%20Editor%20Updates/UpdateInfo.txt")
-        update.DownloadUpdates()
         MessageBoxEx.EnableGlass = False
         KeyPreview = True
         TxtUsername.Text = My.Settings.Username

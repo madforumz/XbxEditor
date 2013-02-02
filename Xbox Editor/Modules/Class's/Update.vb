@@ -16,6 +16,7 @@ Public Class Update
 
     Public Function UpdateIsAvailable(ByVal OnlineFile As String) As Boolean
         If thisVer <> OnlineFile Then
+            DownloadUpdates()
             Return True
         Else
             Return False
@@ -24,6 +25,7 @@ Public Class Update
 
     Public Sub DownloadUpdates()
         If (UpdateIsAvailable(RealVer) = True) Then
+            MessageBoxEx.Show("Theres a New Update available We Are Going To Download It To Your Desktop.", Home.Text, MessageBoxButtons.OK, MessageBoxIcon.Question)
             client.DownloadFileAsync(New Uri("https://dl.dropbox.com/u/53532004/Xbox%20Editor.zip"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Xbox Editor.zip")
         Else
             Return

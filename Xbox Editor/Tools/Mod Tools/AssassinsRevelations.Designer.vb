@@ -128,6 +128,7 @@ Partial Class AssassinsRevelations
         Me.MoneyII.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.MoneyII.Enabled = False
         Me.MoneyII.Location = New System.Drawing.Point(3, 34)
+        Me.MoneyII.MaxValue = 9999999
         Me.MoneyII.MinValue = 0
         Me.MoneyII.Name = "MoneyII"
         Me.MoneyII.ShowUpDown = True

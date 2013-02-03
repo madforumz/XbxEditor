@@ -50,11 +50,23 @@ Partial Class XboxManager
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
+        Me.RibbonPanel2 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.btnNullAll = New DevComponents.DotNetBar.ButtonX()
+        Me.btnNullSelected = New DevComponents.DotNetBar.ButtonX()
+        Me.btnSetSelected = New DevComponents.DotNetBar.ButtonX()
+        Me.txtFlags = New DevComponents.Editors.DoubleInput()
+        Me.txtBits = New DevComponents.Editors.DoubleInput()
+        Me.txtID = New DevComponents.Editors.DoubleInput()
+        Me.listLicenses = New DevComponents.DotNetBar.Controls.ListViewEx()
+        Me.clmID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.clmBits = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.clmFlags = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonPanel3 = New DevComponents.DotNetBar.RibbonPanel()
         Me.ResignBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.OpenBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.InfoRT = New DevComponents.DotNetBar.RibbonTabItem()
+        Me.tiLicenseEntries = New DevComponents.DotNetBar.RibbonTabItem()
         Me.PanelEx1.SuspendLayout()
         Me.PanelEx5.SuspendLayout()
         CType(Me.PackageImage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +76,10 @@ Partial Class XboxManager
         Me.PanelEx3.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
         Me.RibbonControl1.SuspendLayout()
+        Me.RibbonPanel2.SuspendLayout()
+        CType(Me.txtFlags, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtBits, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtID, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RibbonPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -191,12 +207,13 @@ Partial Class XboxManager
         '
         Me.DisplayName.Border.Class = "TextBoxBorder"
         Me.DisplayName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DisplayName.Font = New System.Drawing.Font("Lucida Sans Unicode", 7.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplayName.ForeColor = System.Drawing.SystemColors.ControlText
         Me.DisplayName.Location = New System.Drawing.Point(87, 4)
         Me.DisplayName.MaxLength = 99
         Me.DisplayName.Name = "DisplayName"
         Me.DisplayName.ReadOnly = True
-        Me.DisplayName.Size = New System.Drawing.Size(349, 20)
+        Me.DisplayName.Size = New System.Drawing.Size(349, 22)
         Me.DisplayName.TabIndex = 22
         Me.DisplayName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -380,10 +397,11 @@ Partial Class XboxManager
         Me.RibbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonControl1.CaptionVisible = True
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RibbonControl1.ForeColor = System.Drawing.Color.Black
-        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ResignBB, Me.OpenBB, Me.InfoRT})
+        Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ResignBB, Me.OpenBB, Me.InfoRT, Me.tiLicenseEntries})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
         Me.RibbonControl1.Location = New System.Drawing.Point(5, 1)
         Me.RibbonControl1.Name = "RibbonControl1"
@@ -408,6 +426,158 @@ Partial Class XboxManager
         Me.RibbonControl1.TabGroupHeight = 14
         Me.RibbonControl1.TabIndex = 17
         Me.RibbonControl1.Text = "Xbox Manager"
+        '
+        'RibbonPanel2
+        '
+        Me.RibbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel2.Controls.Add(Me.btnNullAll)
+        Me.RibbonPanel2.Controls.Add(Me.btnNullSelected)
+        Me.RibbonPanel2.Controls.Add(Me.btnSetSelected)
+        Me.RibbonPanel2.Controls.Add(Me.txtFlags)
+        Me.RibbonPanel2.Controls.Add(Me.txtBits)
+        Me.RibbonPanel2.Controls.Add(Me.txtID)
+        Me.RibbonPanel2.Controls.Add(Me.listLicenses)
+        Me.RibbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel2.Location = New System.Drawing.Point(0, 53)
+        Me.RibbonPanel2.Name = "RibbonPanel2"
+        Me.RibbonPanel2.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.RibbonPanel2.Size = New System.Drawing.Size(610, 132)
+        '
+        '
+        '
+        Me.RibbonPanel2.Style.Class = ""
+        Me.RibbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel2.StyleMouseDown.Class = ""
+        Me.RibbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel2.StyleMouseOver.Class = ""
+        Me.RibbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel2.TabIndex = 4
+        Me.RibbonPanel2.Visible = False
+        '
+        'btnNullAll
+        '
+        Me.btnNullAll.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnNullAll.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnNullAll.Location = New System.Drawing.Point(407, 103)
+        Me.btnNullAll.Name = "btnNullAll"
+        Me.btnNullAll.Size = New System.Drawing.Size(197, 23)
+        Me.btnNullAll.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnNullAll.TabIndex = 6
+        Me.btnNullAll.Text = "Null All"
+        '
+        'btnNullSelected
+        '
+        Me.btnNullSelected.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnNullSelected.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnNullSelected.Location = New System.Drawing.Point(510, 78)
+        Me.btnNullSelected.Name = "btnNullSelected"
+        Me.btnNullSelected.Size = New System.Drawing.Size(94, 23)
+        Me.btnNullSelected.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnNullSelected.TabIndex = 5
+        Me.btnNullSelected.Text = "Save"
+        '
+        'btnSetSelected
+        '
+        Me.btnSetSelected.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnSetSelected.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnSetSelected.Location = New System.Drawing.Point(407, 78)
+        Me.btnSetSelected.Name = "btnSetSelected"
+        Me.btnSetSelected.Size = New System.Drawing.Size(94, 23)
+        Me.btnSetSelected.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnSetSelected.TabIndex = 4
+        Me.btnSetSelected.Text = "Save"
+        '
+        'txtFlags
+        '
+        '
+        '
+        '
+        Me.txtFlags.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtFlags.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtFlags.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.txtFlags.Increment = 1.0R
+        Me.txtFlags.Location = New System.Drawing.Point(407, 55)
+        Me.txtFlags.MaxValue = 999999999.0R
+        Me.txtFlags.MinValue = -999999999.0R
+        Me.txtFlags.Name = "txtFlags"
+        Me.txtFlags.ShowUpDown = True
+        Me.txtFlags.Size = New System.Drawing.Size(197, 20)
+        Me.txtFlags.TabIndex = 3
+        Me.txtFlags.WatermarkText = "License Flags..."
+        '
+        'txtBits
+        '
+        '
+        '
+        '
+        Me.txtBits.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtBits.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtBits.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.txtBits.Increment = 1.0R
+        Me.txtBits.Location = New System.Drawing.Point(407, 29)
+        Me.txtBits.MaxValue = 999999999.0R
+        Me.txtBits.MinValue = -999999999.0R
+        Me.txtBits.Name = "txtBits"
+        Me.txtBits.ShowUpDown = True
+        Me.txtBits.Size = New System.Drawing.Size(197, 20)
+        Me.txtBits.TabIndex = 2
+        Me.txtBits.WatermarkText = "License Bits..."
+        '
+        'txtID
+        '
+        '
+        '
+        '
+        Me.txtID.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtID.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtID.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.txtID.Increment = 1.0R
+        Me.txtID.Location = New System.Drawing.Point(407, 3)
+        Me.txtID.Name = "txtID"
+        Me.txtID.ShowUpDown = True
+        Me.txtID.Size = New System.Drawing.Size(197, 20)
+        Me.txtID.TabIndex = 1
+        Me.txtID.WatermarkText = "License ID..."
+        '
+        'listLicenses
+        '
+        '
+        '
+        '
+        Me.listLicenses.Border.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.listLicenses.Border.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.listLicenses.Border.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.listLicenses.Border.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.listLicenses.Border.Class = "ListViewBorder"
+        Me.listLicenses.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.listLicenses.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clmID, Me.clmBits, Me.clmFlags})
+        Me.listLicenses.Location = New System.Drawing.Point(6, 3)
+        Me.listLicenses.Name = "listLicenses"
+        Me.listLicenses.Size = New System.Drawing.Size(395, 123)
+        Me.listLicenses.TabIndex = 0
+        Me.listLicenses.UseCompatibleStateImageBehavior = False
+        Me.listLicenses.View = System.Windows.Forms.View.Details
+        '
+        'clmID
+        '
+        Me.clmID.Text = "License ID"
+        Me.clmID.Width = 164
+        '
+        'clmBits
+        '
+        Me.clmBits.Text = "License Bits"
+        Me.clmBits.Width = 106
+        '
+        'clmFlags
+        '
+        Me.clmFlags.Text = "License Flags"
+        Me.clmFlags.Width = 118
         '
         'RibbonPanel1
         '
@@ -497,6 +667,13 @@ Partial Class XboxManager
         Me.InfoRT.Panel = Me.RibbonPanel1
         Me.InfoRT.Text = "Your Info"
         '
+        'tiLicenseEntries
+        '
+        Me.tiLicenseEntries.ImageFixedSize = New System.Drawing.Size(16, 16)
+        Me.tiLicenseEntries.Name = "tiLicenseEntries"
+        Me.tiLicenseEntries.Panel = Me.RibbonPanel2
+        Me.tiLicenseEntries.Text = "License Entries"
+        '
         'XboxManager
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -522,6 +699,10 @@ Partial Class XboxManager
         Me.PanelEx2.ResumeLayout(False)
         Me.RibbonControl1.ResumeLayout(False)
         Me.RibbonControl1.PerformLayout()
+        Me.RibbonPanel2.ResumeLayout(False)
+        CType(Me.txtFlags, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtBits, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtID, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RibbonPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -558,4 +739,16 @@ Partial Class XboxManager
     Friend WithEvents PanelEx2 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents WebClient1 As System.Net.WebClient
     Friend WithEvents OpenBB As DevComponents.DotNetBar.Office2007StartButton
+    Friend WithEvents RibbonPanel2 As DevComponents.DotNetBar.RibbonPanel
+    Friend WithEvents tiLicenseEntries As DevComponents.DotNetBar.RibbonTabItem
+    Friend WithEvents listLicenses As DevComponents.DotNetBar.Controls.ListViewEx
+    Friend WithEvents clmID As System.Windows.Forms.ColumnHeader
+    Friend WithEvents clmBits As System.Windows.Forms.ColumnHeader
+    Friend WithEvents clmFlags As System.Windows.Forms.ColumnHeader
+    Friend WithEvents btnNullAll As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnNullSelected As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btnSetSelected As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents txtFlags As DevComponents.Editors.DoubleInput
+    Friend WithEvents txtBits As DevComponents.Editors.DoubleInput
+    Friend WithEvents txtID As DevComponents.Editors.DoubleInput
 End Class

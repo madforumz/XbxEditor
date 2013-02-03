@@ -20,6 +20,16 @@ Public Class XboxManager
         ProfileID.Text = Conversions.BytesToString(STFS.ProfileID)
         DeviceID.Text = Conversions.BytesToString(STFS.DeviceID)
         ConsoleID.Text = Conversions.BytesToString(STFS.ConsoleID)
+        ParseLicenseTable()
+    End Sub
+
+    Sub ParseLicenseTable()
+        For Each l As LicenseEntry In STFS.Licenses
+            Dim i As New ListViewItem(l.LicenseID.ToString())
+            i.SubItems.Add(l.LicenseBits)
+            i.SubItems.Add(l.LicenseFlags)
+            listLicenses.Items.Add(i)
+        Next
     End Sub
 
     Public Sub WriteFile(ByVal File As String)
@@ -56,4 +66,8 @@ Public Class XboxManager
         
     End Sub
 
+    Private Sub btnNullAll_Click(sender As Object, e As EventArgs) Handles btnNullAll.Click
+        STFS.NullAllLicenseEntries()
+        ParseLicenseTable()
+    End Sub
 End Class

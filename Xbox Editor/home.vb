@@ -204,7 +204,7 @@ Public Class Home
     End Sub
     Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
         XboxManager.SaveFileDialog1.ShowDialog()
-        XboxManager.ContentImage.BackgroundImage.Save(XboxManager.SaveFileDialog1.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png)
+        XboxManager.TitleImage.BackgroundImage.Save(XboxManager.SaveFileDialog1.FileName + ".png", System.Drawing.Imaging.ImageFormat.Png)
     End Sub
 
     Private Sub NeedForSpeed2012BB_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NeedForSpeed2012BB.Click

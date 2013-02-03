@@ -42,7 +42,7 @@ Partial Class XboxManager
         Me.ExtractImages1CM = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InjectImageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ContentImage = New System.Windows.Forms.PictureBox()
+        Me.TitleImage = New System.Windows.Forms.PictureBox()
         Me.ExtractImages2CM = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelEx3 = New DevComponents.DotNetBar.PanelEx()
@@ -59,7 +59,7 @@ Partial Class XboxManager
         Me.PanelEx5.SuspendLayout()
         CType(Me.PackageImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ExtractImages1CM.SuspendLayout()
-        CType(Me.ContentImage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TitleImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ExtractImages2CM.SuspendLayout()
         Me.PanelEx3.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
@@ -304,17 +304,18 @@ Partial Class XboxManager
         Me.InjectImageToolStripMenuItem.Text = "Inject Image"
         Me.InjectImageToolStripMenuItem.Visible = False
         '
-        'ContentImage
+        'TitleImage
         '
-        Me.ContentImage.BackgroundImage = Global.Xbox_Editor.My.Resources.Resources.IDontKnow
-        Me.ContentImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ContentImage.ContextMenuStrip = Me.ExtractImages2CM
-        Me.ContentImage.ErrorImage = CType(resources.GetObject("ContentImage.ErrorImage"), System.Drawing.Image)
-        Me.ContentImage.Location = New System.Drawing.Point(73, 3)
-        Me.ContentImage.Name = "ContentImage"
-        Me.ContentImage.Size = New System.Drawing.Size(64, 64)
-        Me.ContentImage.TabIndex = 10
-        Me.ContentImage.TabStop = False
+        Me.TitleImage.BackgroundImage = Global.Xbox_Editor.My.Resources.Resources.IDontKnow
+        Me.TitleImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.TitleImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TitleImage.ContextMenuStrip = Me.ExtractImages2CM
+        Me.TitleImage.ErrorImage = CType(resources.GetObject("TitleImage.ErrorImage"), System.Drawing.Image)
+        Me.TitleImage.Location = New System.Drawing.Point(73, 3)
+        Me.TitleImage.Name = "TitleImage"
+        Me.TitleImage.Size = New System.Drawing.Size(64, 64)
+        Me.TitleImage.TabIndex = 10
+        Me.TitleImage.TabStop = False
         '
         'ExtractImages2CM
         '
@@ -354,7 +355,7 @@ Partial Class XboxManager
         Me.PanelEx2.CanvasColor = System.Drawing.SystemColors.Control
         Me.PanelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.PanelEx2.Controls.Add(Me.PackageImage)
-        Me.PanelEx2.Controls.Add(Me.ContentImage)
+        Me.PanelEx2.Controls.Add(Me.TitleImage)
         Me.PanelEx2.Location = New System.Drawing.Point(9, 6)
         Me.PanelEx2.Name = "PanelEx2"
         Me.PanelEx2.Size = New System.Drawing.Size(140, 75)
@@ -466,7 +467,6 @@ Partial Class XboxManager
         Me.ResignBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
         Me.ResignBB.CanCustomize = False
         Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.Magenta
-        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.ResignBB.ImagePaddingHorizontal = 0
         Me.ResignBB.ImagePaddingVertical = 0
         Me.ResignBB.Name = "ResignBB"
@@ -479,7 +479,6 @@ Partial Class XboxManager
         Me.OpenBB.AutoExpandOnClick = True
         Me.OpenBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
         Me.OpenBB.CanCustomize = False
-        Me.OpenBB.ColorTable = DevComponents.DotNetBar.eButtonColor.MagentaWithBackground
         Me.OpenBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.OpenBB.ImagePaddingHorizontal = 0
         Me.OpenBB.ImagePaddingVertical = 0
@@ -517,7 +516,7 @@ Partial Class XboxManager
         Me.PanelEx5.PerformLayout()
         CType(Me.PackageImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ExtractImages1CM.ResumeLayout(False)
-        CType(Me.ContentImage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TitleImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ExtractImages2CM.ResumeLayout(False)
         Me.PanelEx3.ResumeLayout(False)
         Me.PanelEx2.ResumeLayout(False)
@@ -537,7 +536,7 @@ Partial Class XboxManager
     Friend WithEvents ConsoleID As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PanelEx5 As DevComponents.DotNetBar.PanelEx
-    Friend WithEvents ContentImage As System.Windows.Forms.PictureBox
+    Friend WithEvents TitleImage As System.Windows.Forms.PictureBox
     Friend WithEvents PackageImage As System.Windows.Forms.PictureBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ProfileID As DevComponents.DotNetBar.Controls.TextBoxX

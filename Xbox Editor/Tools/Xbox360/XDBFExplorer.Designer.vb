@@ -25,14 +25,14 @@ Partial Class XDBFExplorer
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(XDBFExplorer))
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
+        Me.RibbonPanel2 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.gpHeader = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.listTableEntries = New DevComponents.DotNetBar.Controls.ListViewEx()
         Me.clmNamespace = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.clmEntryID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.clmOffsetSpec = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.clmLength = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.RibbonPanel2 = New DevComponents.DotNetBar.RibbonPanel()
-        Me.gpHeader = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.btnOpen = New DevComponents.DotNetBar.Office2007StartButton()
         Me.btnSave = New DevComponents.DotNetBar.Office2007StartButton()
         Me.tiHeader = New DevComponents.DotNetBar.RibbonTabItem()
@@ -40,8 +40,8 @@ Partial Class XDBFExplorer
         Me.btnFix = New DevComponents.DotNetBar.ButtonItem()
         Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         Me.RibbonControl1.SuspendLayout()
-        Me.RibbonPanel1.SuspendLayout()
         Me.RibbonPanel2.SuspendLayout()
+        Me.RibbonPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'RibbonControl1
@@ -52,8 +52,8 @@ Partial Class XDBFExplorer
         Me.RibbonControl1.BackgroundStyle.Class = ""
         Me.RibbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonControl1.CaptionVisible = True
-        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.btnOpen, Me.btnSave, Me.tiHeader, Me.tiEntries, Me.btnFix})
         Me.RibbonControl1.KeyTipsFont = New System.Drawing.Font("Tahoma", 7.0!)
@@ -81,68 +81,6 @@ Partial Class XDBFExplorer
         Me.RibbonControl1.TabIndex = 0
         Me.RibbonControl1.Text = "RibbonControl1"
         '
-        'RibbonPanel1
-        '
-        Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonPanel1.Controls.Add(Me.listTableEntries)
-        Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 53)
-        Me.RibbonPanel1.Name = "RibbonPanel1"
-        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(510, 392)
-        '
-        '
-        '
-        Me.RibbonPanel1.Style.Class = ""
-        Me.RibbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel1.StyleMouseDown.Class = ""
-        Me.RibbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel1.StyleMouseOver.Class = ""
-        Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonPanel1.TabIndex = 1
-        Me.RibbonPanel1.Visible = False
-        '
-        'listTableEntries
-        '
-        '
-        '
-        '
-        Me.listTableEntries.Border.Class = "ListViewBorder"
-        Me.listTableEntries.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.listTableEntries.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clmNamespace, Me.clmEntryID, Me.clmOffsetSpec, Me.clmLength})
-        Me.listTableEntries.Location = New System.Drawing.Point(6, 3)
-        Me.listTableEntries.Name = "listTableEntries"
-        Me.listTableEntries.Size = New System.Drawing.Size(498, 355)
-        Me.listTableEntries.TabIndex = 0
-        Me.listTableEntries.UseCompatibleStateImageBehavior = False
-        Me.listTableEntries.View = System.Windows.Forms.View.Details
-        '
-        'clmNamespace
-        '
-        Me.clmNamespace.Text = "Namespace"
-        Me.clmNamespace.Width = 139
-        '
-        'clmEntryID
-        '
-        Me.clmEntryID.Text = "ID"
-        Me.clmEntryID.Width = 87
-        '
-        'clmOffsetSpec
-        '
-        Me.clmOffsetSpec.Text = "Offset Specifier"
-        Me.clmOffsetSpec.Width = 162
-        '
-        'clmLength
-        '
-        Me.clmLength.Text = "Length"
-        Me.clmLength.Width = 179
-        '
         'RibbonPanel2
         '
         Me.RibbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -168,6 +106,7 @@ Partial Class XDBFExplorer
         Me.RibbonPanel2.StyleMouseOver.Class = ""
         Me.RibbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel2.TabIndex = 2
+        Me.RibbonPanel2.Visible = False
         '
         'gpHeader
         '
@@ -210,6 +149,67 @@ Partial Class XDBFExplorer
         Me.gpHeader.TabIndex = 0
         Me.gpHeader.Text = "Header Data"
         '
+        'RibbonPanel1
+        '
+        Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel1.Controls.Add(Me.listTableEntries)
+        Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 53)
+        Me.RibbonPanel1.Name = "RibbonPanel1"
+        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(510, 392)
+        '
+        '
+        '
+        Me.RibbonPanel1.Style.Class = ""
+        Me.RibbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel1.StyleMouseDown.Class = ""
+        Me.RibbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel1.StyleMouseOver.Class = ""
+        Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel1.TabIndex = 1
+        '
+        'listTableEntries
+        '
+        '
+        '
+        '
+        Me.listTableEntries.Border.Class = "ListViewBorder"
+        Me.listTableEntries.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.listTableEntries.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clmNamespace, Me.clmEntryID, Me.clmOffsetSpec, Me.clmLength})
+        Me.listTableEntries.Location = New System.Drawing.Point(6, 3)
+        Me.listTableEntries.Name = "listTableEntries"
+        Me.listTableEntries.Size = New System.Drawing.Size(498, 355)
+        Me.listTableEntries.TabIndex = 0
+        Me.listTableEntries.UseCompatibleStateImageBehavior = False
+        Me.listTableEntries.View = System.Windows.Forms.View.Details
+        '
+        'clmNamespace
+        '
+        Me.clmNamespace.Text = "Namespace"
+        Me.clmNamespace.Width = 139
+        '
+        'clmEntryID
+        '
+        Me.clmEntryID.Text = "ID"
+        Me.clmEntryID.Width = 87
+        '
+        'clmOffsetSpec
+        '
+        Me.clmOffsetSpec.Text = "Offset Specifier"
+        Me.clmOffsetSpec.Width = 162
+        '
+        'clmLength
+        '
+        Me.clmLength.Text = "Length"
+        Me.clmLength.Width = 140
+        '
         'btnOpen
         '
         Me.btnOpen.AutoExpandOnClick = True
@@ -239,13 +239,13 @@ Partial Class XDBFExplorer
         '
         'tiHeader
         '
-        Me.tiHeader.Checked = True
         Me.tiHeader.Name = "tiHeader"
         Me.tiHeader.Panel = Me.RibbonPanel2
         Me.tiHeader.Text = "Header Data/Free Space Data"
         '
         'tiEntries
         '
+        Me.tiEntries.Checked = True
         Me.tiEntries.Name = "tiEntries"
         Me.tiEntries.Panel = Me.RibbonPanel1
         Me.tiEntries.Text = "Entry Table"
@@ -274,8 +274,8 @@ Partial Class XDBFExplorer
         Me.Text = "XDBF Explorer"
         Me.RibbonControl1.ResumeLayout(False)
         Me.RibbonControl1.PerformLayout()
-        Me.RibbonPanel1.ResumeLayout(False)
         Me.RibbonPanel2.ResumeLayout(False)
+        Me.RibbonPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

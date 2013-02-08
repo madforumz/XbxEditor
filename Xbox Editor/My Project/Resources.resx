@@ -124,8 +124,8 @@
   <data name="PackageIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PackageIO.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="floppy_disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\floppy_disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="battery_10percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\battery_10percent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Question-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Question-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -138,6 +138,12 @@
   </data>
   <data name="back-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1359931978_key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1359931978_key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1359894338_tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1359894338_tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="battery_60percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_60percent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +169,8 @@
   <data name="X360" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\X360.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="maleIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maleIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="floppy_disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\floppy_disk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="battery_80percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_80percent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,14 +193,14 @@
   <data name="back-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="battery_10percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\battery_10percent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="battery_horizontal_10percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_horizontal_10percent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="battery_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_full1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maleIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maleIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="battery_20percent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\battery_20percent1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +211,7 @@
   <data name="IDontKnow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\I Dont Know.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1359894338_tool" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1359894338_tool.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="database" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

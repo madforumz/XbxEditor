@@ -50,6 +50,7 @@ Partial Class XboxManager
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
+        Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonPanel2 = New DevComponents.DotNetBar.RibbonPanel()
         Me.btnNullAll = New DevComponents.DotNetBar.ButtonX()
         Me.btnNullSelected = New DevComponents.DotNetBar.ButtonX()
@@ -61,7 +62,6 @@ Partial Class XboxManager
         Me.clmID = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.clmBits = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.clmFlags = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonPanel3 = New DevComponents.DotNetBar.RibbonPanel()
         Me.ResignBB = New DevComponents.DotNetBar.Office2007StartButton()
         Me.OpenBB = New DevComponents.DotNetBar.Office2007StartButton()
@@ -76,11 +76,11 @@ Partial Class XboxManager
         Me.PanelEx3.SuspendLayout()
         Me.PanelEx2.SuspendLayout()
         Me.RibbonControl1.SuspendLayout()
+        Me.RibbonPanel1.SuspendLayout()
         Me.RibbonPanel2.SuspendLayout()
         CType(Me.txtFlags, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtBits, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtID, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RibbonPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelEx1
@@ -427,6 +427,33 @@ Partial Class XboxManager
         Me.RibbonControl1.TabIndex = 17
         Me.RibbonControl1.Text = "Xbox Manager"
         '
+        'RibbonPanel1
+        '
+        Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel1.Controls.Add(Me.PanelEx3)
+        Me.RibbonPanel1.Controls.Add(Me.PanelEx1)
+        Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 53)
+        Me.RibbonPanel1.Name = "RibbonPanel1"
+        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(610, 132)
+        '
+        '
+        '
+        Me.RibbonPanel1.Style.Class = ""
+        Me.RibbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel1.StyleMouseDown.Class = ""
+        Me.RibbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel1.StyleMouseOver.Class = ""
+        Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel1.TabIndex = 1
+        '
         'RibbonPanel2
         '
         Me.RibbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -579,33 +606,6 @@ Partial Class XboxManager
         Me.clmFlags.Text = "License Flags"
         Me.clmFlags.Width = 118
         '
-        'RibbonPanel1
-        '
-        Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonPanel1.Controls.Add(Me.PanelEx3)
-        Me.RibbonPanel1.Controls.Add(Me.PanelEx1)
-        Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 53)
-        Me.RibbonPanel1.Name = "RibbonPanel1"
-        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(610, 132)
-        '
-        '
-        '
-        Me.RibbonPanel1.Style.Class = ""
-        Me.RibbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel1.StyleMouseDown.Class = ""
-        Me.RibbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel1.StyleMouseOver.Class = ""
-        Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonPanel1.TabIndex = 1
-        '
         'RibbonPanel3
         '
         Me.RibbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -637,12 +637,13 @@ Partial Class XboxManager
         Me.ResignBB.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
         Me.ResignBB.CanCustomize = False
         Me.ResignBB.ColorTable = DevComponents.DotNetBar.eButtonColor.Magenta
+        Me.ResignBB.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.ResignBB.ImagePaddingHorizontal = 0
         Me.ResignBB.ImagePaddingVertical = 0
         Me.ResignBB.Name = "ResignBB"
         Me.ResignBB.Shape = New DevComponents.DotNetBar.RoundRectangleShapeDescriptor()
         Me.ResignBB.ShowSubItems = False
-        Me.ResignBB.Text = "Rehash And Resign"
+        Me.ResignBB.Text = "Save And Resign"
         '
         'OpenBB
         '
@@ -669,6 +670,8 @@ Partial Class XboxManager
         '
         'tiLicenseEntries
         '
+        Me.tiLicenseEntries.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.tiLicenseEntries.Image = Global.Xbox_Editor.My.Resources.Resources._1359931978_key
         Me.tiLicenseEntries.ImageFixedSize = New System.Drawing.Size(16, 16)
         Me.tiLicenseEntries.Name = "tiLicenseEntries"
         Me.tiLicenseEntries.Panel = Me.RibbonPanel2
@@ -699,11 +702,11 @@ Partial Class XboxManager
         Me.PanelEx2.ResumeLayout(False)
         Me.RibbonControl1.ResumeLayout(False)
         Me.RibbonControl1.PerformLayout()
+        Me.RibbonPanel1.ResumeLayout(False)
         Me.RibbonPanel2.ResumeLayout(False)
         CType(Me.txtFlags, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtBits, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtID, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RibbonPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

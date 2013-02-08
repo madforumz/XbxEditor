@@ -70,9 +70,6 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CLKsFATXLib">
-      <HintPath>..\..\CLKsFATXLib.dll</HintPath>
-    </Reference>
     <Reference Include="DevComponents.DotNetBar2, Version=10.0.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\DevComponents.DotNetBar2.dll</HintPath>
@@ -90,15 +87,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="XboxClasses">
-      <HintPath>..\..\XboxClasses.dll</HintPath>
-    </Reference>
     <Reference Include="XboxEditor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\XboxEditor\XboxEditor\bin\Debug\XboxEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="XboxLibrary">
-      <HintPath>..\..\XboxLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +105,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\CreateXDBF.Designer.vb">
+      <DependentUpon>CreateXDBF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CreateXDBF.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\Class%27s\Update.vb" />
     <Compile Include="Tools\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -323,6 +320,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\CreateXDBF.resx">
+      <DependentUpon>CreateXDBF.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>

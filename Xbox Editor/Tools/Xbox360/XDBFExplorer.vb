@@ -32,4 +32,8 @@ Public Class XDBFExplorer
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
 
     End Sub
+
+    Private Sub btnFix_Click(sender As Object, e As EventArgs) Handles btnFix.Click
+        XDBF.Allocate()
+    End Sub
 End Class

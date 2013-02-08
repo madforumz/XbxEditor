@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property _1359931978_key() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("1359931978_key", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property About() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("About", resourceCulture)
@@ -196,6 +206,16 @@ Namespace My.Resources
         Public ReadOnly Property bullet_key() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("bullet_key", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property database() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("database", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

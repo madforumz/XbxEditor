@@ -22,6 +22,7 @@ Partial Class Assassin_s2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Assassin_s2))
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
         Me.Max = New DevComponents.DotNetBar.ButtonX()
@@ -32,6 +33,7 @@ Partial Class Assassin_s2
         Me.ResignBB = New DevComponents.DotNetBar.ButtonX()
         Me.ControlContainerItem1 = New DevComponents.DotNetBar.ControlContainerItem()
         Me.ControlContainerItem2 = New DevComponents.DotNetBar.ControlContainerItem()
+        Me.StyleManager1 = New DevComponents.DotNetBar.StyleManager(Me.components)
         Me.PanelEx1.SuspendLayout()
         CType(Me.ModChanger, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bar1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,6 +166,11 @@ Partial Class Assassin_s2
         Me.ControlContainerItem2.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways
         Me.ControlContainerItem2.Name = "ControlContainerItem2"
         '
+        'StyleManager1
+        '
+        Me.StyleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Silver
+        Me.StyleManager1.MetroColorParameters = New DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(26, Byte), Integer)))
+        '
         'Assassin_s2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
@@ -196,4 +203,5 @@ Partial Class Assassin_s2
     Friend WithEvents ControlContainerItem1 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents ControlContainerItem2 As DevComponents.DotNetBar.ControlContainerItem
     Friend WithEvents ResignBB As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents StyleManager1 As DevComponents.DotNetBar.StyleManager
 End Class
